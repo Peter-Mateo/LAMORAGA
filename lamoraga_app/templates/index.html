@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMORAGA</title>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <nav id="nav-desk">
+                <div class="logo"><a href="#">LAMORAGA</a></div>
+                <ul>
+                    <li>
+                        <a href="#">Why RMS</a>
+                    </li>
+                    <li>
+                        <a href="#">About RMS</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn dark">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- End Of Desktop Navigation -->
+            <div class="hero-section" id="home">
+                <div class="left">
+                    <h1>A portfolio of products <br> tailored to your personal <br> and business insurance needs</h1>
+                    <a href="#" class="btn light">Get Started</a>
+                </div>
+                <div class="hero-section right">
+                    <div class="insurance-cards">
+                        <img src="{{url_for('static', filename='/img/hero-img.png')}}" alt="Business Insurance">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of desktop navigation menu -->
+        <nav class="mobile-nav">
+            <div class="logo"><a href="#home">RMS</a></div>
+            <div class="menu-icon">
+                <img src="{{url_for('static', filename='/img/menu-icon.png')}}" alt="" />
+            </div>
+        </nav>
+        <div class="mobile-menu-container">
+            <div class="close-icon">
+                <img src="{{url_for('static', filename='/img/close-icon.png')}}" alt="" />
+            </div>
+            <ul>
+                <li>
+                    <a class="whyRMS" href="#testimonials">Why RMS</a>
+                </li>
+                <li>
+                    <a class="aboutRMS" href="#about">About RMS</a>
+                </li>
+                <li>
+                    <a class="RMSservices" href="#services">Services</a>
+                </li>
+                <li>
+                    <a class="RMScontact btn light" href="#contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <!-- End of mobile navigation menu -->
+    </header>
+</body>
+</html>
