@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: red dashed 1px;
+}
+body{
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 175%;
+    background-color: #040404;
+    ;
+    color: #ffff;
+}
+
+.wrapper{
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+header{
+    height: 100vh;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 121px;
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+    font-family: 'Cormorant Upright', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 57.2px;
+    letter-spacing: 0.04em;
+}
+nav .logo a{
+    text-decoration: none;
+    color: #ffff;
+}
+nav .nav-middle {
+    display: flex;
+    align-items: center;
+}
+nav .nav-middle ul{
+    display: flex;
+    gap: 32px;
+}
+nav .nav-middle ul li{
+    list-style: none;
+    
+}
+nav .nav-middle ul li a{
+    text-decoration: none;
+    color: #ffff;
+}
+nav .nav-right {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+nav .nav-right a{
+    text-decoration: none;
+    color: #ffff !important;
+}
+
+.hero .hashtag{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 80px;
+
+    position: absolute;
+    width: 32px;
+    height: 299px;
+    left: 120px;
+    top: 457px;
+}
+.hero .hashtag .right,
+.hero .hashtag .left{
+    letter-spacing: 0.04em;
+    transform: rotate(-90deg);
+    font-size: 18px;
+}
+
+.hero .Content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 180px;
+
+    position: absolute;
+    width: 1300px;
+    height: 736px;
+    left: 310px;
+    top: 169px;
+}
+.hero .Content .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 32px;
+
+    width: 453px;
+    height: 481px;
+}
+
+.hero .Content .content .btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 32px;
+
+    width: 157px;
+    height: 44px;
+
+    background: #AC1F2D;
+}
+.hero .Content .content .btn a{
+    font-family: 'Cormorant Upright';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: #0C0B08;
+    text-decoration: none;
+}
+
+.hero .Content .content .middle {
+    color: #AAAAAA;
+}
+
+.hero .Content .content .top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 231px;
+    height: 47px;
+
+    font-family: 'Cormorant Upright';
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+}
+
+.hero .Content .content h1{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 85px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+
+    color: #AC1F2D;
+}
+
+.hero .Content .hero-img{
+    width: 667px;
+    height: 736px;
+}
+.hero .Content .hero-img .mask-group .rectangle{
+    position: absolute;
+    width: 619px;
+    height: 688px;
+    left: 657px;
+    top: 24px;
+    overflow: hidden;
+    background: #C4C4C4;
+}
+.hero .Content .hero-img .mask-group img{
+    position: relative;
+    width: 1126px;
+    height: 1688px;
+    object-fit:scale-down;
+    bottom: 500px;
+    right: 40%;
+}
+.hero .Content .hero-img .rectangle21{
+    position: absolute;
+    width: 435px;
+    height: 435px;
+    left: 633px;
+    top: 301px;
+    z-index: -1;
+    background: #AC1F2D;
+    mix-blend-mode: normal;
+}
+.hero .Content .hero-img .rectangle20{
+    position: absolute;
+    width: 435px;
+    height: 435px;
+    left: 865px;
+    top: 0px;
+    z-index: -1;
+    background: #AC1F2D;
+}

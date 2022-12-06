@@ -5,67 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAMORAGA</title>
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
     <header>
         <div class="wrapper">
-            <nav id="nav-desk">
+            <nav>
                 <div class="logo"><a href="#">LAMORAGA</a></div>
-                <ul>
-                    <li>
-                        <a href="#">Why RMS</a>
-                    </li>
-                    <li>
-                        <a href="#">About RMS</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn dark">Contact Us</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- End Of Desktop Navigation -->
-            <div class="hero-section" id="home">
-                <div class="left">
-                    <h1>A portfolio of products <br> tailored to your personal <br> and business insurance needs</h1>
-                    <a href="#" class="btn light">Get Started</a>
+                <div class="nav-middle">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
                 </div>
-                <div class="hero-section right">
-                    <div class="insurance-cards">
-                        <img src="{{url_for('static', filename='/img/hero-img.png')}}" alt="Business Insurance">
+                <div class="nav-right">
+                    <div class="left">
+                        <a href="#">Gift Cards</a>
+                    </div>
+                    |
+                    <div class="right">
+                        <a href="#">Book Table</a>
                     </div>
                 </div>
+            </nav>
+        </div>
+        <div class="hero">
+            <div class="hashtag">
+                <div class="left">#vegetarian</div>
+                <div class="right">#paella</div>
+            </div>
+            <div class="slider">
+
+            </div>
+            <div class="scroll">
+
+            </div>
+            <div class="Content">
+                <div class="content">
+                    <div class="top">
+                        <h5>Chase The New Flavour</h5>
+                        <img src="../static/img/red-spoon.png" alt="red spoon">
+                    </div>
+                    <h1>The Key To Fine Dining</h1>
+                    <div class="middle">
+                        <p>Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus </p>
+                    </div>
+                    <div class="btn">
+                        <a href="#" type="button">Explore Menu</a>
+                    </div>
+                </div>
+                <div class="hero-img">
+                    <div class="mask-group">
+                        <div class="rectangle">
+                            <img src="../static/img/IMG_0646.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="rectangle21"></div>
+                    <div class="rectangle20"></div>
+                </div>
             </div>
         </div>
-        <!-- End of desktop navigation menu -->
-        <nav class="mobile-nav">
-            <div class="logo"><a href="#home">RMS</a></div>
-            <div class="menu-icon">
-                <img src="{{url_for('static', filename='/img/menu-icon.png')}}" alt="" />
-            </div>
-        </nav>
-        <div class="mobile-menu-container">
-            <div class="close-icon">
-                <img src="{{url_for('static', filename='/img/close-icon.png')}}" alt="" />
-            </div>
-            <ul>
-                <li>
-                    <a class="whyRMS" href="#testimonials">Why RMS</a>
-                </li>
-                <li>
-                    <a class="aboutRMS" href="#about">About RMS</a>
-                </li>
-                <li>
-                    <a class="RMSservices" href="#services">Services</a>
-                </li>
-                <li>
-                    <a class="RMScontact btn light" href="#contact">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-        <!-- End of mobile navigation menu -->
     </header>
 </body>
 </html>
