@@ -23,13 +23,15 @@ body{
 }
 
 header{
-    height: 100vh;
+    height: 100%;
 }
+
 nav{
     display: flex;
     justify-content: space-between;
     height: 121px;
 }
+
 nav .logo{
     display: flex;
     align-items: center;
@@ -97,11 +99,11 @@ nav .nav-right a{
     padding: 0px;
     gap: 180px;
 
-    position: absolute;
+    position: relative;
     width: 1300px;
     height: 736px;
-    left: 310px;
-    top: 169px;
+    margin: auto;
+    top: 50px;
 }
 .hero .Content .content{
     display: flex;
