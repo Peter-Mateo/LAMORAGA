@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
+@import url('https://fonts.cdnfonts.com/css/bestermind');
 *{
     padding: 0;
     margin: 0;
-    outline: red dashed 1px;
+    /* outline: red dashed 1px; */
 }
 body{
     font-family: 'Open Sans';
@@ -23,7 +23,7 @@ body{
 }
 
 header{
-    height: 100%;
+    height: 100vh;
 }
 
 nav{
@@ -179,7 +179,7 @@ nav .nav-right a{
 .hero .Content .hero-img .mask-group .rectangle{
     position: absolute;
     width: 619px;
-    height: 688px;
+    height: 640px;
     left: 657px;
     top: 24px;
     overflow: hidden;
@@ -196,7 +196,7 @@ nav .nav-right a{
 .hero .Content .hero-img .rectangle21{
     position: absolute;
     width: 435px;
-    height: 435px;
+    height: 385px;
     left: 633px;
     top: 301px;
     z-index: -1;
@@ -211,4 +211,647 @@ nav .nav-right a{
     top: 0px;
     z-index: -1;
     background: #AC1F2D;
+}
+/* About */
+.about {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/bg-second-hp.png");
+    background-size: cover;
+}
+
+.about .wrapper {
+    display: flex;
+    align-items: center;
+    gap:50px;
+}
+.about .wrapper h2{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 130%;
+    color: #AC1F2D;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+}
+.about .wrapper .left{
+    text-align: right;
+    z-index: 1;
+}
+.about .wrapper .right{
+    text-align: left;
+    z-index: 1;
+}
+.about .wrapper .left .btn{
+    float: right;
+}
+.about .wrapper .btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    width: 141px;
+    height: 44px;
+    background: #AC1F2D;
+}
+.about .wrapper .btn a{
+    text-decoration: none;
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: #0C0C0C;
+}
+.about .wrapper .knife{
+    z-index: 1;
+}
+.about .wrapper .letter{
+    position: absolute;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 800px;
+    color: #545454;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .5;
+}
+
+.reservations {
+    display: flex;
+    width: auto;
+    height: 60vh;
+}
+.reservations .wrapper{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 1364px;
+    height: 466px;
+    background: #0C0C0C;
+    border: 1px solid rgba(220, 202, 135, 0.2);
+    gap: 20px;
+}
+.reservations .wrapper .icon {
+    position: relative;
+    width: 146px;
+    height: 146px;
+    right: -100%;
+    bottom: 420px;
+}
+.reservations .wrapper .top h5{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+.reservations .wrapper .book{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 130%;
+    /* or 83px */
+
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+
+    color: #AC1F2D;
+}
+
+.menu {
+    display: flex;
+    width: auto;
+    height: 100vh;
+    background-image: url("../img/menu-bar-glass.png");
+    background-size: cover;
+}
+.menu::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #0C0C0C;
+    opacity: 30%;
+}
+.menu .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 64px;
+    z-index: 1;
+}
+.menu .wrapper .icon{
+    position: absolute;
+    top: -320px;
+}
+.menu .wrapper h2{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+.menu .wrapper .active{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.specials{
+    display: flex;
+    width: auto;
+    height: 100vh;
+}
+.specials .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+.specials .wrapper .tiptop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+}
+.specials .wrapper .tiptop p{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+.specials .wrapper .tiptop h2{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #DCCA87;
+}
+.specials .wrapper .btm{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+.specials .wrapper .btm .left,
+.specials .wrapper .btm .right{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.specials .wrapper .btm .title{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #FFFFFF;
+    padding-top: 20px;
+}
+.specials .wrapper .btm .top{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.specials .wrapper .btm .btm{
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: #AAAAAA;
+}
+.specials .wrapper .btm .name{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #DCCA87;
+}
+.specials .wrapper .btm .price{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+}
+.bar-line{
+    width: 90px;
+}
+.bar-line hr{
+    border-bottom: 1px solid #545454;
+}
+.specials .btm-btn{
+    position: relative;
+    top: -10px;
+    display: flex;
+    justify-content: center;
+}
+.specials .btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 136px;
+    height: 30px;
+    background: #AC1F2D;
+}
+.specials .btn a{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 175%;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    color: #0C0C0C;
+}
+
+.owner {
+    width: auto;
+    height: 100vh;
+    background-image: url("../img/bg-second-hp.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.owner .wrapper{
+    display: flex;
+    gap: 70px;
+}
+.owner .right{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+}
+.owner .top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.owner .btm {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+.owner .wrapper .right .word{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+.owner .wrapper .right .belief{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #AC1F2D;
+}
+.owner .wrapper .right .content {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: #AAAAAA;
+}
+.owner .wrapper .right .name {
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #DCCA87;
+}
+.owner .wrapper .right .founder{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: #AAAAAA;
+}
+.owner .wrapper .right .signature {
+    font-family: 'Bestermind';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    color: #AAAAAA;
+}
+.testimonials{
+    height: 100vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+.testimonials .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.testimonials .wrapper .top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+}
+.testimonials .wrapper .top h5{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+.testimonials .wrapper .top h2{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #DCCA87;
+}
+.testimonials .wrapper .btm-grid{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 32px;
+}
+.testimonials .wrapper .grid-item {
+    display: flex;
+}
+.testimonials .wrapper .grid-item .content{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.testimonials .wrapper .grid-item .content p{
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: #AAAAAA;
+}
+.testimonials .wrapper .grid-item .content h4{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #DCCA87;
+}
+.testimonials .wrapper .grid-item .content .title{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: #F5EFDB;
+}
+.testimonials .spoons{
+    position: absolute;
+    width: 146px;
+    height: 146px;
+    left: 1487px;
+    top: 5740px;
+}
+
+.laurels{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url("../img/bg-second-hp.png");
+    background-size: cover;
+}
+.laurels .wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.laurels .wrapper .left {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 30px;
+    padding-top: 70px;
+}
+.laurels .wrapper .left h5{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+.laurels .wrapper .left h2{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #DCCA87;
+}
+.laurels .wrapper .grid{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+}
+.laurels .wrapper .grid-item{
+    display: flex;
+    gap: 12px;
+}
+.laurels .wrapper .grid-item .content h5{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #DCCA87;
+}
+.laurels .wrapper .grid-item .content p{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: #AAAAAA;
+}
+.laurels .icon img{
+    width: 79px;
+    height: 79px;
+}
+
+.blog{
+    width: 100%;
+    height: 100vh;
+}
+.gallery{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    background-image: url("../img/bg-second-hp.png");
+    background-size: cover;
+}
+.gallery .wrapper{
+    display: flex;
+    justify-content: center;
+}
+.gallery .wrapper .left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    width: 491px;
+    height: 286px;
+}
+.gallery .wrapper .left h5{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+.gallery .wrapper .left h2{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #DCCA87;
+}
+.gallery .wrapper .left .btm p{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: #AAAAAA;
+}
+.gallery .wrapper .left .btm{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.gallery .wrapper .left .btm .btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 10px;
+    width: 136px;
+    height: 44px;
+    background: #DCCA87;
+    border: 1px solid #DCCA87;
+}
+.gallery .wrapper .left .btm .btn a{
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: #0C0C0C;
 }
