@@ -100,11 +100,43 @@ nav .nav-right a{
     line-height: 175%;
     letter-spacing: 0.05em;
 }
-
+nav .nav-right .left ul li{
+    list-style: none;
+    position: relative;
+}
+nav .nav-right .left ul li a{
+    display: block;
+    text-align: start;
+}
+nav .nav-right .left ul.dropdown li{
+    display: none;
+}
+nav .nav-right .left ul.dropdown {
+    position: absolute;
+    bottom: -20%;
+}
+nav #back {
+    position: absolute;
+    right: 13.4%;
+    z-index: -1;
+    height: 90px;
+    width: 140px;
+    background-color: #040404;
+    display: none;
+}
+nav .nav-right .left {
+    display: flex;
+    flex-direction: column;
+}
+.red-tri{
+    width: 13px;
+    height: 13px;
+    align-items: center;
+    padding-left: 4px;
+}
 .hero {
     margin-top: 6%;
 }
-
 .hero .hashtag{
     display: flex;
     flex-direction: column;
@@ -112,7 +144,6 @@ nav .nav-right a{
     align-items: center;
     padding: 0px;
     gap: 80px;
-
     position: absolute;
     width: 32px;
     height: 299px;
@@ -132,7 +163,6 @@ nav .nav-right a{
     align-items: center;
     padding: 0px;
     gap: 180px;
-
     position: relative;
     width: 1300px;
     height: 736px;
@@ -157,10 +187,8 @@ nav .nav-right a{
     justify-content: center;
     align-items: center;
     padding: 8px 32px;
-
     width: 157px;
     height: 44px;
-
     background: #AC1F2D;
 }
 .hero .Content .content .btn a{
@@ -172,11 +200,9 @@ nav .nav-right a{
     color: #0C0B08;
     text-decoration: none;
 }
-
 .hero .Content .content .middle {
     color: #AAAAAA;
 }
-
 .hero .Content .content .top{
     display: flex;
     flex-direction: column;
@@ -186,7 +212,6 @@ nav .nav-right a{
     gap: 8px;
     width: 231px;
     height: 47px;
-
     font-family: 'Cormorant Upright';
     font-weight: 700;
     font-size: 23px;
@@ -194,7 +219,6 @@ nav .nav-right a{
     letter-spacing: 0.04em;
     font-feature-settings: 'tnum' on, 'lnum' on;
 }
-
 .hero .Content .content h1{
     font-family: 'Cormorant Upright';
     font-style: normal;
@@ -202,10 +226,8 @@ nav .nav-right a{
     font-size: 85px;
     line-height: 130%;
     letter-spacing: 0.04em;
-
     color: #AC1F2D;
 }
-
 .hero .Content .hero-img{
     width: 667px;
     height: 736px;
@@ -257,11 +279,13 @@ nav .nav-right a{
     z-index: -2;
     background: #AC1F2D;
 }
-
+.active{
+    text-decoration: underline red solid 3px!important;
+}
 .navigation {
     position: absolute;
-    bottom: 20px;
-    left: 30%;
+    bottom: -40px;
+    left: 40%;
     transform: translateX(-50%);
 }
 .bar{
@@ -290,7 +314,7 @@ input[name="r"]{
     display: flex;
 }
 .hero .Content .hero-img .mask-group .rectangle{
-    transition: 0.6s;
+    transition: 1s;
 }
 #r1:checked ~ .s1{
     margin-left: 0;
@@ -416,13 +440,10 @@ input[name="r"]{
     font-weight: 600;
     font-size: 64px;
     line-height: 130%;
-    /* or 83px */
-
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: capitalize;
     font-feature-settings: 'tnum' on, 'lnum' on;
-
     color: #AC1F2D;
 }
 
@@ -622,7 +643,6 @@ input[name="r"]{
     letter-spacing: 0.04em;
     color: #0C0C0C;
 }
-
 .owner {
     width: auto;
     height: 110vh;
@@ -759,6 +779,12 @@ input[name="r"]{
 }
 .testimonials .wrapper .grid-item {
     display: flex;
+    gap: 30px;
+}
+.testimonials .wrapper .grid-item img{
+    width: 206px;
+    height: 210px;
+    object-fit: scale-down;
 }
 .testimonials .wrapper .grid-item .content{
     padding-top: 10px;
@@ -975,6 +1001,24 @@ input[name="r"]{
     overflow: hidden;
     background: #C4C4C4;
     border: 2px solid gray;
+}
+.gallery .wrapper .right .mask-group .rectangle .tag::after{
+    content: "";
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: wheat;
+    background-image: url(../img//black_instagram.png);
+    object-fit: scale-down;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 20%;
+    bottom: 0px;
+    cursor: pointer;
+}
+.gallery .wrapper .right .mask-group .rectangle .tag:hover::after{
+    display: block;
 }
 .gallery .wrapper .mask-group img{
     position: relative;

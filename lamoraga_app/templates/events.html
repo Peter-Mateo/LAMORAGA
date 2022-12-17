@@ -5,7 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/style.css">
-    <title>Events</title>
+    <title>Event Calendar | Lamoraga</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- Have to Go in and change the links-->
+    <link rel="canonical" href="https://www.lamoragarestaurant.com/event-calendar/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Event Calendar | Lamoraga" />
+	<meta property="og:url" content="https://www.lamoragarestaurant.com/event-calendar/" />
+	<meta property="og:site_name" content="Lamoraga" />
+	<meta property="article:modified_time" content="2019-11-06T22:07:51+00:00" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.lamoragarestaurant.com/#website","url":"https://www.lamoragarestaurant.com/","name":"Lamoraga","description":"","potentialAction":[{"@type":"SearchAction","target":"https://www.lamoragarestaurant.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.lamoragarestaurant.com/event-calendar/#webpage","url":"https://www.lamoragarestaurant.com/event-calendar/","name":"Event Calendar | Lamoraga","isPartOf":{"@id":"https://www.lamoragarestaurant.com/#website"},"datePublished":"2019-11-06T22:07:19+00:00","dateModified":"2019-11-06T22:07:51+00:00","breadcrumb":{"@id":"https://www.lamoragarestaurant.com/event-calendar/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.lamoragarestaurant.com/event-calendar/"]}]},{"@type":"BreadcrumbList","@id":"https://www.lamoragarestaurant.com/event-calendar/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.lamoragarestaurant.com/","url":"https://www.lamoragarestaurant.com/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.lamoragarestaurant.com/event-calendar/#webpage"}}]}]}</script>
 </head>
 <body>
     <header>
@@ -22,8 +32,13 @@
                 </ul>
             </div>
             <div class="nav-right">
-                <div class="left">
-                    <a href="#">Gift Cards</a>
+                <div class="left" id="left">
+                    <a class="top" href="#">Gift Cards <img class="red-tri" src="../static/img/red-triangle.png" alt=""></a>
+                    <div id="back"></div>
+                    <ul class="dropdown">
+                        <li><a href="https://www.toasttab.com/lamoraga/giftcards">New Gift Card</a></li>
+                        <li><a href="https://www.toasttab.com/lamoraga/findcard">Check Balance</a></li>
+                    </ul>
                 </div>
                 |
                 <div class="right">
@@ -76,8 +91,12 @@
                     <p>"The best way to find yourself is to lose yourself in the service of others.”</p>
                     <img src="../static/img/gold-spoon.png" alt="">
                     <div class="btm">
-                        <img src="../static/img/u_facebook-f.png" alt="">
-                        <img src="../static/img/u_instagram.png" alt="">
+                        <a href="https://www.instagram.com/lamoraganaples/?hl=en">
+                            <img src="../static/img/u_facebook-f.png" alt="">
+                        </a>
+                        <a href="https://www.facebook.com/LamoragaNaples">
+                            <img src="../static/img/u_instagram.png" alt="">
+                        </a>
                     </div>
                 </div>
                 <div class="right">
@@ -93,5 +112,6 @@
             </div>
         </div>
     </div>
+    <script src="../static/js/main.js"></script>
 </body>
 </html>

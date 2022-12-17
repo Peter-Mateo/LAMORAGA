@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/style.css">
     <title>Contact | Lamoraga</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- Change the Canonical URL -->
 	<link rel="canonical" href="https://www.lamoragarestaurant.com/contact/" />
 	<meta property="og:locale" content="en_US" />
@@ -34,8 +35,13 @@
                 </ul>
             </div>
             <div class="nav-right">
-                <div class="left">
-                    <a href="#">Gift Cards</a>
+                <div class="left" id="left">
+                    <a class="top" href="#">Gift Cards <img class="red-tri" src="../static/img/red-triangle.png" alt=""></a>
+                    <div id="back"></div>
+                    <ul class="dropdown">
+                        <li><a href="https://www.toasttab.com/lamoraga/giftcards">New Gift Card</a></li>
+                        <li><a href="https://www.toasttab.com/lamoraga/findcard">Check Balance</a></li>
+                    </ul>
                 </div>
                 |
                 <div class="right">
@@ -101,8 +107,12 @@
                     <p>"The best way to find yourself is to lose yourself in the service of others.”</p>
                     <img src="../static/img/gold-spoon.png" alt="">
                     <div class="btm">
-                        <img src="../static/img/u_facebook-f.png" alt="">
-                        <img src="../static/img/u_instagram.png" alt="">
+                        <a href="https://www.instagram.com/lamoraganaples/?hl=en">
+                            <img src="../static/img/u_facebook-f.png" alt="">
+                        </a>
+                        <a href="https://www.facebook.com/LamoragaNaples">
+                            <img src="../static/img/u_instagram.png" alt="">
+                        </a>
                     </div>
                 </div>
                 <div class="right">
@@ -118,5 +128,6 @@
             </div>
         </div>
     </div>
+    <script src="../static/js/main.js"></script>
 </body>
 </html>
