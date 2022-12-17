@@ -115,6 +115,9 @@ nav .nav-right .left ul.dropdown {
     position: absolute;
     bottom: -20%;
 }
+nav .nav-right .right {
+    cursor: pointer;
+}
 nav #back {
     position: absolute;
     right: 13.4%;
@@ -133,6 +136,12 @@ nav .nav-right .left {
     height: 13px;
     align-items: center;
     padding-left: 4px;
+}
+.open_tble{
+    position: absolute;
+    bottom: -290px;
+    right: 90px;
+    display: none;
 }
 .hero {
     margin-top: 6%;

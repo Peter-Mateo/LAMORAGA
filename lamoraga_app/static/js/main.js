@@ -51,3 +51,14 @@ $("#left").hover(function(){
     $(".dropdown").css("display", "none");
     $("#back").css("display", "none");
 });
+
+$("#right").hover(function(){
+    $("#right").css("height", "200px");
+    $(".book_table").css("position", "relative");
+    $(".book_table").css("bottom", "-86px");
+    $(".open_tble").css("display", "block");
+    }, function(){
+    $(".book_table").css("position", "initial");
+    $(".open_tble").css("display", "none");
+    $("#right").css("height", "fit-content");
+})
