@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/style.css">
     <title>History | Lamoraga</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- Need to Update teh Canonical Link-->
@@ -23,24 +22,25 @@
 	<meta name="twitter:data1" content="2 minutes">
     <!-- Need to Update All these Links-->
 	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.lamoragarestaurant.com/#website","url":"https://www.lamoragarestaurant.com/","name":"Lamoraga","description":"","potentialAction":[{"@type":"SearchAction","target":"https://www.lamoragarestaurant.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.lamoragarestaurant.com/the-restaurant/history/#primaryimage","inLanguage":"en-US","url":"https://www.lamoragarestaurant.com/wp-content/uploads/2014/07/internal_img01.jpg","contentUrl":"https://www.lamoragarestaurant.com/wp-content/uploads/2014/07/internal_img01.jpg","width":333,"height":210},{"@type":"WebPage","@id":"https://www.lamoragarestaurant.com/the-restaurant/history/#webpage","url":"https://www.lamoragarestaurant.com/the-restaurant/history/","name":"History | Lamoraga","isPartOf":{"@id":"https://www.lamoragarestaurant.com/#website"},"primaryImageOfPage":{"@id":"https://www.lamoragarestaurant.com/the-restaurant/history/#primaryimage"},"datePublished":"2014-07-01T11:54:17+00:00","dateModified":"2015-06-03T16:31:43+00:00","breadcrumb":{"@id":"https://www.lamoragarestaurant.com/the-restaurant/history/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.lamoragarestaurant.com/the-restaurant/history/"]}]},{"@type":"BreadcrumbList","@id":"https://www.lamoragarestaurant.com/the-restaurant/history/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.lamoragarestaurant.com/","url":"https://www.lamoragarestaurant.com/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://www.lamoragarestaurant.com/the-restaurant/","url":"https://www.lamoragarestaurant.com/the-restaurant/","name":"Lamoraga Restaurant Offers All Diners a Great Gastronomic Experience!"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.lamoragarestaurant.com/the-restaurant/history/#webpage"}}]}]}</script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo"><a href="index.html">LAMORAGA</a></div>
+            <div class="logo"><a href="{{ url_for('index')}}">LAMORAGA</a></div>
             <div class="nav-middle">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="events.html">Events</a></li>
+                    <li><a href="{{ url_for('index')}}">Home</a></li>
+                    <li><a href="{{ url_for('about')}}">About Us</a></li>
+                    <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
+                    <li><a href="{{ url_for('menu')}}">Menu</a></li>
+                    <li><a href="{{ url_for('blog')}}">Blog</a></li>
+                    <li><a href="{{ url_for('events')}}">Events</a></li>
                 </ul>
             </div>
             <div class="nav-right">
                 <div class="left" id="left">
-                    <a class="top" href="#">Gift Cards <img class="red-tri" src="../static/img/red-triangle.png" alt=""></a>
+                    <a class="top" href="#">Gift Cards <img class="red-tri" src="{{ url_for('static', filename='img/red-triangle.png') }}" alt=""></a>
                     <div id="back"></div>
                     <ul class="dropdown">
                         <li><a href="https://www.toasttab.com/lamoraga/giftcards">New Gift Card</a></li>
@@ -54,50 +54,50 @@
                         <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=138772&type=standard&theme=standard&color=1&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
                     </div>
                 </div>
-            </div>
         </nav>
         <div class="wrapper">
         </div>
         <div class="abt-slide">
             <h1>Welcome To LAMORAGA</h1>
-            <p>Home <img src="../static/img/u_angle-left-b.png" alt=""> About Us</p>
+            <!--Jinja2-->
+            <p>Home <img src="{{ url_for('static', filename='img/u_angle-left-b.png') }}" alt=""> About Us</p>
         </div>
     </header>
     <div class="abt-serv">
         <div class="wrapper">
             <div class="top">
                 <h5>Our History</h5>
-                <img src="../static/img/gold-spoon.png" alt="">
+                <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
             </div>
             <h2>Serving Customers For Over 8 Years</h2>
             <div class="btm">
                 <div class="left">
                     <p>On April 14th, 2014, Lamoraga Naples opened its doors for business and is looking to continue to satisfy customers of all realms of life for many years to come.</p>
                     <div class="container">
-                        <img src="../static/img/DSC00837.jpg" alt="">
+                        <img src="{{ url_for('static', filename='img/DSC00837.jpg') }}" alt="">
                     </div>
                 </div>
                 <div class="right">
                     <div class="container">
-                        <img src="../static/img/DSC00888.jpg" alt="">
+                        <img src="{{ url_for('static', filename='img/DSC00888.jpg') }}" alt="">
                     </div>
                     <h3>Over The Years</h3>
                     <div class="options">
                         <div class="option">
                             <h3>7+</h3>
-                            <img src="../static/img/gold-spoon.png" alt="">
+                            <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
                             <h4>Vegan Options</h4>
                         </div>
-                        <img src="../static/img/options-line.png" alt="">
+                        <img src="{{ url_for('static', filename='img/options-line.png') }}" alt="">
                         <div class="option">
                             <h3>50+</h3>
-                            <img src="../static/img/gold-spoon.png" alt="">
+                            <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
                             <h4>Dinner Options</h4>
                         </div>
-                        <img src="../static/img/options-line.png" alt="">
+                        <img src="{{ url_for('static', filename='img/options-line.png') }}" alt="">
                         <div class="option">
                             <h3>10+</h3>
-                            <img src="../static/img/gold-spoon.png" alt="">
+                            <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
                             <h4>Tapas</h4>
                         </div>
                     </div>
@@ -109,7 +109,8 @@
         <div class="wrapper">
             <div class="content">
                 <h5>Orgin</h5>
-                <img src="../static/img/gold-spoon.png" alt="">
+                <!--Jinja2-->
+                <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
             </div>
             <h2>Our Roots</h2>
             <p>The idea of Lamoraga started not too long ago in Andalusia, the Spanish region that covers most of the southern part of the Iberian Peninsula. The region's history dates back many 1000s of years. From the Romans, North African Tribes, such as the Moors, to the British and the French, you notice the social influences in the Andalusian cuisine. The mixture of cultures, a great coastline along the Mediterranean Sea, and the indigenous foods to this region offer complex and very unique flavors to its cuisine.
@@ -126,7 +127,8 @@
             <div class="contact">
                 <div class="top">
                     <h5>Newsletter</h5>
-                    <img src="../static/img/red-spoon.png" alt="">
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/red-spoon.png') }}" alt="">
                     <h2>Subscribe To Our Newsletter</h2>
                     <p>And never miss the latest Updates!</p>
                 </div>
@@ -145,13 +147,14 @@
                 <div class="mid">
                     <h2>LAMORAGA</h2>
                     <p>"The best way to find yourself is to lose yourself in the service of others.”</p>
-                    <img src="../static/img/gold-spoon.png" alt="">
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
                     <div class="btm">
                         <a href="https://www.facebook.com/LamoragaNaples">
-                            <img src="../static/img/u_facebook-f.png" alt="">
+                            <img src="{{ url_for('static', filename='img/u_facebook-f.png') }}" alt="">
                         </a>
                         <a href="https://www.instagram.com/lamoraganaples/?hl=en">
-                            <img src="../static/img/u_instagram.png" alt="">
+                            <img src="{{ url_for('static', filename='img/u_instagram.png') }}" alt="">
                         </a>
                     </div>
                 </div>
@@ -168,6 +171,6 @@
             </div>
         </div>
     </div>
-    <script src="../static/js/main.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

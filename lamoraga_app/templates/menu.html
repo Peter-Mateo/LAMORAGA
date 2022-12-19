@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menus | Lamoraga</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo"><a href="{{ url_for('index')}}">LAMORAGA</a></div>
+            <div class="nav-middle">
+                <ul>
+                    <li><a href="{{ url_for('index')}}">Home</a></li>
+                    <li><a href="{{ url_for('about')}}">About Us</a></li>
+                    <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
+                    <li><a href="{{ url_for('menu')}}">Menu</a></li>
+                    <li><a href="{{ url_for('blog')}}">Blog</a></li>
+                    <li><a href="{{ url_for('events')}}">Events</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="left" id="left">
+                    <a class="top" href="#">Gift Cards <img class="red-tri" src="{{ url_for('static', filename='img/red-triangle.png') }}" alt=""></a>
+                    <div id="back"></div>
+                    <ul class="dropdown">
+                        <li><a href="https://www.toasttab.com/lamoraga/giftcards">New Gift Card</a></li>
+                        <li><a href="https://www.toasttab.com/lamoraga/findcard">Check Balance</a></li>
+                    </ul>
+                </div>
+                |
+                <div class="right" id="right">
+                    <a class="book_table">Book Table</a>
+                    <div class="open_tble">
+                        <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=138772&type=standard&theme=standard&color=1&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="wrapper">
+        </div>
+        <div class="event-slide">
+            <h1>Menus</h1>
+        </div>
+    </header>
+    <div class="menu-bg">
+        <div class="wrapper">
+            <div class="type-btn">
+                <input type="button" id="tapa_btn" class="active" onlclick="switchDisplayOnButtonClick('tapas')" value="Tapas">
+                <input type="button" id="soup_salad_btn" onlclick="switchDisplayOnButtonClick('soups_salad')" value="Soups & Salads">
+                <input type="button" id="entree_btn" onlclick="switchDisplayOnButtonClick('entrees')" value="Entrees">
+                <input type="button" id="vegan_btn" onlclick="switchDisplayOnButtonClick('vegan')" value="Vegan">
+                <input type="button" id="side_btn" onlclick="switchDisplayOnButtonClick('sides')" value="Sides">
+                <input type="button" id="dessert_btn" onlclick="switchDisplayOnButtonClick('desserts')" value="Desserts">
+            </div>
+            <div id="tapas">
+                <div class="items">
+                    <div class="contain">
+                        <H2>From the Sea</H2>
+                        <div class="menu-item">
+                            {% for app in sea %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    {% if app['name'] == 'Spanish Octopus' %}
+                                        <p class="price">$MRKT</p>
+                                    {% else %}
+                                        <p class="price">${{ app['price'] }}</p>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="contain">
+                        <H2>From Land</H2>
+                        <div class="menu-item">
+                            {% for app in land %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    <p class="price">${{ app['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="contain">
+                        <H2>Pinchos</H2>
+                        <div class="menu-item">
+                            {% for app in pinchos %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    <p class="price">${{ app['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="soups_salad">
+                <div class="items">
+                    <div class="contain">
+                        <H2>Soups</H2>
+                        <div class="menu-item">
+                            {% for app in soups %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    {% if app['name'] == 'Spanish Octopus' %}
+                                        <p class="price">$MRKT</p>
+                                    {% else %}
+                                        <p class="price">${{ app['price'] }}</p>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="contain">
+                        <H2>Salads</H2>
+                        <div class="menu-item">
+                            {% for app in salads %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    <p class="price">${{ app['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="entrees">
+                <div class="items">
+                    <div class="contain">
+                        <H2>From the Sea</H2>
+                        <div class="menu-item">
+                            {% for app in sea_dinner %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    <p class="price">${{ app['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="contain">
+                        <H2>From Land</H2>
+                        <div class="menu-item">
+                            {% for app in land_dinner %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    <p class="price">${{ app['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="vegan">
+                <div class="items">
+                    <div class="contain">
+                        <H2>Vegan Options</H2>
+                        <div class="menu-item">
+                            {% for app in vegan_dinner %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    <p class="price">${{ app['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sides">
+                <div class="items">
+                    <div class="contain">
+                        <H2>Sides</H2>
+                        <div class="menu-item">
+                            {% for app in sides %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    <p class="price">${{ app['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="desserts">
+                <div class="items">
+                    <div class="contain">
+                        <H2>Desserts</H2>
+                        <div class="menu-item">
+                            {% for app in dessert %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    <p class="price">${{ app['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="block"></div>
+    <div class="footer">
+        <div class="wrapper">
+            <div class="contact">
+                <div class="top">
+                    <h5>Newsletter</h5>
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/red-spoon.png') }}" alt="">
+                    <h2>Subscribe To Our Newsletter</h2>
+                    <p>And never miss the latest Updates!</p>
+                </div>
+                <div class="btm">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <label for="email">Subscribe</label>
+                </div>
+            </div>
+            <div class="contact-btm">
+                <div class="left">
+                    <h4>Contact Us</h4>
+                    <p>3936 North Tamiami Trail
+                        Naples, Florida 34103</p>
+                    <p> (239) 331-3669</p>
+                </div>
+                <div class="mid">
+                    <h2>LAMORAGA</h2>
+                    <p>"The best way to find yourself is to lose yourself in the service of others.”</p>
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
+                    <div class="btm">
+                        <a href="https://www.facebook.com/LamoragaNaples">
+                            <img src="{{ url_for('static', filename='img/u_facebook-f.png') }}" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/lamoraganaples/?hl=en">
+                            <img src="{{ url_for('static', filename='img/u_instagram.png') }}" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="right">
+                    <h4>Working Hours</h4>
+                    <p>Monday-Friday: <br>
+                        04:00 pm -9:00 pm</p>
+                    <p>Saturday: <br>
+                        04:00pm -09:30 pm</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>2022 LAMORAGA. All Rights reserved.</p>
+            </div>
+        </div>
+    </div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

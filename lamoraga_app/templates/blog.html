@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press Room | Lamoraga</title>
+    <link rel="canonical" href="https://www.lamoragarestaurant.com/the-restaurant/press-room/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Press Room | Lamoraga" />
+    <meta property="og:description" content="On April 14th, 2014, Lamoraga Naples opened its doors for business and is looking to continue to satisfy customers of all realms of life for many years to come. Select High Resolution Photography Download Photography &#8211; click here &nbsp; Recent Press Releases Business BEAT: Mediterranean fare on the menu at Lamoraga Tom Nutten has a [&hellip;]" />
+    <meta property="og:url" content="https://www.lamoragarestaurant.com/the-restaurant/press-room/" />
+    <meta property="og:site_name" content="Lamoraga" />
+    <meta property="article:modified_time" content="2018-01-07T15:16:15+00:00" />
+    <meta property="og:image" content="https://www.lamoragarestaurant.com/wp-content/uploads/2014/07/press.jpg" />
+    <meta name="twitter:label1" content="Est. reading time">
+    <meta name="twitter:data1" content="3 minutes">
+    <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.lamoragarestaurant.com/#website","url":"https://www.lamoragarestaurant.com/","name":"Lamoraga","description":"","potentialAction":[{"@type":"SearchAction","target":"https://www.lamoragarestaurant.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.lamoragarestaurant.com/the-restaurant/press-room/#primaryimage","inLanguage":"en-US","url":"https://www.lamoragarestaurant.com/wp-content/uploads/2014/07/press.jpg","contentUrl":"https://www.lamoragarestaurant.com/wp-content/uploads/2014/07/press.jpg","width":333,"height":210},{"@type":"WebPage","@id":"https://www.lamoragarestaurant.com/the-restaurant/press-room/#webpage","url":"https://www.lamoragarestaurant.com/the-restaurant/press-room/","name":"Press Room | Lamoraga","isPartOf":{"@id":"https://www.lamoragarestaurant.com/#website"},"primaryImageOfPage":{"@id":"https://www.lamoragarestaurant.com/the-restaurant/press-room/#primaryimage"},"datePublished":"2014-07-01T11:55:25+00:00","dateModified":"2018-01-07T15:16:15+00:00","breadcrumb":{"@id":"https://www.lamoragarestaurant.com/the-restaurant/press-room/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.lamoragarestaurant.com/the-restaurant/press-room/"]}]},{"@type":"BreadcrumbList","@id":"https://www.lamoragarestaurant.com/the-restaurant/press-room/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.lamoragarestaurant.com/","url":"https://www.lamoragarestaurant.com/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://www.lamoragarestaurant.com/the-restaurant/","url":"https://www.lamoragarestaurant.com/the-restaurant/","name":"Lamoraga Restaurant Offers All Diners a Great Gastronomic Experience!"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.lamoragarestaurant.com/the-restaurant/press-room/#webpage"}}]}]}</script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo"><a href="{{ url_for('index')}}">LAMORAGA</a></div>
+            <div class="nav-middle">
+                <ul>
+                    <li><a href="{{ url_for('index')}}">Home</a></li>
+                    <li><a href="{{ url_for('about')}}">About Us</a></li>
+                    <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
+                    <li><a href="{{ url_for('menu')}}">Menu</a></li>
+                    <li><a href="{{ url_for('blog')}}">Blog</a></li>
+                    <li><a href="{{ url_for('events')}}">Events</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="left" id="left">
+                    <a class="top" href="#">Gift Cards <img class="red-tri" src="{{ url_for('static', filename='img/red-triangle.png') }}" alt=""></a>
+                    <div id="back"></div>
+                    <ul class="dropdown">
+                        <li><a href="https://www.toasttab.com/lamoraga/giftcards">New Gift Card</a></li>
+                        <li><a href="https://www.toasttab.com/lamoraga/findcard">Check Balance</a></li>
+                    </ul>
+                </div>
+                |
+                <div class="right" id="right">
+                    <a class="book_table">Book Table</a>
+                    <div class="open_tble">
+                        <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=138772&type=standard&theme=standard&color=1&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="wrapper">
+        </div>
+        <div class="event-slide">
+            <h1>Our Blogs</h1>
+        </div>
+    </header>
+    
+    <h1>Checking</h1>
+    {% for post in blog %}
+        {{ post.title }}
+        {{ post.created_at }}
+        {{ post.content }}
+        <br>
+    {% endfor %}
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Event Calendar | Lamoraga</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- Have to Go in and change the links-->
@@ -20,20 +20,20 @@
 <body>
     <header>
         <nav>
-            <div class="logo"><a href="index.html">LAMORAGA</a></div>
+            <div class="logo"><a href="{{ url_for('index')}}">LAMORAGA</a></div>
             <div class="nav-middle">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="events.html">Events</a></li>
+                    <li><a href="{{ url_for('index')}}">Home</a></li>
+                    <li><a href="{{ url_for('about')}}">About Us</a></li>
+                    <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
+                    <li><a href="{{ url_for('menu')}}">Menu</a></li>
+                    <li><a href="{{ url_for('blog')}}">Blog</a></li>
+                    <li><a href="{{ url_for('events')}}">Events</a></li>
                 </ul>
             </div>
             <div class="nav-right">
                 <div class="left" id="left">
-                    <a class="top" href="#">Gift Cards <img class="red-tri" src="../static/img/red-triangle.png" alt=""></a>
+                    <a class="top" href="#">Gift Cards <img class="red-tri" src="{{ url_for('static', filename='img/red-triangle.png') }}" alt=""></a>
                     <div id="back"></div>
                     <ul class="dropdown">
                         <li><a href="https://www.toasttab.com/lamoraga/giftcards">New Gift Card</a></li>
@@ -53,16 +53,24 @@
         </div>
         <div class="event-slide">
             <h1>Events</h1>
-            <p>Home <img src="../static/img/u_angle-left-b.png" alt=""> Events</p>
+            <!--Jinja2-->
+            <p>Home <img src="{{ url_for('static', filename='img/u_angle-left-b.png') }}" alt=""> Events</p>
         </div>
     </header>
     <div class="events">
         <div class="wrapper">
             <div class="left">
-                <img src="../static/img/even1.png" alt="">
+                <!--Jinja2-->
+                <img src="{{ url_for('static', filename='img/even1.png') }}" alt="">
             </div>
             <div class="right">
-
+                <br>
+                {% for event in events %}
+                    <div class="content">
+                        <h3>{{ event['name'] }}</h3>
+                        <h5>{{ event["date_format(date, '%M %e %a, %Y')"] }}</h5>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -72,7 +80,8 @@
             <div class="contact">
                 <div class="top">
                     <h5>Newsletter</h5>
-                    <img src="../static/img/red-spoon.png" alt="">
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/red-spoon.png') }}" alt="">
                     <h2>Subscribe To Our Newsletter</h2>
                     <p>And never miss the latest Updates!</p>
                 </div>
@@ -91,13 +100,14 @@
                 <div class="mid">
                     <h2>LAMORAGA</h2>
                     <p>"The best way to find yourself is to lose yourself in the service of others.”</p>
-                    <img src="../static/img/gold-spoon.png" alt="">
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
                     <div class="btm">
                         <a href="https://www.facebook.com/LamoragaNaples">
-                            <img src="../static/img/u_facebook-f.png" alt="">
+                            <img src="{{ url_for('static', filename='img/u_facebook-f.png') }}" alt="">
                         </a>
                         <a href="https://www.instagram.com/lamoraganaples/?hl=en">
-                            <img src="../static/img/u_instagram.png" alt="">
+                            <img src="{{ url_for('static', filename='img/u_instagram.png') }}" alt="">
                         </a>
                     </div>
                 </div>
@@ -114,6 +124,6 @@
             </div>
         </div>
     </div>
-    <script src="../static/js/main.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

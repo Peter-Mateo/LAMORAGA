@@ -18,25 +18,26 @@
 	<meta property="article:modified_time" content="2015-09-23T23:46:24+00:00" />
     <!-- Need to Update All these Links-->
 	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.lamoragarestaurant.com/#website","url":"https://www.lamoragarestaurant.com/","name":"Lamoraga","description":"","potentialAction":[{"@type":"SearchAction","target":"https://www.lamoragarestaurant.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.lamoragarestaurant.com/#webpage","url":"https://www.lamoragarestaurant.com/","name":"Naples Restaurant - International Food, Best Tapas | Lamoraga","isPartOf":{"@id":"https://www.lamoragarestaurant.com/#website"},"datePublished":"2014-08-08T12:04:09+00:00","dateModified":"2015-09-23T23:46:24+00:00","description":"Lamoraga International Restaurant Naples FL offers the Best Tapas and Freshest Seafood. Visit our authentic cuisine dining spot - The Restaurant in Naples!","breadcrumb":{"@id":"https://www.lamoragarestaurant.com/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.lamoragarestaurant.com/"]}]},{"@type":"BreadcrumbList","@id":"https://www.lamoragarestaurant.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.lamoragarestaurant.com/#webpage"}}]}]}</script>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <!--Jinja2-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <header>
         <nav id="navbar">
-            <div class="logo"><a href="#">LAMORAGA</a></div>
+            <div class="logo"><a href="{{ url_for('index')}}">LAMORAGA</a></div>
             <div class="nav-middle">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="events.html">Events</a></li>
+                    <li><a href="{{ url_for('index')}}">Home</a></li>
+                    <li><a href="{{ url_for('about')}}">About Us</a></li>
+                    <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
+                    <li><a href="{{ url_for('menu')}}">Menu</a></li>
+                    <li><a href="{{ url_for('blog')}}">Blog</a></li>
+                    <li><a href="{{ url_for('events')}}">Events</a></li>
                 </ul>
             </div>
             <div class="nav-right">
                 <div class="left" id="left">
-                    <a class="top" href="#">Gift Cards <img class="red-tri" src="../static/img/red-triangle.png" alt=""></a>
+                    <a class="top" href="#">Gift Cards <img class="red-tri" src="{{ url_for('static', filename='img/red-triangle.png') }}" alt=""></a>
                     <div id="back"></div>
                     <ul class="dropdown">
                         <li><a href="https://www.toasttab.com/lamoraga/giftcards">New Gift Card</a></li>
@@ -63,13 +64,14 @@
 
             </div>
             <div class="scroll">
-                <img class="index-scroll" src="../static/img/Scroll.png" alt="">
+                <!--Jinja2-->
+                <img class="index-scroll" src="{{ url_for('static', filename='img/Scroll.png') }}" alt="">
             </div>
             <div class="Content">
                 <div class="content">
                     <div class="top">
                         <h5>Chase The New Flavour</h5>
-                        <img src="../static/img/red-spoon.png" alt="red spoon">
+                        <img src="{{ url_for('static', filename='img/red-spoon.png') }}" alt="red spoon">
                     </div>
                     <h1>The Key To Fine Dining</h1>
                     <div class="middle">
@@ -89,16 +91,16 @@
                                 <input type="radio" name="r" id="r4">
                                 
                                 <div class="rectangle s1">
-                                    <img src="../static/img/IMG_0646.jpg" alt="">
+                                    <img src="{{ url_for('static', filename='img/IMG_0646.jpg') }}" alt="">
                                 </div>
                                 <div class="rectangle s2">
-                                    <img src="../static/img/Sea Bass.jpg" alt="">
+                                    <img src="{{ url_for('static', filename='img/Sea Bass.jpg') }}" alt="">
                                 </div>
                                 <div class="rectangle s3">
-                                    <img src="../static/img/IMG_0481.jpg" alt="">
+                                    <img src="{{ url_for('static', filename='img/IMG_0481.jpg') }}" alt="">
                                 </div>
                                 <div class="rectangle s4">
-                                    <img src="../static/img/IMG_0552.jpg" alt="">
+                                    <img src="{{ url_for('static', filename='img/IMG_0552.jpg') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -122,7 +124,7 @@
                 <h2>About Us</h2>
                 <br>
                 <div>
-                    <img src="../static/img/red-spoon-left.png" alt="">
+                    <img src="{{ url_for('static', filename='img/red-spoon-left.png') }}" alt="">
                 </div>
                 <br>
                 <div>
@@ -130,16 +132,16 @@
                 </div>
                 <br>
                 <div class="btn">
-                    <a href="about.html" type="button">Learn More</a>
+                    <a href="{{ url_for('about')}}" type="button">Learn More</a>
                 </div>
             </div>
-            <img class="knife" src="../static/img/knife.png" alt="">
+            <img class="knife" src="{{ url_for('static', filename='img/knife.png') }}" alt="">
             <h1 class="letter">L</h1>
             <div class="right">
                 <h2>Our History</h2>
                 <br>
                 <div>
-                    <img src="../static/img/red-spoon-right.png" alt="">
+                    <img src="{{ url_for('static', filename='img/red-spoon-right.png') }}" alt="">
                 </div>
                 <br>
                 <div>
@@ -147,7 +149,7 @@
                 </div>
                 <br>
                 <div class="btn">
-                    <a href="about.html" type="button">Learn More</a>
+                    <a href="{{ url_for('about')}}" type="button">Learn More</a>
                 </div>
             </div>
         </div>
@@ -155,11 +157,11 @@
     <div class="reservations">
         <div class="wrapper">
             <div class="icon">
-                <img src="../static/img/double-spoons.png" alt="">
+                <img src="{{ url_for('static', filename='img/double-spoons.png') }}" alt="">
             </div>
             <div class="top">
                 <h5>Reservations</h5>
-                <img src="../static/img/gold-spoon.png" alt="">
+                <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
             </div>
             <h2 class="book">Book A Table</h2>
             <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=138772&type=standard&theme=wide&color=1&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
@@ -168,7 +170,7 @@
     <div class="menu">
         <div class="wrapper">
             <div class="icon">
-                <img src="../static/img/double-spoons.png" alt="">
+                <img src="{{ url_for('static', filename='img/double-spoons.png') }}" alt="">
             </div>
             <h2><a href="#">Bar Menu</a></h2>
             <h2><a href="#">Dinner Menu</a></h2>
@@ -180,7 +182,7 @@
             <div class="tiptop">
                 <p>Menu that fits your pallete</p>
                 <div>
-                    <img src="../static/img/gold-spoon.png" alt="">
+                    <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
                 </div>
                 <h2>Today's Special</h2>
             </div>
@@ -190,169 +192,108 @@
                     <div class="wine">
                         <div class="top">
                             <div class="name">
-                                <h5>Chapel Hill Shiraz</h5>
+                                <h5>{{ sangria[0]['name'] }}</h5>
                             </div>
                             <div class="bar-line">
                                 <p><hr></p>
                             </div>
                             <div class="price">
-                                <h5>$56</h5>
+                                <h5>${{ sangria[0]['price'] }}</h5>
                             </div>
                         </div>
                         <div class="btm">
-                            <p>AU | Bottle</p>
+                            <p>{{ sangria[0]['region'] }} | {{ sangria[0]['grape'] }}</p>
                         </div>
                     </div>
                     <div class="wine">
                         <div class="top">
                             <div class="name">
-                                <h5>Chapel Hill Shiraz</h5>
+                                <h5>{{ white_wine[0]['name'] }}</h5>
                             </div>
                             <div class="bar-line">
                                 <p><hr></p>
                             </div>
                             <div class="price">
-                                <h5>$56</h5>
+                                <h5>${{ white_wine[0]['price'] }}</h5>
                             </div>
                         </div>
                         <div class="btm">
-                            <p>AU | Bottle</p>
+                            <p>{{ white_wine[0]['region'] }} | BTG</p>
                         </div>
                     </div>
                     <div class="wine">
                         <div class="top">
                             <div class="name">
-                                <h5>Chapel Hill Shiraz</h5>
+                                <h5>{{ white_wine[1]['name'] }}</h5>
                             </div>
                             <div class="bar-line">
                                 <p><hr></p>
                             </div>
                             <div class="price">
-                                <h5>$56</h5>
+                                <h5>${{ white_wine[1]['price'] }}</h5>
                             </div>
                         </div>
                         <div class="btm">
-                            <p>AU | Bottle</p>
+                            <p>{{ white_wine[1]['region'] }} | BTG</p>
                         </div>
                     </div>
                     <div class="wine">
                         <div class="top">
                             <div class="name">
-                                <h5>Chapel Hill Shiraz</h5>
+                                <h5>{{ red_wine[0]['name'] }}</h5>
                             </div>
                             <div class="bar-line">
                                 <p><hr></p>
                             </div>
                             <div class="price">
-                                <h5>$56</h5>
+                                <h5>${{ red_wine[0]['price'] }}</h5>
                             </div>
                         </div>
                         <div class="btm">
-                            <p>AU | Bottle</p>
+                            <p>{{ red_wine[0]['region'] }} | BTG</p>
                         </div>
                     </div>
                     <div class="wine">
                         <div class="top">
                             <div class="name">
-                                <h5>Chapel Hill Shiraz</h5>
+                                <h5>{{ beer[0]['name'] }}</h5>
                             </div>
                             <div class="bar-line">
                                 <p><hr></p>
                             </div>
                             <div class="price">
-                                <h5>$56</h5>
+                                <h5>${{ beer[0]['price'] }}</h5>
                             </div>
                         </div>
                         <div class="btm">
-                            <p>AU | Bottle</p>
+                            <p>{{ beer[0]['region'] }} | Draft</p>
                         </div>
                     </div>
                 </div>
                 <div class="middle">
-                    <img src="../static/img/bar-kit.png" alt="">
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/bar-kit.png') }}" alt="">
                 </div>
                 <div class="right">
                     <h2 class="title">Cocktails</h2>
-                    <div class="wine">
-                        <div class="top">
-                            <div class="name">
-                                <h5>Chapel Hill Shiraz</h5>
+                    {% for drink in range(5) %}
+                        <div class="wine">
+                            <div class="top">
+                                <div class="name">
+                                    <h5>{{ cocktails[drink]['name']}}</h5>
+                                </div>
+                                <div class="bar-line">
+                                    <p><hr></p>
+                                </div>
+                                <div class="price">
+                                    <h5>${{ cocktails[drink]['price']}}</h5>
+                                </div>
                             </div>
-                            <div class="bar-line">
-                                <p><hr></p>
-                            </div>
-                            <div class="price">
-                                <h5>$56</h5>
-                            </div>
-                        </div>
-                        <div class="btm">
-                            <p>AU | Bottle</p>
-                        </div>
-                    </div>
-                    <div class="wine">
-                        <div class="top">
-                            <div class="name">
-                                <h5>Chapel Hill Shiraz</h5>
-                            </div>
-                            <div class="bar-line">
-                                <p><hr></p>
-                            </div>
-                            <div class="price">
-                                <h5>$56</h5>
+                            <div class="btm">
+                                <p>{{ cocktails[drink]['ingredients']}}</p>
                             </div>
                         </div>
-                        <div class="btm">
-                            <p>AU | Bottle</p>
-                        </div>
-                    </div>
-                    <div class="wine">
-                        <div class="top">
-                            <div class="name">
-                                <h5>Chapel Hill Shiraz</h5>
-                            </div>
-                            <div class="bar-line">
-                                <p><hr></p>
-                            </div>
-                            <div class="price">
-                                <h5>$56</h5>
-                            </div>
-                        </div>
-                        <div class="btm">
-                            <p>AU | Bottle</p>
-                        </div>
-                    </div>
-                    <div class="wine">
-                        <div class="top">
-                            <div class="name">
-                                <h5>Chapel Hill Shiraz</h5>
-                            </div>
-                            <div class="bar-line">
-                                <p><hr></p>
-                            </div>
-                            <div class="price">
-                                <h5>$56</h5>
-                            </div>
-                        </div>
-                        <div class="btm">
-                            <p>AU | Bottle</p>
-                        </div>
-                    </div>
-                    <div class="wine">
-                        <div class="top">
-                            <div class="name">
-                                <h5>Chapel Hill Shiraz</h5>
-                            </div>
-                            <div class="bar-line">
-                                <p><hr></p>
-                            </div>
-                            <div class="price">
-                                <h5>$56</h5>
-                            </div>
-                        </div>
-                        <div class="btm">
-                            <p>AU | Bottle</p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="btm-btn">
@@ -365,7 +306,8 @@
     <div class="owner">
         <div class="wrapper">
             <div class="left">
-                <img src="../static/img/tom.png" alt="">
+
+                <img src="{{ url_for('static', filename='img/tom.png') }}" alt="">
             </div>
             <div class="right">
                 <div class="top">
@@ -373,7 +315,8 @@
                         <h5>Owner's Word</h5>
                     </div>
                     <div>
-                        <img src="../static/img/red-spoon.png" alt="">
+                        <!--Jinja2-->
+                        <img src="{{ url_for('static', filename='img/red-spoon.png') }}" alt="">
                     </div>
                     <div class="belief">
                         <h2>Leaving the NFL</h2>
@@ -381,7 +324,8 @@
                 </div>
                 <div class="mid">
                     <div class="content">
-                        <p><img src="../static/img/“.png" alt=""> I worked so hard to tune everything out. Now that I'm done, I'm trying to let people get to know me first, who I am rather than what I've done. But it's pretty special. It's really special.</p>
+                        <!--Jinja2-->
+                        <p><img src="{{ url_for('static', filename='img/“.png') }}" alt=""> I worked so hard to tune everything out. Now that I'm done, I'm trying to let people get to know me first, who I am rather than what I've done. But it's pretty special. It's really special.</p>
                     </div>
                 </div>
                 <div class="btm">
@@ -398,18 +342,21 @@
         </div>
     </div>
     <div class="testimonials">
-        <img class="spoons" src="../static/img/double-spoons.png" alt="">
+        <!--Jinja2-->
+        <img class="spoons" src="{{ url_for('static', filename='img/double-spoons.png') }}" alt="">
         <div class="wrapper">
             <div class="top">
                 <h5>Testimonials</h5>
                 <div>
-                    <img src="../static/img/gold-spoon.png" alt="">
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
                 </div>
                 <h2>Happy Customers</h2>
             </div>
             <div class="btm-grid">
                 <div class="grid-item">
-                    <img src="../static/img/pexels-mehmet-turgut-kirkgoz-12007078.jpg" alt="">
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/pexels-mehmet-turgut-kirkgoz-12007078.jpg') }}" alt="">
                     <div class="content">
                         <p>"WE NEVER MADE OUR WAY to the entrees on Lamorga's fetching menu, delightfully waylaid as we were by tapas and cocktails"</p>
                         <h4>Micheal C.</h4>
@@ -417,7 +364,8 @@
                     </div>
                 </div>
                 <div class="grid-item">
-                    <img src="../static/img/pexels-juan-pablo-serrano-arenas-1587830.jpg" alt="">
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/pexels-juan-pablo-serrano-arenas-1587830.jpg') }}" alt="">
                     <div class="content">
                         <p>"We had an enjoyable and quiet dinner. Excellent mix of flavors and Mediterranean texture. We started with Tapas as appetizers and two lovely entrees , the grouper for me and steak for my husband."</p>
                         <h4>Wade W.</h4>
@@ -425,7 +373,8 @@
                     </div>
                 </div>
                 <div class="grid-item">
-                    <img src="../static/img/pexels-max-avans-5056613.jpg" alt="">
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/pexels-max-avans-5056613.jpg') }}" alt="">
                     <div class="content">
                         <p> "Really enjoyed the service, drinks, and especially the food.  We had a large group with children and it was handled with grace and professionalism."</p>
                         <h4>Jason N.</h4>
@@ -433,7 +382,8 @@
                     </div>
                 </div>
                 <div class="grid-item">
-                    <img src="../static/img/pexels-mikhail-nilov-8093844.jpg" alt="">
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/pexels-mikhail-nilov-8093844.jpg') }}" alt="">
                     <div class="content">
                         <p>"I never know what to expect with any restaurants post Covid, but this place knocked me off my feet! We went for Thanksgiving as a treat, and wow!" </p>
                         <h4>Jennifer M.</h4>
@@ -448,13 +398,15 @@
             <div class="left">
                 <div>
                     <h5>Awards & Recognition</h5>
-                    <img src="../static/img/gold-spoon.png" alt="">
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
                 </div>
                 <h2>Our Laurels</h2>
                 <div class="grid">
                     <div class="grid-item">
                         <div class="icon">
-                            <img src="../static/img/number-1-icon.png" alt="">
+                            <!--Jinja2-->
+                            <img src="{{ url_for('static', filename='img/number-1-icon.png') }}" alt="">
                         </div>
                         <div class="content">
                             <h5>Naples Illustrated Dining Awards 2022 <br> Best International Cusine - Editors Pick</h5>
@@ -463,7 +415,8 @@
                     </div>
                     <div class="grid-item">
                         <div class="icon">
-                            <img src="../static/img/paradise-coast-icon.png" alt="">
+                            <!--Jinja2-->
+                            <img src="{{ url_for('static', filename='img/paradise-coast-icon.png') }}" alt="">
                         </div>
                         <div class="content">
                             <h5>Paradise Coast - Award Wining Restaurants</h5>
@@ -472,7 +425,8 @@
                     </div>
                     <div class="grid-item">
                         <div class="icon">
-                            <img src="../static/img/trip-advisor-icon.png" alt="">
+                            <!--Jinja2-->
+                            <img src="{{ url_for('static', filename='img/trip-advisor-icon.png') }}" alt="">
                         </div>
                         <div class="content">
                             <h5>Trip Advisor - Travelers' Choice 2022</h5>
@@ -483,7 +437,8 @@
                 </div>
             </div>
             <div class="right">
-                <img src="../static/img/mushroom-roll.png" alt="">
+                <!--Jinja2-->
+                <img src="{{ url_for('static', filename='img/mushroom-roll.png') }}" alt="">
             </div>
         </div>
     </div>
@@ -497,7 +452,8 @@
             <div class="left">
                 <div>
                     <h5>Instagram</h5>
-                    <img src="../static/img/gold-spoon.png" alt="">
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
                 </div>
                 <h2>Photo Gallery</h2>
                 <div class="btm">
@@ -511,22 +467,22 @@
                 <div class="mask-group">
                     <div class="rectangle">
                         <a class="tag" href="https://www.instagram.com/lamoraganaples/?hl=en">
-                            <img src="../static/img/IMG_0470.jpg" alt="">
+                            <img src="{{ url_for('static', filename='img/IMG_0470.jpg') }}" alt="">
                         </a>
                     </div>
                     <div class="rectangle dub">
                         <a class="tag" href="https://www.instagram.com/lamoraganaples/?hl=en">
-                            <img src="../static/img/IMG_0471.jpg" alt="">
+                            <img src="{{ url_for('static', filename='img/IMG_0471.jpg') }}" alt="">
                         </a>
                     </div>
                     <div class="rectangle rub">
                         <a class="tag" href="https://www.instagram.com/lamoraganaples/?hl=en">
-                            <img src="../static/img/IMG_0440.jpg" alt="">
+                            <img src="{{ url_for('static', filename='img/IMG_0440.jpg') }}" alt="">
                         </a>
                     </div>
                     <div class="rectangle sub">
                         <a class="tag" href="https://www.instagram.com/lamoraganaples/?hl=en">
-                            <img src="../static/img/IMG_0561.jpg" alt="">
+                            <img src="{{ url_for('static', filename='img/IMG_0561.jpg') }}" alt="">
                         </a>
                     </div>
                 </div>
@@ -539,7 +495,8 @@
             <div class="contact">
                 <div class="top">
                     <h5>Newsletter</h5>
-                    <img src="../static/img/red-spoon.png" alt="">
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/red-spoon.png') }}" alt="">
                     <h2>Subscribe To Our Newsletter</h2>
                     <p>And never miss the latest Updates!</p>
                 </div>
@@ -558,13 +515,14 @@
                 <div class="mid">
                     <h2>LAMORAGA</h2>
                     <p>"The best way to find yourself is to lose yourself in the service of others.”</p>
-                    <img src="../static/img/gold-spoon.png" alt="">
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
                     <div class="btm">
                         <a href="https://www.facebook.com/LamoragaNaples">
-                            <img src="../static/img/u_facebook-f.png" alt="">
+                            <img src="{{ url_for('static', filename='img/u_facebook-f.png') }}" alt="">
                         </a>
                         <a href="https://www.instagram.com/lamoraganaples/?hl=en">
-                            <img src="../static/img/u_instagram.png" alt="">
+                            <img src="{{ url_for('static', filename='img/u_instagram.png') }}" alt="">
                         </a>
                     </div>
                 </div>
@@ -581,6 +539,7 @@
             </div>
         </div>
     </div>
-    <script src="../static/js/main.js"></script>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
