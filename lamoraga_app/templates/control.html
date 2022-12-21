@@ -15,5 +15,16 @@
         <input class="file-upload-input" type="file" name="cover" onchange="readUrl(this)" accept="Image/*">
         <input type="submit" value="Save">
     </form>
+    {% for post in posts %}
+        <div class="post">
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.content }}</p>
+            <img src="../static/blob_imgs/{{ post.cover.filename }}" alt="">
+            {% for name in blog_imgs %}
+                {% if post.cover == name %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endfor %}
 </body>
 </html>

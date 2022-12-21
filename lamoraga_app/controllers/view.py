@@ -13,7 +13,7 @@ from lamoraga_app.models.wine import Wine
 
 @app.route('/')
 def index():
-    return render_template('index.html', cocktails=Cocktail.get_all_cocktails(), sangria=Wine.get_sangria(), white_wine=Wine.get_white(), red_wine=Wine.get_red(), beer=Beer.get_beer(), event = Events.delete_event())
+    return render_template('index.html', cocktails=Cocktail.get_all_cocktails(), sangria=Wine.get_sangria(), white_wine=Wine.get_white(), red_wine=Wine.get_red(), beer=Beer.get_beer(), event = Events.delete_event(), blog_imgs = Blog.get_blog_imgs(), posts = Blog.get_all_posts())
 
 
 @app.route('/the-restaurant/history/')
@@ -49,7 +49,7 @@ def admin():
 
 @app.route('/lenvera-console')
 def console():
-    return render_template('control.html')
+    return render_template('control.html', blog_imgs = Blog.get_blog_imgs(), posts = Blog.get_all_posts())
 
 
 @app.route('/login', methods=['POST'])
@@ -62,7 +62,7 @@ def login():
     if User.check_admin(data) == False:
         return redirect('/')
     else:
-        return redirect('/lenvera-console')
+        return redirect(url_for('console'))
 
 
 @app.route('/lenvera-admin/newpost/', methods=['POST'])
@@ -71,4 +71,4 @@ def save_post():
     content = request.form.get('content')
     cover = request.files['cover']
     Blog.save_post(title, content, cover)
-    return redirect('/')
+    return redirect(url_for('console'))

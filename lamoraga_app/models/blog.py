@@ -1,3 +1,5 @@
+import os
+
 from lamoraga_app.config.mysqlconnection import connectToMySQL
 
 db = 'lamoraga'
@@ -12,7 +14,21 @@ class Blog(object):
 
     # Saves the Blog Post data
     def save_post(title, content, cover):
-        connectToMySQL(db).insertBLOB(title, content, cover)
+        with open("lamoraga_app/static/blob_imgs/" + cover.filename, "wb") as f:
+            f.write(cover.read())
+        print("The File has been processed")
+        data = {
+            "title": title,
+            "content": content,
+            "cover": cover.read(),
+        }
+        query = "INSERT INTO blog (title, content, cover) VALUES (%(title)s, %(content)s, %(cover)s);"
+        return connectToMySQL(db).query_db(query, data)
+
+    # Gets the list of the imgs
+    def get_blog_imgs():
+        print(os.listdir("lamoraga_app/static/blob_imgs"))
+        return os.listdir("lamoraga_app/static/blob_imgs")
 
     # Gets the Blog Post data
     def get_all_posts():

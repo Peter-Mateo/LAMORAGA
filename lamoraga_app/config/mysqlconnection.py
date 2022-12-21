@@ -37,36 +37,6 @@ class MySQLConnection:
                 # close the connection
                 self.connection.close()
 
-    def convertToBinaryData(self,filename):
-        # Convert digital data to binary format
-        with open(filename, 'rb') as file:
-            binaryData = file.read()
-        return binaryData
-
-    def insertBLOB(self,title, content, cover):
-        print("Inserting BLOB into blog table")
-        try:
-            connection = mysql.connector.connect(host='localhost',
-                                                database='lamoraga',
-                                                user='root',
-                                                password='root')
-
-            cursor = connection.cursor()
-            sql_insert_blob_query = """ INSERT INTO blog
-                            (title, content, cover) VALUES (%(title)s,%(content)s,%(cover)s)"""
-
-            cover_photo = cover.read()
-
-            # Convert data into tuple format
-            insert_blob_tuple = {'title': title, 'content': content, 'cover': cover_photo}
-            result = self.cursor.execute(sql_insert_blob_query, insert_blob_tuple)
-            print(result)
-            self.connection.commit()
-            print("Image and data inserted successfully as a BLOB into blog table", result)
-
-        except mysql.connector.Error as error:
-            print("Failed inserting BLOB data into MySQL table {}".format(error))
-
 
 # connectToMySQL receives the database we're using and uses it to create an instance of MySQLConnection
 def connectToMySQL(db):
