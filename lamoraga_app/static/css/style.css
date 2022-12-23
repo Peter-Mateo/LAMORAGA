@@ -9,23 +9,23 @@
 #bg-line-1{
     position: absolute;
     top: 0;
-    z-index: auto;
+    z-index: -1;
 }
 #bg-line-2{
     position: absolute;
     top: 0;
     right: -10px;
-    z-index: auto;
+    z-index: -1;
 }
 #bg-line-3{
     position: absolute;
-    top: 0;
+    top: 200px;
     right: -10px;
-    z-index: auto;
+    z-index: -1;
 }
 #bg-line-4{
     position: absolute;
-    z-index: auto;
+    z-index: -1;
     right: 0;
 }
 p{
@@ -116,7 +116,8 @@ body{
 }
 header{
     height: 100vh;
-    z-index: 1;
+    z-index: 5;
+    background-color: #040404;
 }
 header a {
     text-decoration: none;

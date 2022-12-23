@@ -28,11 +28,10 @@
             <div class="nav-middle">
                 <ul>
                     <li><a href="{{ url_for('index')}}">Home</a></li>
-                    <li><a href="{{ url_for('about')}}">About Us</a></li>
-                    <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
                     <li><a href="{{ url_for('menu')}}">Menu</a></li>
-                    <li><a href="{{ url_for('blog')}}">Blog</a></li>
                     <li><a href="{{ url_for('events')}}">Events</a></li>
+                    <li><a href="{{ url_for('blog')}}">Blog</a></li>
+                    <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
                 </ul>
             </div>
             <div class="nav-right">
@@ -175,9 +174,9 @@
             <div class="icon">
                 <img src="{{ url_for('static', filename='img/double-spoons.png') }}" alt="">
             </div>
-            <h2><a id="bar_menu" href="#">Bar Menu</a></h2>
-            <h2><a id="din_menu" href="#">Dinner Menu</a></h2>
-            <h2><a id="des_menu" href="#">Vegan Menu</a></h2>
+            <h2><a id="bar_menu" href="{{ url_for('menu') }}">Bar Menu</a></h2>
+            <h2><a id="din_menu" href="{{ url_for('menu') }}">Dinner Menu</a></h2>
+            <h2><a id="des_menu" href="{{ url_for('menu') }}">Vegan Menu</a></h2>
         </div>
     </div>
     <div class="specials">

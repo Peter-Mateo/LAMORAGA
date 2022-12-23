@@ -1,7 +1,6 @@
 from datetime import datetime
 
 from flask import flash, redirect, render_template, request, url_for
-from flask_babel import format_date
 
 from lamoraga_app import app
 from lamoraga_app.models.beer import Beer
