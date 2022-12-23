@@ -5,9 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naples Restaurant - International Food, Best Tapas | Lamoraga</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <meta name="geo.country" content="US">
+    <meta name="geo.region" content="US-FL">
+    <meta name="geo.placename" content="Lamoraga">
+    <meta name="geo.position" content="26.194206318854413, -81.79952854229583">
+    <meta name="googlebot" content="index, follow">
+    <meta name="author" content="Lamoraga">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="General">
+    <meta name="language" content="English">
+    <meta name="distribution" content="global">
+    <meta name="google" content="notranslate">
+    <meta name="msnbot" content="index, follow">
+    <meta name="yahoo" content="index, follow">
 	<meta name="description" content="Lamoraga International Restaurant Naples FL offers the Best Tapas and Freshest Seafood. Visit our authentic cuisine dining spot - The Restaurant in Naples!" />
-    <!-- Need to Update teh Canonical Link-->
+    <meta name="keywords" content="Lamoraga, Restaurant, Naples, FL, International, Food, Best, Tapas, Seafood, Authentic, Cuisine, Dining, Spot, Restaurant, Mediterranean cuisine, Spanish food, Meal, Dinner, Menu, Chef, Mediterranean Food, Mediterranean Cuisine, Mediterranean Restaurant Naples, Mediterranean Food Naples, Mediterranean Cuisine Naples, Mediterranean Restaurant Florida, Mediterranean Food Florida, Mediterranean Cuisine Florida, Mediterranean Restaurant 34102, Mediterranean Food 34102, Mediterranean Cuisine 34102, Mediterranean Restaurant 34103, Mediterranean Food 34103, Mediterranean Cuisine 34103 Mediterranean Restaurant 34104, Mediterranean Food 34104, Mediterranean Cuisine 34104, Mediterranean Restaurant 34105, Mediterranean Food 34105, Mediterranean Cuisine 34105, Mediterranean Restaurant 34108, Mediterranean Food 34108, Mediterranean Cuisine 34108, Mediterranean Restaurant 34109, Mediterranean Food 34109, Mediterranean Cuisine 34109, Mediterranean Restaurant 34110, Mediterranean Food 34110, Mediterranean Cuisine 34110, Mediterranean Restaurant 34112, Mediterranean Food 34112" />
 	<link rel="canonical" href="https://www.lamoragarestaurant.com/" />
 	<meta property="og:locale" content="en_US" />
 	<meta property="og:type" content="website" />
@@ -16,9 +29,9 @@
 	<meta property="og:url" content="https://www.lamoragarestaurant.com/" />
 	<meta property="og:site_name" content="Lamoraga" />
 	<meta property="article:modified_time" content="2015-09-23T23:46:24+00:00" />
-    <!-- Need to Update All these Links-->
 	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.lamoragarestaurant.com/#website","url":"https://www.lamoragarestaurant.com/","name":"Lamoraga","description":"","potentialAction":[{"@type":"SearchAction","target":"https://www.lamoragarestaurant.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.lamoragarestaurant.com/#webpage","url":"https://www.lamoragarestaurant.com/","name":"Naples Restaurant - International Food, Best Tapas | Lamoraga","isPartOf":{"@id":"https://www.lamoragarestaurant.com/#website"},"datePublished":"2014-08-08T12:04:09+00:00","dateModified":"2015-09-23T23:46:24+00:00","description":"Lamoraga International Restaurant Naples FL offers the Best Tapas and Freshest Seafood. Visit our authentic cuisine dining spot - The Restaurant in Naples!","breadcrumb":{"@id":"https://www.lamoragarestaurant.com/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.lamoragarestaurant.com/"]}]},{"@type":"BreadcrumbList","@id":"https://www.lamoragarestaurant.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.lamoragarestaurant.com/#webpage"}}]}]}</script>
-    <!--Jinja2-->
+    <!--async-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
@@ -165,18 +178,18 @@
             <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=138772&type=standard&theme=wide&color=1&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
         </div>
     </div>
-    <!-- <img id="bg-line-1" src="{{ url_for('static', filename='img/vector 15.png') }}" alt="">
+    <img id="bg-line-1" src="{{ url_for('static', filename='img/vector 15.png') }}" alt="">
     <img id="bg-line-2" src="{{ url_for('static', filename='img/vector 15.png') }}" alt="">
     <img id="bg-line-3" src="{{ url_for('static', filename='img/vector 14.png') }}" alt="">
-    <img id="bg-line-4" src="{{ url_for('static', filename='img/vector 14.png') }}" alt=""> -->
+    <img id="bg-line-4" src="{{ url_for('static', filename='img/vector 14.png') }}" alt="">
     <div class="menu">
         <div class="wrapper">
             <div class="icon">
                 <img src="{{ url_for('static', filename='img/double-spoons.png') }}" alt="">
             </div>
-            <h2><a id="bar_menu" href="{{ url_for('menu') }}">Bar Menu</a></h2>
-            <h2><a id="din_menu" href="{{ url_for('menu') }}">Dinner Menu</a></h2>
-            <h2><a id="des_menu" href="{{ url_for('menu') }}">Vegan Menu</a></h2>
+            <h2><a id="bar_menu" href="{{ url_for('menu_type', menu = 'bar' )}}">Bar Menu</a></h2>
+            <h2><a id="din_menu" href="{{ url_for('menu_type', menu = 'dinner' )}}">Dinner Menu</a></h2>
+            <h2><a id="des_menu" href="{{ url_for('menu_type', menu = 'vegan' )}}">Vegan Menu</a></h2>
         </div>
     </div>
     <div class="specials">
@@ -300,7 +313,7 @@
             </div>
             <div class="btm-btn">
                 <div class="btn">
-                    <a href="#">View More</a>
+                    <a href="{{ url_for('menu_type', menu = 'cocktails' )}}">View More</a>
                 </div>
             </div>
         </div>

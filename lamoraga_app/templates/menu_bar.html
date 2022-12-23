@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menus | Lamoraga</title>
+    <meta name="description" content="Experience the flavors of the Mediterranean at our restaurant in Naples. Our menu features a variety of delicious tapas, seafood dishes, and other authentic cuisine. Stop by and taste the difference!">
+    <meta name="keywords" content="Lamoraga, Restaurant, Naples, FL, International, Food, Best, Tapas, Seafood, Authentic, Cuisine, Dining, Spot, Restaurant, Mediterranean cuisine, Spanish food, Meal, Dinner, Menu, Chef" />
+    <meta name="geo.country" content="US">
+    <meta name="geo.region" content="US-FL">
+    <meta name="geo.placename" content="Lamoraga">
+    <meta name="geo.position" content="26.194206318854413, -81.79952854229583">
+    <meta name="googlebot" content="index, follow">
+    <meta name="author" content="Lamoraga">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="General">
+    <meta name="language" content="English">
+    <meta name="distribution" content="global">
+    <meta name="google" content="notranslate">
+    <meta name="msnbot" content="index, follow">
+    <meta name="yahoo" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Menus | Lamoraga">
+    <meta property="og:description" content="Experience the flavors of the Mediterranean at our restaurant in Naples. Our menu features a variety of delicious tapas, seafood dishes, and other authentic cuisine. Stop by and taste the difference!">
+    <meta property="og:image" content="{{ url_for('static', filename='img/IMG_0646.jpg') }}">
+    <meta property="og:url" content="https://lamoraga.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lamoraga">
+    <meta property="og:locale" content="en_US">
+    <meta property="fb:app_id" content="123456789">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Lamoraga">
+    <meta property="twitter:description" content="Experience the flavors of the Mediterranean at our restaurant in Naples. Our menu features a variety of delicious tapas, seafood dishes, and other authentic cuisine. Stop by and taste the difference!">
+    <meta property="twitter:image" content="{{ url_for('static', filename='img/IMG_0646.jpg') }}">
+    <meta property="twitter:url" content="https://lamoraga.com">
+    <meta property="twitter:site" content="@lamoraga">
+    <meta property="twitter:creator" content="@lamoraga">
+    <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.lamoragarestaurant.com/#website","url":"https://www.lamoragarestaurant.com/","name":"Lamoraga","description":"","potentialAction":[{"@type":"SearchAction","target":"https://www.lamoragarestaurant.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.lamoragarestaurant.com/menus/#webpage","url":"https://www.lamoragarestaurant.com/menus/","name":"Menus | Lamoraga","isPartOf":{"@id":"https://www.lamoragarestaurant.com/#website"},"datePublished":"2014-07-01T11:55:49+00:00","dateModified":"2015-09-18T09:42:37+00:00","breadcrumb":{"@id":"https://www.lamoragarestaurant.com/menus/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.lamoragarestaurant.com/menus/"]}]},{"@type":"BreadcrumbList","@id":"https://www.lamoragarestaurant.com/menus/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.lamoragarestaurant.com/","url":"https://www.lamoragarestaurant.com/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.lamoragarestaurant.com/menus/#webpage"}}]}]}</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo"><a href="{{ url_for('index')}}">LAMORAGA</a></div>
+            <div class="nav-middle">
+                <ul>
+                    <li><a href="{{ url_for('index')}}">Home</a></li>
+                    <li><a href="{{ url_for('about')}}">About Us</a></li>
+                    <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
+                    <li><a href="{{ url_for('menu')}}">Menu</a></li>
+                    <li><a href="{{ url_for('blog')}}">Blog</a></li>
+                    <li><a href="{{ url_for('events')}}">Events</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="left" id="left">
+                    <a class="top" href="#">Gift Cards <img class="red-tri" src="{{ url_for('static', filename='img/red-triangle.png') }}" alt=""></a>
+                    <div id="back"></div>
+                    <ul class="dropdown">
+                        <li><a href="https://www.toasttab.com/lamoraga/giftcards">New Gift Card</a></li>
+                        <li><a href="https://www.toasttab.com/lamoraga/findcard">Check Balance</a></li>
+                    </ul>
+                </div>
+                |
+                <div class="right" id="right">
+                    <a class="book_table">Book Table</a>
+                    <div class="open_tble">
+                        <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=138772&type=standard&theme=standard&color=1&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="wrapper">
+        </div>
+        <div class="event-slide">
+            <h1>Menus</h1>
+        </div>
+    </header>
+    <div class="menu-bg">
+        <div class="wrapper">
+            <div class="type-btn">
+                <input type="button" id="tapa_btn" value="Tapas">
+                <input type="button" id="soup_salad_btn" value="Soups & Salads">
+                <input type="button" id="entree_btn" value="Dinner">
+                <input type="button" id="vegan_btn" value="Vegan">
+                <input type="button" id="happyhour_btn" class="active" value="Happy Hour">
+                <input type="button" id="drinks_btn" value="Drinks">
+            </div>
+            <div id="tapas">
+                <div class="items">
+                    <div class="contain">
+                        <H2>From the Sea</H2>
+                        <div class="menu-item">
+                            {% for app in sea %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    {% if app['name'] == 'Spanish Octopus' %}
+                                        <p class="price">$MRKT</p>
+                                    {% else %}
+                                        <p class="price">${{ app['price'] }}</p>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="contain">
+                        <H2>From Land</H2>
+                        <div class="menu-item">
+                            {% for app in land %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    <p class="price">${{ app['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="contain">
+                        <H2>Pinchos</H2>
+                        <div class="menu-item">
+                            {% for app in pinchos %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    <p class="price">${{ app['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="soups_salad">
+                <div class="items">
+                    <div class="contain">
+                        <H2>Soups</H2>
+                        <div class="menu-item">
+                            {% for app in soups %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    {% if app['name'] == 'Spanish Octopus' %}
+                                        <p class="price">$MRKT</p>
+                                    {% else %}
+                                        <p class="price">${{ app['price'] }}</p>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="contain">
+                        <H2>Salads</H2>
+                        <div class="menu-item">
+                            {% for app in salads %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    <p class="price">${{ app['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="entrees">
+                <div class="items">
+                    <div class="contain">
+                        <H2>From the Sea</H2>
+                        <div class="menu-item">
+                            {% for app in sea_dinner %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    <p class="price">${{ app['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="contain">
+                        <H2>From Land</H2>
+                        <div class="menu-item">
+                            {% for app in land_dinner %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    <p class="price">${{ app['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="contain">
+                        <H2>Sides</H2>
+                        <div class="menu-item">
+                            {% for app in sides %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    <p class="price">${{ app['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="contain">
+                        <H2>Desserts</H2>
+                        <div class="menu-item">
+                            {% for app in dessert %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    <p class="price">${{ app['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="vegan">
+                <div class="items">
+                    <div class="contain">
+                        <H2>Vegan Options</H2>
+                        <div class="menu-item">
+                            {% for app in vegan_dinner %}
+                                <div class="menu-info">
+                                    <h3>{{ app['name'] }}</h3>
+                                    <p>{{ app['description'] }}</p>
+                                    <p class="price">${{ app['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="happyhour" style="display: block!important;">
+                <div class="items">
+                    <div class="contain">
+                        <H2>From the Sea</H2>
+                        <div class="menu-item">
+                            {% for hr in hrS %}
+                                <div class="menu-info">
+                                    <h3>{{ hr['name'] }}</h3>
+                                    <p>{{ hr['ingredients'] }}</p>
+                                    <p class="price">${{ hr['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="contain">
+                        <H2>From Land</H2>
+                        <div class="menu-item">
+                            {% for hr in hrL %}
+                                <div class="menu-info">
+                                    <h3>{{ hr['name'] }}</h3>
+                                    <p>{{ hr['ingredients'] }}</p>
+                                    <p class="price">${{ hr['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="contain">
+                        <H2>Sides</H2>
+                        <div class="menu-item">
+                            {% for hr in hrs %}
+                                <div class="menu-info">
+                                    <h3>{{ hr['name'] }}</h3>
+                                    <p>{{ hr['ingredients'] }}</p>
+                                    <p class="price">${{ hr['price'] }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="drinks">
+                <div class="items">
+                    <div class="contain">
+                        <div class="type-btn">
+                            <input type="button" id="cocktails_btn" class="active" value="Cocktails & Beer">
+                            <input type="button" id="wine_btn" value="Wine BTG">
+                            <input type="button" id="wine_btl_btn" value="Wine">
+                        </div>
+                        <div id="cocktails">
+                            <div class="items">
+                                <div class="contain">
+                                    <H2>Cocktails</H2>
+                                    <div class="menu-item">
+                                        {% for tail in cocktails %}
+                                            <div class="menu-info">
+                                                <h3>{{ tail['name'] }}</h3>
+                                                <p>{{ tail['ingredients'] }}</p>
+                                                <p class="price">${{ tail['price'] }}</p>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="contain">
+                                    <H2>Beer</H2>
+                                    <div class="menu-item">
+                                        {% for beer in beers %}
+                                            <div class="menu-info">
+                                                <h3>{{ beer['name'] }}</h3>
+                                                {% if beer['region'] %}
+                                                    <p>{{ beer['region'] }} - Draft/On-Tap</p>
+                                                {% else %}
+                                                    <p>Bottle</p>
+                                                {% endif %}
+                                                <p class="price">${{ beer['price'] }}</p>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="wine_btg">
+                            <div class="items">
+                                <div class="contain">
+                                    <H2>Wines by the Glass</H2>
+                                    <div class="wine-items">
+                                        {% for san in sangria %}
+                                            <div class="menu-info">
+                                                <div class="left">
+                                                    <h5>{{ san['name'] }},<span>.</span></h5>
+                                                    <p>{{ san['region'] }}</p>
+                                                </div>
+                                                <div class="wine-price">
+                                                    <p class="price">${{ san['price'] }} | ${{ san['btl_price'] }}</p>
+                                                </div>
+                                            </div>
+                                            <p>{{ san['grape']  }}</p>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="contain">
+                                    <H2>Sparkling</H2>
+                                    <div class="wine-items">
+                                        {% for sparkling in sparklings %}
+                                            <div class="menu-info">
+                                                <div class="left">
+                                                    <p>{{ sparkling['grape']  }},<span>.</span></p>
+                                                    <h5>{{ sparkling['name'] }},<span>.</span></h5>
+                                                    <p>{{ sparkling['region'] }}</p>
+                                                </div>
+                                                <div class="wine-price">
+                                                    {% if sparkling['btl_price'] %}
+                                                        <p class="price">${{ sparkling['price'] }} | ${{ sparkling['btl_price'] }}</p>
+                                                    {% else %}
+                                                        <p class="price">${{ sparkling['price'] }}</p>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="contain">
+                                    <H2>Rosé</H2>
+                                    <div class="wine-items">
+                                        {% for rose in rose_wine %}
+                                            <div class="menu-info">
+                                                <div class="left">
+                                                    <p>{{ rose['grape']  }},<span>.</span></p>
+                                                    <h5>{{ rose['name'] }},<span>.</span></h5>
+                                                    <p>{{ rose['region'] }}</p>
+                                                </div>
+                                                <div class="wine-price">
+                                                    {% if rose['btl_price'] %}
+                                                        <p class="price">${{ rose['price'] }} | ${{ rose['btl_price'] }}</p>
+                                                    {% else %}
+                                                        <p class="price">${{ rose['price'] }}</p>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="contain">
+                                    <H2>White</H2>
+                                    <div class="wine-items">
+                                        {% for white in white_wine %}
+                                            <div class="menu-info">
+                                                <div class="left">
+                                                    <p>{{ white['grape']  }},<span>.</span></p>
+                                                    <h5>{{ white['name'] }},<span>.</span></h5>
+                                                    <p>{{ white['region'] }}</p>
+                                                </div>
+                                                <div class="wine-price">
+                                                    {% if white['btl_price'] %}
+                                                        <p class="price">${{ white['price'] }} | ${{ white['btl_price'] }}</p>
+                                                    {% else %}
+                                                        <p class="price">${{ white['price'] }}</p>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="contain">
+                                    <H2>Red</H2>
+                                    <div class="wine-items">
+                                        {% for red in red_wine %}
+                                            <div class="menu-info">
+                                                <div class="left">
+                                                    <p>{{ red['grape']  }},<span>.</span></p>
+                                                    <h5>{{ red['name'] }},<span>.</span></h5>
+                                                    <p>{{ red['region'] }}</p>
+                                                </div>
+                                                <div class="wine-price">
+                                                    {% if red['btl_price'] %}
+                                                        <p class="price">${{ red['price'] }} | ${{ red['btl_price'] }}</p>
+                                                    {% else %}
+                                                        <p class="price">${{ red['price'] }}</p>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="wine_btl">
+                            <div class="items">
+                                <div class="contain">
+                                    <H2>Sparkling</H2>
+                                    <div class="wine-items">
+                                        {% for sp in sp_btl %}
+                                            <div class="menu-info">
+                                                <div class="left">
+                                                    <p>{{ sp['type']  }},<span>.</span></p>
+                                                    <h5>{{ sp['name'] }},<span>.</span></h5>
+                                                    <p>{{ sp['region'] }}</p>
+                                                    {% if sp['year'] %}
+                                                        <p>,<span>.</span>{{ sp['year'] }}</p>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="wine-price">
+                                                        <p class="price">${{ sp['price'] }}</p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="contain">
+                                    <H2>White & Rosé</H2>
+                                    <h4>Light & Crisp</h4>
+                                    <div class="wine-items">
+                                        {% for lc in lc_btl %}
+                                            <div class="menu-info">
+                                                <div class="left">
+                                                    <p>{{ lc['type']  }},<span>.</span></p>
+                                                    <h5>{{ lc['name'] }},<span>.</span></h5>
+                                                    <p>{{ lc['region'] }}</p>
+                                                    {% if lc['year'] %}
+                                                        <p>,<span>.</span>{{ lc['year'] }}</p>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="wine-price">
+                                                        <p class="price">${{ lc['price'] }}</p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="contain">
+                                    <h4>Fun & Interesting</h4>
+                                    <div class="wine-items">
+                                        {% for fn in fn_btl %}
+                                            <div class="menu-info">
+                                                <div class="left">
+                                                    <p>{{ fn['type']  }},<span>.</span></p>
+                                                    <h5>{{ fn['name'] }},<span>.</span></h5>
+                                                    <p>{{ fn['region'] }}</p>
+                                                    {% if fn['year'] %}
+                                                        <p>,<span>.</span>{{ fn['year'] }}</p>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="wine-price">
+                                                        <p class="price">${{ fn['price'] }}</p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="contain">
+                                    <h4>Full & Bold</h4>
+                                    <div class="wine-items">
+                                        {% for fbb in fbb_btl %}
+                                            <div class="menu-info">
+                                                <div class="left">
+                                                    <p>{{ fbb['type']  }},<span>.</span></p>
+                                                    <h5>{{ fbb['name'] }},<span>.</span></h5>
+                                                    <p>{{ fbb['region'] }}</p>
+                                                    {% if fbb['year'] %}
+                                                        <p>,<span>.</span>{{ fbb['year'] }}</p>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="wine-price">
+                                                        <p class="price">${{ fbb['price'] }}</p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="contain">
+                                    <h2>Spanish Red</h2>
+                                    <div class="wine-items">
+                                        {% for spb in spb_btl %}
+                                            <div class="menu-info">
+                                                <div class="left">
+                                                    <p>{{ spb['type']  }},<span>.</span></p>
+                                                    <h5>{{ spb['name'] }},<span>.</span></h5>
+                                                    <p>{{ spb['region'] }}</p>
+                                                    {% if spb['year'] %}
+                                                        <p>,<span>.</span>{{ spb['year'] }}</p>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="wine-price">
+                                                        <p class="price">${{ spb['price'] }}</p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="contain">
+                                    <h2>Red</h2>
+                                    <h4>Light Bodied</h4>
+                                    <div class="wine-items">
+                                        {% for lb in lb_btl %}
+                                            <div class="menu-info">
+                                                <div class="left">
+                                                    <p>{{ lb['type']  }},<span>.</span></p>
+                                                    <h5>{{ lb['name'] }},<span>.</span></h5>
+                                                    <p>{{ lb['region'] }}</p>
+                                                    {% if lb['year'] %}
+                                                        <p>,<span>.</span>{{ lb['year'] }}</p>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="wine-price">
+                                                        <p class="price">${{ lb['price'] }}</p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="contain">
+                                    <h4>Medium Bodied</h4>
+                                    <div class="wine-items">
+                                        {% for mb in mb_btl %}
+                                            <div class="menu-info">
+                                                <div class="left">
+                                                    <p>{{ mb['type']  }},<span>.</span></p>
+                                                    <h5>{{ mb['name'] }},<span>.</span></h5>
+                                                    <p>{{ mb['region'] }}</p>
+                                                    {% if mb['year'] %}
+                                                        <p>,<span>.</span>{{ mb['year'] }}</p>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="wine-price">
+                                                        <p class="price">${{ mb['price'] }}</p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="contain">
+                                    <h4>Full Bodied</h4>
+                                    <div class="wine-items">
+                                        {% for fb in fb_btl %}
+                                            <div class="menu-info">
+                                                <div class="left">
+                                                    <p>{{ fb['type']  }},<span>.</span></p>
+                                                    <h5>{{ fb['name'] }},<span>.</span></h5>
+                                                    <p>{{ fb['region'] }}</p>
+                                                    {% if fb['year'] %}
+                                                        <p>,<span>.</span>{{ fb['year'] }}</p>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="wine-price">
+                                                        <p class="price">${{ fb['price'] }}</p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="contain">
+                                    <h4>End Of Bin</h4>
+                                    <div class="wine-items">
+                                        {% for end in end_btl %}
+                                            <div class="menu-info">
+                                                <div class="left">
+                                                    <p>{{ end['type']  }},<span>.</span></p>
+                                                    <h5>{{ end['name'] }},<span>.</span></h5>
+                                                    <p>{{ end['region'] }}</p>
+                                                    {% if end['year'] %}
+                                                        <p>,<span>.</span>{{ end['year'] }}</p>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="wine-price">
+                                                        <p class="price">${{ end['price'] }}</p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block"></div>
+    <div class="footer">
+        <div class="wrapper">
+            <div class="contact">
+                <div class="top">
+                    <h5>Newsletter</h5>
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/red-spoon.png') }}" alt="">
+                    <h2>Subscribe To Our Newsletter</h2>
+                    <p>And never miss the latest Updates!</p>
+                </div>
+                <div class="btm">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <label for="email">Subscribe</label>
+                </div>
+            </div>
+            <div class="contact-btm">
+                <div class="left">
+                    <h4>Contact Us</h4>
+                    <p>3936 North Tamiami Trail
+                        Naples, Florida 34103</p>
+                    <p> (239) 331-3669</p>
+                </div>
+                <div class="mid">
+                    <h2>LAMORAGA</h2>
+                    <p>"The best way to find yourself is to lose yourself in the service of others.”</p>
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
+                    <div class="btm">
+                        <a href="https://www.facebook.com/LamoragaNaples">
+                            <img src="{{ url_for('static', filename='img/u_facebook-f.png') }}" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/lamoraganaples/?hl=en">
+                            <img src="{{ url_for('static', filename='img/u_instagram.png') }}" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="right">
+                    <h4>Working Hours</h4>
+                    <p>Monday-Friday: <br>
+                        04:00 pm -9:00 pm</p>
+                    <p>Saturday: <br>
+                        04:00pm -09:30 pm</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>2022 LAMORAGA. All Rights reserved.</p>
+            </div>
+        </div>
+    </div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

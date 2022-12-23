@@ -4,7 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{ post[0].title }}</title>
+    <meta name="geo.country" content="US">
+    <meta name="geo.region" content="US-FL">
+    <meta name="geo.placename" content="Lamoraga">
+    <meta name="geo.position" content="26.194206318854413, -81.79952854229583">
+    <meta name="googlebot" content="index, follow">
+    <meta name="author" content="Lamoraga">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="General">
+    <meta name="language" content="English">
+    <meta name="distribution" content="global">
+    <meta name="google" content="notranslate">
+    <meta name="msnbot" content="index, follow">
+    <meta name="yahoo" content="index, follow">
+    <meta name="description" content="{{ post[0].intro }}">
+    <meta name="keywords" content="Food news, Chef interviews, Recipe tutorials, Culinary trends, Restaurant insights, Menu updates, Event announcements, Special offers, Behind-the-scenes, Dining tips, Food photography, Travel inspiration, Food culture, Local ingredients" />
+    <meta name="subject" content="{{ post[0].meta_subject }}">
+    <meta name="url" content="{{ url_for('blog_post', id=post[0].id) }}">
+    <meta name="og:title" content="{{ post[0].title }}">
+    <meta name="og:site_name" content="Lamoraga">
+    <meta name="og:description" content="{{ post[0].intro }}">
+    <meta name="og:url" content="{{ url_for('blog_post', id=post[0].id) }}">
+    <meta name="og:image" content="{{ url_for('static', filename='blob_imgs/' + post[0].cover) }}">
+    <meta name="og:type" content="website">
+    <meta name="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ post[0].title }}">
+    <meta name="twitter:description" content="{{ post[0].intro }}">
+    <meta name="twitter:image" content="{{ url_for('static', filename='blob_imgs/' + post[0].cover) }}">
+    <meta name="twitter:site" content="@Lamoraga">
+    <meta name="twitter:creator" content="@Lamoraga">
+    <link rel="canonical" href="{{ url_for('blog_post', id=post[0].id) }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>

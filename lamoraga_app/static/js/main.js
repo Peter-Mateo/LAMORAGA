@@ -5,7 +5,6 @@ window.onload = function() {
         }
     }
 }
-
 function re1(){
     if(document.getElementById("r1").checked = true){
         document.getElementById("re1").classList.add("active");
@@ -42,7 +41,6 @@ function re4(){
         return true;
     }
 }
-
 $("#left").hover(function(){
     $(".dropdown").css("display", "block");
     $("#back").css("display", "block");
@@ -51,7 +49,6 @@ $("#left").hover(function(){
     $(".dropdown").css("display", "none");
     $("#back").css("display", "none");
 });
-
 $("#right").hover(function(){
     $("#right").css("height", "200px");
     $(".book_table").css("position", "relative");
@@ -62,8 +59,6 @@ $("#right").hover(function(){
     $(".open_tble").css("display", "none");
     $("#right").css("height", "fit-content");
 })
-
-
 $("#tapa_btn").click(function(){
     $("#tapas").css("display", "block");
     $("#soups_salad").css("display", "none");
@@ -169,14 +164,13 @@ $("#cocktails_btn").click(function(){
     $("#happyhour").css("display", "none");
     $("#wine_btl").css("display", "none");
     $("#wine_btn").removeClass("active");
-    $("#happyhour_btn").removeClass("active");
     $("#wine_btl_btn").removeClass("active");
 })
 $("#wine_btn").click(function(){
     $("#wine_btg").css("display", "block");
     $("#wine_btn").addClass("active");
     $("#cocktails").css("display", "none");
-    $("#wine_btg").css("display", "block");
+    $("#wine_btl").css("display", "none");
     $("#cocktails_btn").removeClass("active");
     $("#wine_btl_btn").removeClass("active");
 })
@@ -187,25 +181,4 @@ $("#wine_btl_btn").click(function(){
     $("#wine_btg").css("display", "none");
     $("#cocktails_btn").removeClass("active");
     $("#wine_btn").removeClass("active");
-})
-$("#bar_menu").click(function(){
-    console.log("bar menu clicked");
-    function test(){
-        $("#happyhour").css("display", "block");
-        $("#happyhour_btn").addClass("active");
-        $("#tapas").css("display", "none");
-        $("#soups_salad").css("display", "none");
-        $("#entrees").css("display", "none");
-        $("#drinks").css("display", "none");
-        $("#vegan").css("display", "none");
-        $("#tapa_btn").removeClass("active");
-        $("#soup_salad_btn").removeClass("active");
-        $("#entree_btn").removeClass("active");
-        $("#drinks_btn").removeClass("active");
-        $("#vegan_btn").removeClass("active");
-    }
-    $(document).ready(function(){
-        console.log("onload")
-        setTimeout(test, 6000)
-    })
 })

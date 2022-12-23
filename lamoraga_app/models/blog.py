@@ -1,5 +1,7 @@
 import os
 
+from flask import flash
+
 from lamoraga_app.config.mysqlconnection import connectToMySQL
 
 db = 'lamoraga'
@@ -37,3 +39,18 @@ class Blog(object):
     def get_post(data):
         query = "SELECT * FROM blog WHERE id = %(id)s"
         return connectToMySQL(db).query_db(query, data)
+
+    # Validates the Blog Post datas
+    @staticmethod
+    def validate_post(data, img):
+        is_valid = True
+        if len(data['title']) < 1:
+            flash("Please enter a title")
+            is_valid = False
+        if len(data['intro']) < 1:
+            flash("Please enter an intro")
+            is_valid = False
+        if img.filename in os.listdir("lamoraga_app/static/blob_imgs/"):
+            flash("Image already exists, please choose another image")
+            is_valid = False
+        return is_valid

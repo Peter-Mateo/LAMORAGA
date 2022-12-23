@@ -5,7 +5,6 @@
     margin: 0;
     /* outline: red dashed 1px; */
 }
-
 #bg-line-1{
     position: absolute;
     top: 0;
@@ -22,11 +21,13 @@
     top: 200px;
     right: -10px;
     z-index: -1;
+    height: 10000px;
 }
 #bg-line-4{
     position: absolute;
     z-index: -1;
     right: 0;
+    height: 8000px;
 }
 p{
     font-family: 'Open Sans';
@@ -96,7 +97,6 @@ h6 {
     text-transform: capitalize;
     font-feature-settings: 'tnum' on, 'lnum' on;
 }
-
 body{
     font-family: 'Open Sans';
     font-weight: 400;
@@ -265,7 +265,6 @@ nav .nav-right .left {
     transform: rotate(-90deg);
     font-size: 18px;
 }
-
 .hero .Content{
     display: flex;
     flex-direction: row;
@@ -289,7 +288,6 @@ nav .nav-right .left {
     width: 453px;
     height: 481px;
 }
-
 .hero .Content .content .btn{
     display: flex;
     flex-direction: column;
@@ -368,14 +366,13 @@ nav .nav-right .left {
     bottom: 500px;
     right: 40%;
 }
-
 .hero .Content .hero-img .rectangle21{
     position: absolute;
     width: 435px;
     height: 435px;
     left: 633px;
     top: 301px;
-    z-index: -2;
+    z-index: 0;
     background: #AC1F2D;
     mix-blend-mode: normal;
 }
@@ -385,7 +382,7 @@ nav .nav-right .left {
     height: 435px;
     left: 865px;
     top: 0px;
-    z-index: -2;
+    z-index: 0;
     background: #AC1F2D;
 }
 .active{
@@ -437,7 +434,6 @@ input[name="r"]{
 #r4:checked ~ .s1{
     margin-left: -60%;
 }
-
 /* About */
 .about {
     display: flex;
@@ -446,7 +442,6 @@ input[name="r"]{
     background-image: url("../img/bg-second-hp.png");
     background-size: cover;
 }
-
 .about .wrapper {
     display: flex;
     align-items: center;
@@ -506,7 +501,6 @@ input[name="r"]{
     transform: translateX(-50%);
     opacity: .5;
 }
-
 .reservations {
     display: flex;
     width: auto;
@@ -555,7 +549,6 @@ input[name="r"]{
     font-feature-settings: 'tnum' on, 'lnum' on;
     color: #AC1F2D;
 }
-
 .menu {
     display: flex;
     width: auto;
@@ -572,7 +565,6 @@ input[name="r"]{
     background-color: #0C0C0C;
     opacity: 30%;
 }
-
 .menu .wrapper{
     display: flex;
     flex-direction: column;
@@ -938,7 +930,6 @@ input[name="r"]{
     left: 1487px;
     top: 5340px;
 }
-
 .laurels{
     height: 110vh;
     width: 100%;
@@ -1008,7 +999,6 @@ input[name="r"]{
     width: 79px;
     height: 79px;
 }
-
 .blog{
     width: 100%;
     height: 120vh;
@@ -1152,7 +1142,6 @@ input[name="r"]{
     bottom: 600px;
     right: 500px;
 }
-
 .block{
     width: 100%;
     height: 50vh;
@@ -1240,7 +1229,6 @@ input[name="r"]{
     border: 1px solid rgba(220, 202, 135, 0.2);
     box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
 }
-
 .footer .contact-btm{
     display: flex;
     flex-direction: row;
@@ -1322,7 +1310,6 @@ input[name="r"]{
     margin: auto;
     padding-top: 20px;
 }
-
 /* Contact Form */
 header .con-slide {
     width: 100%;
@@ -1438,7 +1425,6 @@ header .con-slide {
     flex-direction: column;
     gap: 20px;
 }
-
 .contact-form .left form input{
     width: 635px;
     height: 60px;
@@ -1494,7 +1480,6 @@ header .con-slide {
     letter-spacing: 0.04em;
     color: #0C0C0C;
 }
-
 /* About Page*/
 header .abt-slide {
     width: 100%;
@@ -1686,7 +1671,6 @@ header .abt-slide {
     text-align: center;
     color: #AAAAAA;
 }
-
 /* Events Page */
 header .event-slide {
     width: 100%;
@@ -1782,7 +1766,6 @@ header .event-slide {
     left: 1739px;
     top: 804px;
 }
-
 #map{
     filter: grayscale(100%) invert(92%) contrast(83%);
 }
@@ -1868,7 +1851,7 @@ header .event-slide {
 .menu-bg .wrapper .wine-items .menu-info p{
     font-size: 22px;
 }
-#entrees, #desserts,
+#tapas,#entrees, #desserts,
 #drinks, #vegan, #soups_salad,
 #wine, #happyhour, #wine_btg, #wine_btl{
     display: none;
@@ -1895,7 +1878,6 @@ header .event-slide {
     font-feature-settings: 'tnum' on, 'lnum' on;
     color: #DCCA87;
 }
-
 /* Console */
 .blog_form .wrapper form{
     display: flex;

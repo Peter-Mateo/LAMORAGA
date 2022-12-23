@@ -45,14 +45,23 @@ def blog_post(id):
     return render_template('blog_post.html', post = post, posts = Blog.get_all_posts()[::-1])
 
 
-@app.route('/menu')
+@app.route('/menus/')
 def menu():
     return render_template('menu.html', sea=Tapa.Sea_app(), land=Tapa.Land_app(), pinchos=Tapa.Pinchos_app(), soups=Tapa.Soups_app(), salads=Tapa.Salads_app(), happyhr=Tapa.Happyhr_app(), sea_dinner=Dinner.Sea_dinner(), land_dinner=Dinner.Land_dinner(), vegan_dinner=Dinner.Vegan_dinner(), sides=Dinner.Sides_dinner(), dessert=Dinner.Dessert_dinner(), cocktails=Cocktail.get_all_cocktails(), sangria=Wine.get_sangria(), sparklings=Wine.get_sparkling(), white_wine=Wine.get_white(), red_wine=Wine.get_red(), beers=Beer.get_beer(), rose_wine = Wine.get_rose(), sp_btl = Wine.get_sparkling_bottle(), lc_btl = Wine.get_light_crisp_bottle(), fn_btl = Wine.get_fun_interesting_bottle(), fbb_btl = Wine.get_full_bold_bottle(), spb_btl = Wine.get_spanish_red_bottle(), lb_btl = Wine.get_light_bodied_bottle(), mb_btl=Wine.get_medium_bodied_bottle(), fb_btl=Wine.get_full_bodied_bottle(), end_btl = Wine.get_end_of_bin_bottle(), hrS = Happyhr.get_sea(), hrL = Happyhr.get_land(), hrs = Happyhr.get_side() )
-"""
-@app.route('/menu/<string:name>')
-def index_menus(name):
-    return render_template('menu.html', sea=Tapa.Sea_app(), land=Tapa.Land_app(), pinchos=Tapa.Pinchos_app(), soups=Tapa.Soups_app(), salads=Tapa.Salads_app(), happyhr=Tapa.Happyhr_app(), sea_dinner=Dinner.Sea_dinner(), land_dinner=Dinner.Land_dinner(), vegan_dinner=Dinner.Vegan_dinner(), sides=Dinner.Sides_dinner(), dessert=Dinner.Dessert_dinner(), cocktails=Cocktail.get_all_cocktails(), sangria=Wine.get_sangria(), sparklings=Wine.get_sparkling(), white_wine=Wine.get_white(), red_wine=Wine.get_red(), beers=Beer.get_beer(), rose_wine = Wine.get_rose(), sp_btl = Wine.get_sparkling_bottle(), lc_btl = Wine.get_light_crisp_bottle(), fn_btl = Wine.get_fun_interesting_bottle(), fbb_btl = Wine.get_full_bold_bottle(), spb_btl = Wine.get_spanish_red_bottle(), lb_btl = Wine.get_light_bodied_bottle(), mb_btl=Wine.get_medium_bodied_bottle(), fb_btl=Wine.get_full_bodied_bottle(), end_btl = Wine.get_end_of_bin_bottle(), hrS = Happyhr.get_sea(), hrL = Happyhr.get_land(), hrs = Happyhr.get_side(), current = name) """
 
+@app.route('/menus/<string:menu>')
+def menu_type(menu):
+    print(menu)
+    if menu == 'bar':
+        return render_template('menu_bar.html', sea=Tapa.Sea_app(), land=Tapa.Land_app(), pinchos=Tapa.Pinchos_app(), soups=Tapa.Soups_app(), salads=Tapa.Salads_app(), happyhr=Tapa.Happyhr_app(), sea_dinner=Dinner.Sea_dinner(), land_dinner=Dinner.Land_dinner(), vegan_dinner=Dinner.Vegan_dinner(), sides=Dinner.Sides_dinner(), dessert=Dinner.Dessert_dinner(), cocktails=Cocktail.get_all_cocktails(), sangria=Wine.get_sangria(), sparklings=Wine.get_sparkling(), white_wine=Wine.get_white(), red_wine=Wine.get_red(), beers=Beer.get_beer(), rose_wine = Wine.get_rose(), sp_btl = Wine.get_sparkling_bottle(), lc_btl = Wine.get_light_crisp_bottle(), fn_btl = Wine.get_fun_interesting_bottle(), fbb_btl = Wine.get_full_bold_bottle(), spb_btl = Wine.get_spanish_red_bottle(), lb_btl = Wine.get_light_bodied_bottle(), mb_btl=Wine.get_medium_bodied_bottle(), fb_btl=Wine.get_full_bodied_bottle(), end_btl = Wine.get_end_of_bin_bottle(), hrS = Happyhr.get_sea(), hrL = Happyhr.get_land(), hrs = Happyhr.get_side())
+    elif menu == 'dinner':
+        return render_template('menu_dinner.html', sea=Tapa.Sea_app(), land=Tapa.Land_app(), pinchos=Tapa.Pinchos_app(), soups=Tapa.Soups_app(), salads=Tapa.Salads_app(), happyhr=Tapa.Happyhr_app(), sea_dinner=Dinner.Sea_dinner(), land_dinner=Dinner.Land_dinner(), vegan_dinner=Dinner.Vegan_dinner(), sides=Dinner.Sides_dinner(), dessert=Dinner.Dessert_dinner(), cocktails=Cocktail.get_all_cocktails(), sangria=Wine.get_sangria(), sparklings=Wine.get_sparkling(), white_wine=Wine.get_white(), red_wine=Wine.get_red(), beers=Beer.get_beer(), rose_wine = Wine.get_rose(), sp_btl = Wine.get_sparkling_bottle(), lc_btl = Wine.get_light_crisp_bottle(), fn_btl = Wine.get_fun_interesting_bottle(), fbb_btl = Wine.get_full_bold_bottle(), spb_btl = Wine.get_spanish_red_bottle(), lb_btl = Wine.get_light_bodied_bottle(), mb_btl=Wine.get_medium_bodied_bottle(), fb_btl=Wine.get_full_bodied_bottle(), end_btl = Wine.get_end_of_bin_bottle(), hrS = Happyhr.get_sea(), hrL = Happyhr.get_land(), hrs = Happyhr.get_side())
+    elif menu == 'vegan':
+        return render_template('menu_vegan.html', sea=Tapa.Sea_app(), land=Tapa.Land_app(), pinchos=Tapa.Pinchos_app(), soups=Tapa.Soups_app(), salads=Tapa.Salads_app(), happyhr=Tapa.Happyhr_app(), sea_dinner=Dinner.Sea_dinner(), land_dinner=Dinner.Land_dinner(), vegan_dinner=Dinner.Vegan_dinner(), sides=Dinner.Sides_dinner(), dessert=Dinner.Dessert_dinner(), cocktails=Cocktail.get_all_cocktails(), sangria=Wine.get_sangria(), sparklings=Wine.get_sparkling(), white_wine=Wine.get_white(), red_wine=Wine.get_red(), beers=Beer.get_beer(), rose_wine = Wine.get_rose(), sp_btl = Wine.get_sparkling_bottle(), lc_btl = Wine.get_light_crisp_bottle(), fn_btl = Wine.get_fun_interesting_bottle(), fbb_btl = Wine.get_full_bold_bottle(), spb_btl = Wine.get_spanish_red_bottle(), lb_btl = Wine.get_light_bodied_bottle(), mb_btl=Wine.get_medium_bodied_bottle(), fb_btl=Wine.get_full_bodied_bottle(), end_btl = Wine.get_end_of_bin_bottle(), hrS = Happyhr.get_sea(), hrL = Happyhr.get_land(), hrs = Happyhr.get_side())
+    elif menu == 'cocktails':
+        return render_template('menu_cocktails.html', sea=Tapa.Sea_app(), land=Tapa.Land_app(), pinchos=Tapa.Pinchos_app(), soups=Tapa.Soups_app(), salads=Tapa.Salads_app(), happyhr=Tapa.Happyhr_app(), sea_dinner=Dinner.Sea_dinner(), land_dinner=Dinner.Land_dinner(), vegan_dinner=Dinner.Vegan_dinner(), sides=Dinner.Sides_dinner(), dessert=Dinner.Dessert_dinner(), cocktails=Cocktail.get_all_cocktails(), sangria=Wine.get_sangria(), sparklings=Wine.get_sparkling(), white_wine=Wine.get_white(), red_wine=Wine.get_red(), beers=Beer.get_beer(), rose_wine = Wine.get_rose(), sp_btl = Wine.get_sparkling_bottle(), lc_btl = Wine.get_light_crisp_bottle(), fn_btl = Wine.get_fun_interesting_bottle(), fbb_btl = Wine.get_full_bold_bottle(), spb_btl = Wine.get_spanish_red_bottle(), lb_btl = Wine.get_light_bodied_bottle(), mb_btl=Wine.get_medium_bodied_bottle(), fb_btl=Wine.get_full_bodied_bottle(), end_btl = Wine.get_end_of_bin_bottle(), hrS = Happyhr.get_sea(), hrL = Happyhr.get_land(), hrs = Happyhr.get_side())
+    else:
+        return redirect(url_for('menu'))
 
 @app.route('/lenvera-admin')
 def admin():
@@ -92,6 +101,8 @@ def save_post():
         'sumheading': request.form.get('sumheading'),
         'summary': request.form.get('summary')
     }
+    if not Blog.validate_post(data, img):
+        return redirect(url_for('console'))
     Blog.save_post(data, img)
     return redirect(url_for('console'))
 

@@ -23,9 +23,12 @@ class Events(object):
         query = "SELECT name, date, date_format(date, '%M %e %a, %Y') FROM events ORDER BY date ASC;"
         return connectToMySQL(db).query_db(query)
 
-    today = datetime.date.today() + datetime.timedelta(days=1)
 
     # Deletes old Events
     def delete_event():
-        query = "DELETE FROM events WHERE date < (today) VALUES (%(today)s);"
-        return connectToMySQL(db).query_db(query)
+        today = datetime.date.today() + datetime.timedelta(days=1)
+        data = {
+            'today': today
+        }
+        query = "DELETE FROM events WHERE date < %(today)s;"
+        return connectToMySQL(db).query_db(query, data)
