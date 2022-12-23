@@ -8,29 +8,32 @@ class Blog(object):
     def __init__(self, data):
         self.title = data['title']
         self.date = data['date']
-        self.content = data['content']
+        self.intro = data['intro']
+        self.par1heading = data['par1heading']
+        self.par1 = data['par1']
+        self.par2heading = data['par2heading']
+        self.par2 = data['par2']
+        self.par3heading = data['par3heading']
+        self.par3 = data['par3']
+        self.sumheading = data['sumheading']
+        self.summary = data['summary']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
 
     # Saves the Blog Post data
-    def save_post(title, content, cover):
-        with open("lamoraga_app/static/blob_imgs/" + cover.filename, "wb") as f:
-            f.write(cover.read())
+    def save_post(data, img):
+        with open("lamoraga_app/static/blob_imgs/" + img.filename, "wb") as f:
+            f.write(img.read())
         print("The File has been processed")
-        data = {
-            "title": title,
-            "content": content,
-            "cover": cover.read(),
-        }
-        query = "INSERT INTO blog (title, content, cover) VALUES (%(title)s, %(content)s, %(cover)s);"
+        query = "INSERT INTO blog (title, intro, cover, par1heading, par1, par2heading, par2, par3heading, par3, sumheading, summary) VALUES (%(title)s, %(intro)s, %(cover)s, %(par1heading)s, %(par1)s, %(par2heading)s, %(par2)s, %(par3heading)s, %(par3)s, %(sumheading)s, %(summary)s);"
         return connectToMySQL(db).query_db(query, data)
-
-    # Gets the list of the imgs
-    def get_blog_imgs():
-        print(os.listdir("lamoraga_app/static/blob_imgs"))
-        return os.listdir("lamoraga_app/static/blob_imgs")
 
     # Gets the Blog Post data
     def get_all_posts():
         query = "SELECT * FROM blog"
         return connectToMySQL(db).query_db(query)
+
+    # Grabs the specific Blog Post data
+    def get_post(data):
+        query = "SELECT * FROM blog WHERE id = %(id)s"
+        return connectToMySQL(db).query_db(query, data)

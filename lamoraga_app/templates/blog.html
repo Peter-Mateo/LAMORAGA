@@ -56,17 +56,127 @@
         <div class="wrapper">
         </div>
         <div class="event-slide">
-            <h1>Our Blogs</h1>
+            <h1>Our Blog</h1>
         </div>
     </header>
-    
-    <h1>Checking</h1>
-    {% for post in blog %}
-        {{ post.title }}
-        {{ post.created_at }}
-        {{ post.content }}
-        <br>
-    {% endfor %}
+    <div class="container">
+        <div class="wrapper">
+            <div class="blog_list">
+            {% for post in posts[0:2] %}
+                <div class="post">
+                    <div class="top">
+                        <img src="{{ url_for('static', filename='blob_imgs/' + post.cover) }}" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="section">
+                            <p>{{ post.created_at |format_datetime }}</p>
+                            <h4>{{ post.title | capitalize }}</h4>
+                            <div class="small-descrip">
+                                <p>{{ post.intro | truncate(200) }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btm">
+                        <a href="{{ url_for('blog_post', id= post.id) }}"><hr> Read More</a>
+                    </div>
+                </div>
+            {% endfor %}
+            </div> 
+            <div class="menu-blog">
+                <div class="categories">
+                    <div class="inner-contain">
+                        <div class="top">
+                            <h4>All Categories</h4>
+                        </div>
+                        <div class="list">
+                            <div class="cate">
+                                <a href="">Photography <hr> (1)</a>
+                            </div>
+                            <div class="cate">
+                                <a href="">Baking <hr> (1)</a>
+                            </div>
+                            <div class="cate">
+                                <a href="">Cooking Tips <hr> (1)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recent-post">
+                    <div class="inner-contain">
+                        <div class="top">
+                            <h4>Our Latest Posts</h4>
+                        </div>
+                        <div class="content">
+                            {% for post in posts[0:1] %}
+                            <div class="section">
+                                <img src="{{ url_for('static', filename='blob_imgs/' + post.cover) }}" alt="">
+                                <p>{{ post.created_at | format_datetime }}</p>
+                                <h4>{{ post.title | capitalize }}</h4>
+                                <div class="small-descrip">
+                                    <p>{{ post.intro | truncate(50) }}</p>
+                                </div>
+                            </div>
+                            <div class="btm">
+                                <a href="{{ url_for('blog_post', id= post.id) }}">Read More</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block"></div>
+    <div class="footer">
+        <div class="wrapper">
+            <div class="contact">
+                <div class="top">
+                    <h5>Newsletter</h5>
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/red-spoon.png') }}" alt="">
+                    <h2>Subscribe To Our Newsletter</h2>
+                    <p>And never miss the latest Updates!</p>
+                </div>
+                <div class="btm">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <label for="email">Subscribe</label>
+                </div>
+            </div>
+            <div class="contact-btm">
+                <div class="left">
+                    <h4>Contact Us</h4>
+                    <p>3936 North Tamiami Trail
+                        Naples, Florida 34103</p>
+                    <p> (239) 331-3669</p>
+                </div>
+                <div class="mid">
+                    <h2>LAMORAGA</h2>
+                    <p>"The best way to find yourself is to lose yourself in the service of others.”</p>
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
+                    <div class="btm">
+                        <a href="https://www.facebook.com/LamoragaNaples">
+                            <img src="{{ url_for('static', filename='img/u_facebook-f.png') }}" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/lamoraganaples/?hl=en">
+                            <img src="{{ url_for('static', filename='img/u_instagram.png') }}" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="right">
+                    <h4>Working Hours</h4>
+                    <p>Monday-Friday: <br>
+                        04:00 pm -9:00 pm</p>
+                    <p>Saturday: <br>
+                        04:00pm -09:30 pm</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>2022 LAMORAGA. All Rights reserved.</p>
+            </div>
+        </div>
+    </div>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

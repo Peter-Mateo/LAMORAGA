@@ -1,4 +1,7 @@
+from datetime import datetime
+
 from flask import flash, redirect, render_template, request, url_for
+from flask_babel import format_date
 
 from lamoraga_app import app
 from lamoraga_app.models.beer import Beer
@@ -6,6 +9,7 @@ from lamoraga_app.models.blog import Blog
 from lamoraga_app.models.cocktail import Cocktail
 from lamoraga_app.models.dinner import Dinner
 from lamoraga_app.models.events import Events
+from lamoraga_app.models.happyhr import Happyhr
 from lamoraga_app.models.tapa import Tapa
 from lamoraga_app.models.user import User
 from lamoraga_app.models.wine import Wine
@@ -13,33 +17,42 @@ from lamoraga_app.models.wine import Wine
 
 @app.route('/')
 def index():
-    return render_template('index.html', cocktails=Cocktail.get_all_cocktails(), sangria=Wine.get_sangria(), white_wine=Wine.get_white(), red_wine=Wine.get_red(), beer=Beer.get_beer(), event = Events.delete_event(), blog_imgs = Blog.get_blog_imgs(), posts = Blog.get_all_posts())
-
+    return render_template('index.html', cocktails=Cocktail.get_all_cocktails(), sangria=Wine.get_sangria(), white_wine=Wine.get_white(), red_wine=Wine.get_red(), beer=Beer.get_beer(), event = Events.delete_event(), posts = Blog.get_all_posts()[::-1])
 
 @app.route('/the-restaurant/history/')
 def about():
     return render_template('about.html')
 
-
 @app.route('/contact/')
 def contact():
     return render_template('contact.html')
 
-
 @app.route('/event-calendar/')
 def events():
-    print(Events.get_all_events())
     return render_template('events.html', events = Events.get_all_events())
 
 
 @app.route('/the-restaurant/press-room/')
 def blog():
-    return render_template('blog.html', blog=Blog.get_all_posts())
+    blog = Blog.get_all_posts()
+    return render_template('blog.html', posts = blog[::-1])
+
+@app.route('/the-restaurant/press-room/<int:id>')
+def blog_post(id):
+    data = {
+        'id': id
+    }
+    post = Blog.get_post(data)
+    return render_template('blog_post.html', post = post, posts = Blog.get_all_posts()[::-1])
 
 
 @app.route('/menu')
 def menu():
-    return render_template('menu.html', sea=Tapa.Sea_app(), land=Tapa.Land_app(), pinchos=Tapa.Pinchos_app(), soups=Tapa.Soups_app(), salads=Tapa.Salads_app(), happyhr=Tapa.Happyhr_app(), sea_dinner=Dinner.Sea_dinner(), land_dinner=Dinner.Land_dinner(), vegan_dinner=Dinner.Vegan_dinner(), sides=Dinner.Sides_dinner(), dessert=Dinner.Dessert_dinner(), cocktails=Cocktail.get_all_cocktails(), sangria=Wine.get_sangria(), white_wine=Wine.get_white(), red_wine=Wine.get_red(), beer=Beer.get_beer())
+    return render_template('menu.html', sea=Tapa.Sea_app(), land=Tapa.Land_app(), pinchos=Tapa.Pinchos_app(), soups=Tapa.Soups_app(), salads=Tapa.Salads_app(), happyhr=Tapa.Happyhr_app(), sea_dinner=Dinner.Sea_dinner(), land_dinner=Dinner.Land_dinner(), vegan_dinner=Dinner.Vegan_dinner(), sides=Dinner.Sides_dinner(), dessert=Dinner.Dessert_dinner(), cocktails=Cocktail.get_all_cocktails(), sangria=Wine.get_sangria(), sparklings=Wine.get_sparkling(), white_wine=Wine.get_white(), red_wine=Wine.get_red(), beers=Beer.get_beer(), rose_wine = Wine.get_rose(), sp_btl = Wine.get_sparkling_bottle(), lc_btl = Wine.get_light_crisp_bottle(), fn_btl = Wine.get_fun_interesting_bottle(), fbb_btl = Wine.get_full_bold_bottle(), spb_btl = Wine.get_spanish_red_bottle(), lb_btl = Wine.get_light_bodied_bottle(), mb_btl=Wine.get_medium_bodied_bottle(), fb_btl=Wine.get_full_bodied_bottle(), end_btl = Wine.get_end_of_bin_bottle(), hrS = Happyhr.get_sea(), hrL = Happyhr.get_land(), hrs = Happyhr.get_side() )
+"""
+@app.route('/menu/<string:name>')
+def index_menus(name):
+    return render_template('menu.html', sea=Tapa.Sea_app(), land=Tapa.Land_app(), pinchos=Tapa.Pinchos_app(), soups=Tapa.Soups_app(), salads=Tapa.Salads_app(), happyhr=Tapa.Happyhr_app(), sea_dinner=Dinner.Sea_dinner(), land_dinner=Dinner.Land_dinner(), vegan_dinner=Dinner.Vegan_dinner(), sides=Dinner.Sides_dinner(), dessert=Dinner.Dessert_dinner(), cocktails=Cocktail.get_all_cocktails(), sangria=Wine.get_sangria(), sparklings=Wine.get_sparkling(), white_wine=Wine.get_white(), red_wine=Wine.get_red(), beers=Beer.get_beer(), rose_wine = Wine.get_rose(), sp_btl = Wine.get_sparkling_bottle(), lc_btl = Wine.get_light_crisp_bottle(), fn_btl = Wine.get_fun_interesting_bottle(), fbb_btl = Wine.get_full_bold_bottle(), spb_btl = Wine.get_spanish_red_bottle(), lb_btl = Wine.get_light_bodied_bottle(), mb_btl=Wine.get_medium_bodied_bottle(), fb_btl=Wine.get_full_bodied_bottle(), end_btl = Wine.get_end_of_bin_bottle(), hrS = Happyhr.get_sea(), hrL = Happyhr.get_land(), hrs = Happyhr.get_side(), current = name) """
 
 
 @app.route('/lenvera-admin')
@@ -49,7 +62,7 @@ def admin():
 
 @app.route('/lenvera-console')
 def console():
-    return render_template('control.html', blog_imgs = Blog.get_blog_imgs(), posts = Blog.get_all_posts())
+    return render_template('control.html')
 
 
 @app.route('/login', methods=['POST'])
@@ -58,7 +71,6 @@ def login():
         'username': request.form.get('username'),
         'pswd': request.form.get('password')
     }
-    print("this is the login", data)
     if User.check_admin(data) == False:
         return redirect('/')
     else:
@@ -67,8 +79,25 @@ def login():
 
 @app.route('/lenvera-admin/newpost/', methods=['POST'])
 def save_post():
-    title = request.form.get('title')
-    content = request.form.get('content')
-    cover = request.files['cover']
-    Blog.save_post(title, content, cover)
+    img = request.files['cover']
+    data = {
+        'cover': request.files['cover'].filename,
+        'title': request.form.get('title'),
+        'intro': request.form.get('intro'),
+        'par1heading': request.form.get('par1heading'),
+        'par1': request.form.get('par1'),
+        'par2heading': request.form.get('par2heading'),
+        'par2': request.form.get('par2'),
+        'par3heading': request.form.get('par3heading'),
+        'par3': request.form.get('par3'),
+        'sumheading': request.form.get('sumheading'),
+        'summary': request.form.get('summary')
+    }
+    Blog.save_post(data, img)
     return redirect(url_for('console'))
+
+# Date Filter
+@app.template_filter()
+def format_datetime(value):
+    format = "%b %m, %Y"
+    return value.strftime(format)

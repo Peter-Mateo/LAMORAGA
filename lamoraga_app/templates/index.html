@@ -78,7 +78,7 @@
                         <p>We combine traditional, Spanish tapas and classic dishes with an international twist. </p>
                     </div>
                     <div class="btn">
-                        <a href="#" type="button">Explore Menu</a>
+                        <a href="{{ url_for('menu') }}" type="button">Explore Menu</a>
                     </div>
                 </div>
                 <div class="hero-img">
@@ -117,7 +117,6 @@
             </div>
         </div>
     </header>
-    <img src="" alt="">
     <div class="about">
         <div class="wrapper">
             <div class="left">
@@ -167,14 +166,18 @@
             <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=138772&type=standard&theme=wide&color=1&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
         </div>
     </div>
+    <!-- <img id="bg-line-1" src="{{ url_for('static', filename='img/vector 15.png') }}" alt="">
+    <img id="bg-line-2" src="{{ url_for('static', filename='img/vector 15.png') }}" alt="">
+    <img id="bg-line-3" src="{{ url_for('static', filename='img/vector 14.png') }}" alt="">
+    <img id="bg-line-4" src="{{ url_for('static', filename='img/vector 14.png') }}" alt=""> -->
     <div class="menu">
         <div class="wrapper">
             <div class="icon">
                 <img src="{{ url_for('static', filename='img/double-spoons.png') }}" alt="">
             </div>
-            <h2><a href="#">Bar Menu</a></h2>
-            <h2><a href="#">Dinner Menu</a></h2>
-            <h2><a href="#">Desserts Menu</a></h2>
+            <h2><a id="bar_menu" href="#">Bar Menu</a></h2>
+            <h2><a id="din_menu" href="#">Dinner Menu</a></h2>
+            <h2><a id="des_menu" href="#">Vegan Menu</a></h2>
         </div>
     </div>
     <div class="specials">
@@ -333,7 +336,6 @@
                         <h4>Tom Nutten</h4>
                         <p class="founder">Founder</p>
                     </div>
-
                     <div class="signature">
                         <p>Tom Nutten</p>
                     </div>
@@ -444,7 +446,39 @@
     </div>
     <div class="blog">
         <div class="wrapper">
-            <h1>Blog</h1>
+            <div class="contain">
+                <div class="top">
+                    <div class="mini">
+                        <h5>Blogs</h5>
+                        <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
+                    </div>
+                    <div>
+                        <h2>Lamoraga Updates</h2>
+                    </div>
+                </div>
+                <div class="middle">
+                    {% for post in posts %}
+                        <div class="post">
+                            <div>
+                                <img src="{{ url_for('static', filename='blob_imgs/' + post.cover) }} " alt="">
+                            </div>
+                            <div class="content">
+                                <p>{{ post.created_at | format_datetime }}</p>
+                                <h5 id="title-blog">{{ post.title }}</h5>
+                                <p>{{ post.intro | truncate(100) }}</p>
+                                <div class="btn">
+                                    <a href="{{ url_for('blog_post', id=post.id) }}">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="btm">
+                    <div class="btn">
+                        <a href="{{ url_for('blog') }}">View More</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="gallery">
@@ -539,7 +573,6 @@
             </div>
         </div>
     </div>
-
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

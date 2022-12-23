@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo"><a href="{{ url_for('index')}}">LAMORAGA</a></div>
+            <div class="nav-middle">
+                <ul>
+                    <li><a href="{{ url_for('index')}}">Home</a></li>
+                    <li><a href="{{ url_for('about')}}">About Us</a></li>
+                    <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
+                    <li><a href="{{ url_for('menu')}}">Menu</a></li>
+                    <li><a href="{{ url_for('blog')}}">Blog</a></li>
+                    <li><a href="{{ url_for('events')}}">Events</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="left" id="left">
+                    <a class="top" href="#">Gift Cards <img class="red-tri" src="{{ url_for('static', filename='img/red-triangle.png') }}" alt=""></a>
+                    <div id="back"></div>
+                    <ul class="dropdown">
+                        <li><a href="https://www.toasttab.com/lamoraga/giftcards">New Gift Card</a></li>
+                        <li><a href="https://www.toasttab.com/lamoraga/findcard">Check Balance</a></li>
+                    </ul>
+                </div>
+                |
+                <div class="right" id="right">
+                    <a class="book_table">Book Table</a>
+                    <div class="open_tble">
+                        <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=138772&type=standard&theme=standard&color=1&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="wrapper">
+        </div>
+        <div class="event-slide">
+            <h1>Our Blogs</h1>
+            <p><a href="{{ url_for('index') }}">Home</a><img src="{{ url_for('static', filename='img/u_angle-left-b.png') }}" alt=""><a href="{{ url_for('blog') }}">Blog</a><img src="{{ url_for('static', filename='img/u_angle-left-b.png') }}" alt=""> {{ post[0].title | capitalize }}</p>
+        </div>
+    </header>
+    <div class="blog-post">
+        <div class="wrapper">
+            <p>{{ post[0].created_at |format_datetime }}</p>
+                <h1>{{ post[0].title | capitalize}}</h1>
+                <div class="top">
+                    <img src="{{ url_for('static', filename='blob_imgs/' + post[0].cover) }}" alt="">
+                </div>
+            <div class="post">
+                <div class="blog-content">
+                    <div class="section">
+                        <p>{{ post[0].intro }}</p>
+                    </div>
+                    {% if post[0].par1heading %}
+                        <div class="section">
+                            <h5>{{ post[0].par1heading }}</h5>
+                            <p>{{ post[0].par1 }}</p>
+                        </div>
+                    {% endif %}
+                    {% if post[0].par2heading %}
+                        <div class="section">
+                            <h5>{{ post[0].par2heading }}</h5>
+                            <p>{{ post[0].par2 }}</p>
+                        </div>
+                    {% endif %}
+                    {% if post[0].par3heading %}
+                        <div class="section">
+                            <h5>{{ post[0].par3heading }}</h5>
+                            <p>{{ post[0].par3 }}</p>
+                        </div>
+                    {% endif %}
+                    {% if post[0].sumheading %}
+                        <div class="section">
+                            <h5>{{ post[0].sumheading }}</h5>
+                            <p>{{ post[0].summary }}</p>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="menu-blog">
+                    <div class="categories">
+                        <div class="inner-contain">
+                            <div class="top">
+                                <h4>All Categories</h4>
+                            </div>
+                            <div class="list">
+                                <div class="cate">
+                                    <a href="">Photography <hr> (1)</a>
+                                </div>
+                                <div class="cate">
+                                    <a href="">Baking <hr> (1)</a>
+                                </div>
+                                <div class="cate">
+                                    <a href="">Cooking Tips <hr> (1)</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="recent-post">
+                        <div class="inner-contain">
+                            <div class="top">
+                                <h4>Our Latest Posts</h4>
+                            </div>
+                            <div class="content">
+                                {% for post in posts[0:1] %}
+                                <div class="section">
+                                    <img src="{{ url_for('static', filename='blob_imgs/' + post.cover) }}" alt="">
+                                    <p>{{ post.created_at |format_datetime }}</p>
+                                    <h4>{{ post.title | capitalize }}</h4>
+                                    <div class="small-descrip">
+                                        <p>{{ post.intro }}</p>
+                                    </div>
+                                </div>
+                                <div class="btm">
+                                    <a href="{{ url_for('blog_post', id= post.id) }}">Read More</a>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block"></div>
+    <div class="footer">
+        <div class="wrapper">
+            <div class="contact">
+                <div class="top">
+                    <h5>Newsletter</h5>
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/red-spoon.png') }}" alt="">
+                    <h2>Subscribe To Our Newsletter</h2>
+                    <p>And never miss the latest Updates!</p>
+                </div>
+                <div class="btm">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <label for="email">Subscribe</label>
+                </div>
+            </div>
+            <div class="contact-btm">
+                <div class="left">
+                    <h4>Contact Us</h4>
+                    <p>3936 North Tamiami Trail
+                        Naples, Florida 34103</p>
+                    <p> (239) 331-3669</p>
+                </div>
+                <div class="mid">
+                    <h2>LAMORAGA</h2>
+                    <p>"The best way to find yourself is to lose yourself in the service of others.”</p>
+                    <!--Jinja2-->
+                    <img src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
+                    <div class="btm">
+                        <a href="https://www.facebook.com/LamoragaNaples">
+                            <img src="{{ url_for('static', filename='img/u_facebook-f.png') }}" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/lamoraganaples/?hl=en">
+                            <img src="{{ url_for('static', filename='img/u_instagram.png') }}" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="right">
+                    <h4>Working Hours</h4>
+                    <p>Monday-Friday: <br>
+                        04:00 pm -9:00 pm</p>
+                    <p>Saturday: <br>
+                        04:00pm -09:30 pm</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>2022 LAMORAGA. All Rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -57,7 +57,7 @@
         <div class="con-slide">
             <h1>Contact Us</h1>
             <!--Jinja2-->
-            <p>Home <img src="{{ url_for('static', filename='img/u_angle-left-b.png') }}" alt=""> Contact Us</p>
+            <p><a href="{{ url_for('index') }}">Home</a><img src="{{ url_for('static', filename='img/u_angle-left-b.png') }}" alt=""> Contact Us</p>
         </div>
     </header>
     <div class="map">
@@ -69,10 +69,9 @@
         <div class="wrapper">
             <div class="left">
                 <form action="" method="POST">
-                    <input type="text" for="name" id="name" value="Full Name">
-                    <input type="email" for="email" id="email" value="Email Address">
-                    <textarea class="textbox" type="text" for="message" id="message" required>Message
-                    </textarea>
+                    <input type="text" for="name" id="name" placeholder="Full Name">
+                    <input type="email" for="email" id="email" placeholder="Email Address">
+                    <textarea class="textbox" type="text" for="message" id="message" placeholder="Message" required></textarea>
                     <div class="btn">
                         <a href="#">Submit</a>
                     </div>

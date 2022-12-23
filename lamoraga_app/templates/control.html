@@ -9,22 +9,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
-    <form action="{{ url_for('save_post') }}" method="POST" enctype="multipart/form-data">
-        <input type="text" name="title" placeholder="Title">
-        <input type="text" name="content" placeholder="Content">
-        <input class="file-upload-input" type="file" name="cover" onchange="readUrl(this)" accept="Image/*">
-        <input type="submit" value="Save">
-    </form>
-    {% for post in posts %}
-        <div class="post">
-            <h1>{{ post.title }}</h1>
-            <p>{{ post.content }}</p>
-            <img src="../static/blob_imgs/{{ post.cover.filename }}" alt="">
-            {% for name in blog_imgs %}
-                {% if post.cover == name %}
-                {% endif %}
-            {% endfor %}
+    <div class="blog_form">
+        <div class="wrapper">
+            <form action="{{ url_for('save_post') }}" method="POST" enctype="multipart/form-data">
+                <h1>Blog</h1>
+                <input type="text" name="title" placeholder="Title">
+                <input type="text" name="intro" placeholder="intro">
+                <input type="text" name="par1heading" placeholder="par1heading">
+                <input type="text" name="par1" placeholder="par1">
+                <input type="text" name="par2heading" placeholder="par2heading">
+                <input type="text" name="par2" placeholder="par2">
+                <input type="text" name="par3heading" placeholder="par3heading">
+                <input type="text" name="par3" placeholder="par3">
+                <input type="text" name="sumheading" placeholder="sumheading">
+                <input type="text" name="summary" placeholder="summary">
+                <input class="file-upload-input" type="file" name="cover" onchange="readUrl(this)" accept="Image/*">
+                <input type="submit" value="Save">
+            </form>
         </div>
-    {% endfor %}
+    </div>
 </body>
 </html>
