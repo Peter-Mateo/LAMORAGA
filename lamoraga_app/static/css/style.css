@@ -9,12 +9,20 @@
     position: absolute;
     top: 0;
     z-index: -1;
+    background-image: url("../img/Vector15.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 10000px;
 }
 #bg-line-2{
     position: absolute;
     top: 0;
     right: -10px;
     z-index: -1;
+    background-image: url("../img/Vector15.png");
+    background-repeat: repeat-x;
+    height: 10000px;
+    width: 100%;
 }
 #bg-line-3{
     position: absolute;
@@ -22,12 +30,16 @@
     right: -10px;
     z-index: -1;
     height: 10000px;
+    width: 100%;
+    background-image: url("../img/Vector14.png");
 }
 #bg-line-4{
     position: absolute;
     z-index: -1;
     right: 0;
     height: 8000px;
+    width: 100%;
+    background-image: url("../img/Vector14.png");
 }
 p{
     font-family: 'Open Sans';
@@ -231,6 +243,25 @@ nav .nav-right .left {
     display: flex;
     flex-direction: column;
 }
+.working-hours-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #040404;
+    z-index: 100;
+}
+.working-hours-text {
+    display: flex;
+    margin: 10px;
+    font-size: 14px;
+    justify-content: center;
+}
+.working-hours-text p {
+    margin: 0;
+    padding-left: 20px;
+    color: #ffff;
+}
 .red-tri{
     width: 13px;
     height: 13px;
@@ -335,14 +366,16 @@ nav .nav-right .left {
     letter-spacing: 0.04em;
     color: #AC1F2D;
 }
+/* All Slideshow  */
 .hero .Content .hero-img{
     width: 667px;
     height: 736px;
 }
 .hero .Content .hero-img .mask-group{
     overflow: hidden;
+    z-index: 1;
 }
-.hero .Content .hero-img .contain{
+.hero .Content .hero-img .slideshow{
     overflow: hidden;
     position: absolute;
     width: 619px;
@@ -366,6 +399,56 @@ nav .nav-right .left {
     bottom: 500px;
     right: 40%;
 }
+.slides{
+    width: 2600px;
+    height: 100%;
+    display: flex;
+    animation: slide 25s ease-in-out infinite;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-667px);
+    }
+    66% {
+        transform: translateX(-1330px);
+    }
+    100% {
+        transform: translateX(-1950px);
+    }
+}
+.slide-1{
+    background-image: url("../img/IMG_0646.jpg");
+    background-size: cover;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.slide-2{
+    background-image: url("../img/Sea Bass.jpg");
+    background-size: cover;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.slide-3{
+    background-image: url("../img/IMG_0481.jpg");
+    background-size: cover;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.slide-4{
+    background-image: url("../img/IMG_0552.jpg");
+    background-size: cover;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+/* Red Squares */
 .hero .Content .hero-img .rectangle21{
     position: absolute;
     width: 435px;
@@ -388,12 +471,6 @@ nav .nav-right .left {
 .active{
     text-decoration: underline red solid 3px!important;
 }
-.navigation {
-    position: absolute;
-    bottom: -40px;
-    left: 40%;
-    transform: translateX(-50%);
-}
 .bar{
     width: 17px;
     height: 28px;
@@ -410,30 +487,7 @@ nav .nav-right .left {
     cursor: pointer;
     transition: 0.4s;
 }
-input[name="r"]{
-    position: absolute;
-    visibility: hidden;
-}
-.slides{
-    width: 500%;
-    height: 100%;
-    display: flex;
-}
-.hero .Content .hero-img .mask-group .rectangle{
-    transition: 1s;
-}
-#r1:checked ~ .s1{
-    margin-left: 0;
-}
-#r2:checked ~ .s1{
-    margin-left: -20%;
-}
-#r3:checked ~ .s1{
-    margin-left: -40%;
-}
-#r4:checked ~ .s1{
-    margin-left: -60%;
-}
+
 /* About */
 .about {
     display: flex;

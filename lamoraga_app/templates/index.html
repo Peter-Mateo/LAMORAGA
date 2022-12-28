@@ -20,7 +20,7 @@
     <meta name="msnbot" content="index, follow">
     <meta name="yahoo" content="index, follow">
 	<meta name="description" content="Lamoraga International Restaurant Naples FL offers the Best Tapas and Freshest Seafood. Visit our authentic cuisine dining spot - The Restaurant in Naples!" />
-    <meta name="keywords" content="Lamoraga, Restaurant, Naples, FL, International, Food, Best, Tapas, Seafood, Authentic, Cuisine, Dining, Spot, Restaurant, Mediterranean cuisine, Spanish food, Meal, Dinner, Menu, Chef, Mediterranean Food, Mediterranean Cuisine, Mediterranean Restaurant Naples, Mediterranean Food Naples, Mediterranean Cuisine Naples, Mediterranean Restaurant Florida, Mediterranean Food Florida, Mediterranean Cuisine Florida, Mediterranean Restaurant 34102, Mediterranean Food 34102, Mediterranean Cuisine 34102, Mediterranean Restaurant 34103, Mediterranean Food 34103, Mediterranean Cuisine 34103 Mediterranean Restaurant 34104, Mediterranean Food 34104, Mediterranean Cuisine 34104, Mediterranean Restaurant 34105, Mediterranean Food 34105, Mediterranean Cuisine 34105, Mediterranean Restaurant 34108, Mediterranean Food 34108, Mediterranean Cuisine 34108, Mediterranean Restaurant 34109, Mediterranean Food 34109, Mediterranean Cuisine 34109, Mediterranean Restaurant 34110, Mediterranean Food 34110, Mediterranean Cuisine 34110, Mediterranean Restaurant 34112, Mediterranean Food 34112" />
+    <meta name="keywords" content="Lamoraga, Restaurant, Naples, FL, International, Tapas, Seafood, Authentic, Restaurant, Mediterranean cuisine, Spanish food, Mediterranean restaurant in Naples, Florida, Authentic Mediterranean cuisine in Naples, Best tapas in Naples, Fresh seafood in Naples, Florida, Spanish restaurant in Naples, Florida, International food in Naples, Florida, Dining spot in Naples for Mediterranean cuisine, Mediterranean restaurant near me, Fine dining in Naples, Florida, Mediterranean meal in Naples, Mediterranean dinner in Naples, Mediterranean menu in Naples, Chef-inspired Mediterranean dishes in Naples, Mediterranean food in Naples, Florida, Mediterranean cuisine in Naples, Florida " />
 	<link rel="canonical" href="https://www.lamoragarestaurant.com/" />
 	<meta property="og:locale" content="en_US" />
 	<meta property="og:type" content="website" />
@@ -52,8 +52,8 @@
                     <a class="top" href="#">Gift Cards <img class="red-tri" src="{{ url_for('static', filename='img/red-triangle.png') }}" alt=""></a>
                     <div id="back"></div>
                     <ul class="dropdown">
-                        <li><a href="https://www.toasttab.com/lamoraga/giftcards">New Gift Card</a></li>
-                        <li><a href="https://www.toasttab.com/lamoraga/findcard">Check Balance</a></li>
+                        <li><a href="https://www.toasttab.com/lamoraga/giftcards" target="_blank">New Gift Card</a></li>
+                        <li><a href="https://www.toasttab.com/lamoraga/findcard" target="_blank">Check Balance</a></li>
                     </ul>
                 </div>
                 |
@@ -65,6 +65,13 @@
                 </div>
             </div>
         </nav>
+        <div class="working-hours-bar">
+            <div class="working-hours-text">
+                <p>Working Hours:</p>
+                <p>Monday-Friday: 4:00 pm - 9:00 pm</p>
+                <p>Saturday: 4:00 pm - 9:30 pm</p>
+            </div>
+        </div>
         <div class="wrapper">
         </div>
         <div class="hero">
@@ -94,36 +101,17 @@
                     </div>
                 </div>
                 <div class="hero-img">
-                    <div class="mask-group">
-                        <div class="contain">
-                            <div class="slides">
-                                <input type="radio" name="r" id="r1" checked>
-                                <input type="radio" name="r" id="r2">
-                                <input type="radio" name="r" id="r3">
-                                <input type="radio" name="r" id="r4">
-                                
-                                <div class="rectangle s1">
-                                    <img src="{{ url_for('static', filename='img/IMG_0646.jpg') }}" alt="">
-                                </div>
-                                <div class="rectangle s2">
-                                    <img src="{{ url_for('static', filename='img/Sea Bass.jpg') }}" alt="">
-                                </div>
-                                <div class="rectangle s3">
-                                    <img src="{{ url_for('static', filename='img/IMG_0481.jpg') }}" alt="">
-                                </div>
-                                <div class="rectangle s4">
-                                    <img src="{{ url_for('static', filename='img/IMG_0552.jpg') }}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="rectangle21"></div>
                     <div class="rectangle20"></div>
-                    <div class="navigation">
-                        <label for="r1" class="bar" id="re1" onclick="re1()">01</label>
-                        <label for="r2" class="bar" id="re2" onclick="re2()">02</label>
-                        <label for="r3" class="bar" id="re3" onclick="re3()">03</label>
-                        <label for="r4" class="bar" id="re4" onclick="re4()">04</label>
+                    <div class="mask-group">
+                        <div class="slideshow">
+                            <div class="slides">
+                                <div class="slide-1"></div>
+                                <div class="slide-2"></div>
+                                <div class="slide-3"></div>
+                                <div class="slide-4"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -178,10 +166,10 @@
             <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=138772&type=standard&theme=wide&color=1&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
         </div>
     </div>
-    <img id="bg-line-1" src="{{ url_for('static', filename='img/vector15.png') }}" alt="">
-    <img id="bg-line-2" src="{{ url_for('static', filename='img/vector15.png') }}" alt="">
-    <img id="bg-line-3" src="{{ url_for('static', filename='img/vector14.png') }}" alt="">
-    <img id="bg-line-4" src="{{ url_for('static', filename='img/vector14.png') }}" alt="">
+    <div id="bg-line-1"></div>
+    <div id="bg-line-2"></div>
+    <div id="bg-line-3"></div>
+    <div id="bg-line-4"></div>
     <div class="menu">
         <div class="wrapper">
             <div class="icon">
@@ -575,9 +563,9 @@
                 <div class="right">
                     <h4>Working Hours</h4>
                     <p>Monday-Friday: <br>
-                        04:00 pm -9:00 pm</p>
+                        4:00 pm - 9:00 pm</p>
                     <p>Saturday: <br>
-                        04:00pm -09:30 pm</p>
+                        4:00pm - 9:30 pm</p>
                 </div>
             </div>
             <div class="bottom">

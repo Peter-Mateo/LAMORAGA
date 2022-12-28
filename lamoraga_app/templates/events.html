@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Event Calendar | Lamoraga</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <meta name="geo.country" content="US">
-    <meta name="geo.region" content="US-FL">
-    <meta name="geo.placename" content="Lamoraga">
-    <meta name="geo.position" content="26.194206318854413, -81.79952854229583">
-    <meta name="googlebot" content="index, follow">
-    <meta name="author" content="Lamoraga">
-    <meta name="robots" content="index, follow">
-    <meta name="revisit-after" content="7 days">
-    <meta name="rating" content="General">
-    <meta name="language" content="English">
-    <meta name="distribution" content="global">
-    <meta name="google" content="notranslate">
-    <meta name="msnbot" content="index, follow">
-    <meta name="yahoo" content="index, follow">
-    <meta name="description" content="Experience the flavors of the Mediterranean at our restaurant in Naples. Join us for special events featuring delicious tapas, seafood dishes, and other authentic cuisine. Check out our calendar and reserve your spot today!">
-    <meta name="keywords" content="Special occasions, Private events, Parties, Celebrations, Corporate events, Group gatherings, Banquets, Rehearsal dinners, Wedding receptions, Anniversaries, Birthdays, Bridal showers, Baby showers, Graduations, Holiday parties" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="geo.country" content="US" />
+    <meta name="geo.region" content="US-FL" />
+    <meta name="geo.placename" content="Lamoraga" />
+    <meta name="geo.position" content="26.194206318854413, -81.79952854229583" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="author" content="Lamoraga" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="General" />
+    <meta name="language" content="English" />
+    <meta name="distribution" content="global" />
+    <meta name="google" content="notranslate" />
+    <meta name="msnbot" content="index, follow" />
+    <meta name="yahoo" content="index, follow" />
+    <meta name="description" content="Experience the flavors of the Mediterranean at our restaurant in Naples. Join us for special events featuring delicious tapas, seafood dishes, and other authentic cuisine. Check out our calendar and reserve your spot today!" />
+    <meta name="keywords" content="Mediterranean restaurant, Events, Private events, Corporate events, Mediterranean cuisine, Spanish food, Naples, Florida, Authentic food, Best tapas, Fresh seafood, Dining spot, International food, Mediterranean restaurant events, Private events at Mediterranean restaurant, Corporate events at Mediterranean restaurant, Mediterranean cuisine events, Spanish food events, Naples, Florida restaurant events, Authentic food events, Best tapas events, Fresh seafood events, Dining spot events, International food events" />
     <link rel="canonical" href="https://www.lamoragarestaurant.com/event-calendar/" />
 	<meta property="og:locale" content="en_US" />
 	<meta property="og:type" content="article" />
@@ -34,16 +34,15 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav id="navbar">
             <div class="logo"><a href="{{ url_for('index')}}">LAMORAGA</a></div>
             <div class="nav-middle">
                 <ul>
                     <li><a href="{{ url_for('index')}}">Home</a></li>
-                    <li><a href="{{ url_for('about')}}">About Us</a></li>
-                    <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
                     <li><a href="{{ url_for('menu')}}">Menu</a></li>
-                    <li><a href="{{ url_for('blog')}}">Blog</a></li>
                     <li><a href="{{ url_for('events')}}">Events</a></li>
+                    <li><a href="{{ url_for('blog')}}">Blog</a></li>
+                    <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
                 </ul>
             </div>
             <div class="nav-right">
@@ -51,8 +50,8 @@
                     <a class="top" href="#">Gift Cards <img class="red-tri" src="{{ url_for('static', filename='img/red-triangle.png') }}" alt=""></a>
                     <div id="back"></div>
                     <ul class="dropdown">
-                        <li><a href="https://www.toasttab.com/lamoraga/giftcards">New Gift Card</a></li>
-                        <li><a href="https://www.toasttab.com/lamoraga/findcard">Check Balance</a></li>
+                        <li><a href="https://www.toasttab.com/lamoraga/giftcards" target="_blank">New Gift Card</a></li>
+                        <li><a href="https://www.toasttab.com/lamoraga/findcard" target="_blank">Check Balance</a></li>
                     </ul>
                 </div>
                 |
@@ -64,6 +63,13 @@
                 </div>
             </div>
         </nav>
+        <div class="working-hours-bar">
+            <div class="working-hours-text">
+                <p>Working Hours:</p>
+                <p>Monday-Friday: 4:00 pm - 9:00 pm</p>
+                <p>Saturday: 4:00 pm - 9:30 pm</p>
+            </div>
+        </div>
         <div class="wrapper">
         </div>
         <div class="event-slide">
@@ -129,9 +135,9 @@
                 <div class="right">
                     <h4>Working Hours</h4>
                     <p>Monday-Friday: <br>
-                        04:00 pm -9:00 pm</p>
+                        4:00 pm - 9:00 pm</p>
                     <p>Saturday: <br>
-                        04:00pm -09:30 pm</p>
+                        4:00pm - 9:30 pm</p>
                 </div>
             </div>
             <div class="bottom">
