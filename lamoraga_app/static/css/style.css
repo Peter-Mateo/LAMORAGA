@@ -243,6 +243,34 @@ nav .nav-right .left {
     display: flex;
     flex-direction: column;
 }
+/* Hide mobile navigation menu by default */
+.mobile-nav {
+    display: none;
+    z-index: 100;
+}
+.mobile-nav .mobile-nav-list {
+    list-style: none;
+    display: none;
+}
+/* Show mobile navigation menu list when button is clicked */
+.mobile-nav-btn:focus + .mobile-nav-list {
+    display: block;
+}
+/* Position mobile navigation menu on top right of the page */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 20px;
+}
+/* Use media queries to show mobile navigation menu at certain screen sizes */
+@media (max-width: 768px) {
+    .mobile-nav {
+    display: block;
+    }
+    nav {
+        display: none;
+    }
+}
 .working-hours-bar {
     position: fixed;
     bottom: 0;
