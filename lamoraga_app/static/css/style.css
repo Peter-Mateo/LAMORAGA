@@ -5,42 +5,6 @@
     margin: 0;
     /* outline: red dashed 1px; */
 }
-#bg-line-1{
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    background-image: url("../img/Vector15.png");
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 10000px;
-}
-#bg-line-2{
-    position: absolute;
-    top: 0;
-    right: -10px;
-    z-index: -1;
-    background-image: url("../img/Vector15.png");
-    background-repeat: repeat-x;
-    height: 10000px;
-    width: 100%;
-}
-#bg-line-3{
-    position: absolute;
-    top: 200px;
-    right: -10px;
-    z-index: -1;
-    height: 10000px;
-    width: 100%;
-    background-image: url("../img/Vector14.png");
-}
-#bg-line-4{
-    position: absolute;
-    z-index: -1;
-    right: 0;
-    height: 8000px;
-    width: 100%;
-    background-image: url("../img/Vector14.png");
-}
 p{
     font-family: 'Open Sans';
     font-weight: 400;
@@ -136,7 +100,12 @@ header a {
     color: #ffff;
 }
 .bar-head{
-    background-image: url("../img/bg-second-hp.png");
+    background-image: url("../img/bg-second-hp.webp");
+}
+@supports not (background-image: url("../img/bg-second-hp.webp")){
+    .bar-head{
+        background-image: url("../img/bg-second-hp.jpg");
+    }
 }
 .btn{
     cursor: pointer;
@@ -447,35 +416,58 @@ nav .nav-right .left {
         transform: translateX(-1950px);
     }
 }
+/* Paella  */
 .slide-1{
-    background-image: url("../img/IMG_0646.jpg");
+    background-image: url("../img/sea_paella.webp");
     background-size: cover;
     z-index: 1;
     width: 100%;
     height: 100%;
 }
+@supports not (background-image: url("../img/sea_paella.webp")){
+    .slide-1{
+        background-image: url("../img/sea_paella.jpg");
+    }
+}
+/* Massaman Curry */
 .slide-2{
-    background-image: url("../img/Sea Bass.jpg");
+    background-image: url("../img/vegan_curry.webp");
     background-size: cover;
     z-index: 1;
     width: 100%;
     height: 100%;
 }
+@supports not (background-image: url("../img/vegan_curry.webp")){
+    .slide-2{
+        background-image: url("../img/vegan_curry.jpg");
+    }
+}
+/* Sea Bass */
 .slide-3{
-    background-image: url("../img/IMG_0481.jpg");
+    background-image: url("../img/sea_bass.webp");
     background-size: cover;
     z-index: 1;
     width: 100%;
     height: 100%;
 }
+@supports not (background-image: url("../img/sea_bass.webp")){
+    .slide-3{
+        background-image: url("../img/sea_bass.jpg");
+    }
+}
+/* Short Ribs */
 .slide-4{
-    background-image: url("../img/IMG_0552.jpg");
+    background-image: url("../img/short_ribs.webp");
     background-size: cover;
     z-index: 1;
     width: 100%;
     height: 100%;
 }
-
+@supports not (background-image: url("../img/short_ribs.webp")){
+    .slide-4{
+        background-image: url("../img/short_ribs.jpg");
+    }
+}
 /* Red Squares */
 .hero .Content .hero-img .rectangle21{
     position: absolute;
@@ -521,8 +513,13 @@ nav .nav-right .left {
     display: flex;
     height: 110vh;
     width: 100%;
-    background-image: url("../img/bg-second-hp.png");
+    background-image: url("../img/bg-second-hp.webp");
     background-size: cover;
+}
+@supports not (background-image: url("../img/bg-second-hp.webp")){
+    .about{
+        background-image: url("../img/bg-second-hp.jpg");
+    }
 }
 .about .wrapper {
     display: flex;
@@ -635,8 +632,13 @@ nav .nav-right .left {
     display: flex;
     width: auto;
     height: 100vh;
-    background-image: url("../img/menu-bar-glass.png");
+    background-image: url("../img/menu-bar-glass.webp");
     background-size: cover;
+}
+@supports not (background-image: url("../img/menu-bar-glass.webp")){
+    .menu{
+        background-image: url("../img/menu-bar-glass.jpg");
+    }
 }
 .menu::after{
     content: "";
@@ -835,10 +837,15 @@ nav .nav-right .left {
 .owner {
     width: auto;
     height: 110vh;
-    background-image: url("../img/bg-second-hp.png");
+    background-image: url("../img/bg-second-hp.webp");
     background-size: cover;
     display: flex;
     justify-content: center;
+}
+@supports not (background-image: url("../img/bg-second-hp.webp")){
+    .owner {
+        background-image: url("../img/bg-second-hp.jpg");
+    }
 }
 .owner .wrapper{
     display: flex;
@@ -1017,8 +1024,13 @@ nav .nav-right .left {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-image: url("../img/bg-second-hp.png");
+    background-image: url("../img/bg-second-hp.webp");
     background-size: cover;
+}
+@supports not (background-image: url("../img/bg-second-hp.webp")){
+    .laurels{
+        background-image: url("../img/bg-second-hp.jpg");
+    }
 }
 .laurels .wrapper {
     display: flex;
@@ -1090,8 +1102,13 @@ nav .nav-right .left {
     height: 68vh;
     display: flex;
     justify-content: center;
-    background-image: url("../img/bg-second-hp.png");
+    background-image: url("../img/bg-second-hp.webp");
     background-size: cover;
+}
+@supports not (background-image: url("../img/bg-second-hp.webp")){
+    .gallery{
+        background-image: url("../img/bg-second-hp.jpg");
+    }
 }
 .gallery .wrapper{
     display: flex;
@@ -1192,20 +1209,7 @@ nav .nav-right .left {
 }
 .gallery .wrapper .mask-group img{
     position: relative;
-    width: 1126px;
-    height: 1688px;
-    object-fit: scale-down;
-    bottom: 600px;
-    right: 500px;
-}
-.gallery .wrapper .mask-group .dub img{
-    right: 400px!important;
-    transform: scale(0.7,0.7);
-}
-.gallery .wrapper .mask-group .rub img{
-    right: 400px!important;
-    bottom: 620px;
-    transform: scale(0.6,0.6);
+    object-fit: cover;
 }
 .gallery .wrapper .mask-group .sub{
     position: absolute!important;
@@ -1218,11 +1222,7 @@ nav .nav-right .left {
 }
 .gallery .wrapper .mask-group .sub img{
     position: relative;
-    width: 1126px;
-    height: 1688px;
-    object-fit: scale-down;
-    bottom: 600px;
-    right: 500px;
+    object-fit: cover;
 }
 .block{
     width: 100%;
@@ -1232,7 +1232,12 @@ nav .nav-right .left {
     width: 100%;
     height: 90vh;
     display: flex;
-    background-image: url("../img/bg-second-hp.png");
+    background-image: url("../img/bg-second-hp.webp");
+}
+@supports not (background-image: url("../img/bg-second-hp.webp")){
+    .footer{
+        background-image: url("../img/bg-second-hp.jpg");
+    }
 }
 .footer .wrapper .top h5{
     font-family: 'Cormorant Upright';
@@ -1481,7 +1486,12 @@ header .con-slide {
     width: 100%;
     height: 80vh;
     display: flex;
-    background-image: url("../img/bg-second-hp.png");
+    background-image: url("../img/bg-second-hp.webp");
+}
+@supports not (background-image: url("../img/bg-second-hp.webp")){
+    .contact-form{
+        background-image: url("../img/bg-second-hp.jpg");
+    }
 }
 .contact-form .right{
     width: 483px;
@@ -1571,9 +1581,14 @@ header .abt-slide {
 .abt-slide{
     display: flex;
     width: auto;
-    background-image: url("../img/abt-hero.png");
+    background-image: url("../img/abt-hero.webp");
     background-position: 0px;
     background-size: cover;
+}
+@supports not (background-image: url("../img/abt-hero.webp")){
+    .abt-slide{
+        background-image: url("../img/abt-hero.jpg");
+    }
 }
 .abt-slide h1{
     font-family: 'Cormorant Upright';
@@ -1762,9 +1777,14 @@ header .event-slide {
 .event-slide{
     display: flex;
     width: auto;
-    background-image: url("../img/event-hero.png");
+    background-image: url("../img/event-hero.webp");
     background-position: 0px;
     background-size: cover;
+}
+@supports not (background-image: url("../img/event-hero.webp")){
+    .event-slide{
+        background-image: url("../img/event-hero.jpg");
+    }
 }
 .event-slide h1{
     font-family: 'Cormorant Upright';

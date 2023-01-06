@@ -46,7 +46,7 @@
 <body>
     <header>
         <nav id="navbar">
-            <div class="logo"><a href="{{ url_for('index')}}">LAMORAGA</a></div>
+            <div class="logo"><a href="{{ url_for('index')}}"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Lamoraga Logo"></a></div>
             <div class="nav-middle">
                 <ul>
                     <li><a href="{{ url_for('index')}}">Home</a></li>
@@ -58,7 +58,7 @@
             </div>
             <div class="nav-right">
                 <div class="left" id="left">
-                    <a class="top" href="#">Gift Cards <img class="red-tri" src="{{ url_for('static', filename='img/red-triangle.png') }}" alt=""></a>
+                    <a href="https://www.toasttab.com/lamoraga/giftcards" target="_blank" class="top">Gift Cards <img class="red-tri" src="{{ url_for('static', filename='img/red-triangle.png') }}" alt="Lamoraga giftcards"></a>
                     <div id="back"></div>
                     <ul class="dropdown">
                         <li><a href="https://www.toasttab.com/lamoraga/giftcards" target="_blank">New Gift Card</a></li>
@@ -67,7 +67,7 @@
                 </div>
                 |
                 <div class="right" id="right">
-                    <a class="book_table">Book Table</a>
+                    <a class="book_table" href="#open_table">Book Table</a>
                     <div class="open_tble">
                         <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=138772&type=standard&theme=standard&color=1&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
                     </div>

@@ -19,6 +19,7 @@
     <meta name="google" content="notranslate" />
     <meta name="msnbot" content="index, follow" />
     <meta name="yahoo" content="index, follow" />
+    <meta name="description" content="The idea of Lamoraga started not too long ago in Andalusia, the Spanish region that covers most of the southern part of the Iberian Peninsula. The region's history dates back many 1000s of years." />
     <link rel="canonical" href="https://www.lamoragarestaurant.com/the-restaurant/history/" />
     <meta name="keywords" content="Restaurant history, Founder, Contact information, Hours of operation, Services, Mediterranean restaurant, About us, Mediterranean cuisine, Spanish food, Naples, Florida, Authentic food, Best tapas, Fresh seafood, Dining spot, International food, Authentic Mediterranean restaurant in Naples, Florida, Best tapas in Naples, Florida, Fresh seafood in Naples, Spanish restaurant in Naples, Florida, International food in Naples, Florida, Authentic dining spot in Naples for Mediterranean cuisine" />
 	<link rel="canonical" href="https://www.lamoragarestaurant.com/" />
@@ -40,7 +41,7 @@
 <body>
     <header>
         <nav id="navbar">
-            <div class="logo"><a href="{{ url_for('index')}}">LAMORAGA</a></div>
+            <div class="logo"><a href="{{ url_for('index')}}"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Lamoraga Logo"></a></div>
             <div class="nav-middle">
                 <ul>
                     <li><a href="{{ url_for('index')}}">Home</a></li>
@@ -52,7 +53,7 @@
             </div>
             <div class="nav-right">
                 <div class="left" id="left">
-                    <a class="top" href="#">Gift Cards <img class="red-tri" src="{{ url_for('static', filename='img/red-triangle.png') }}" alt=""></a>
+                    <a href="https://www.toasttab.com/lamoraga/giftcards" target="_blank" class="top">Gift Cards <img class="red-tri" src="{{ url_for('static', filename='img/red-triangle.png') }}" alt="Lamoraga giftcards"></a>
                     <div id="back"></div>
                     <ul class="dropdown">
                         <li><a href="https://www.toasttab.com/lamoraga/giftcards" target="_blank">New Gift Card</a></li>
@@ -61,7 +62,7 @@
                 </div>
                 |
                 <div class="right" id="right">
-                    <a class="book_table">Book Table</a>
+                    <a class="book_table" href="#open_table">Book Table</a>
                     <div class="open_tble">
                         <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=138772&type=standard&theme=standard&color=1&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
                     </div>
