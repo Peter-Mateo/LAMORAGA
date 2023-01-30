@@ -50,7 +50,6 @@
             <div class="nav-right">
                 <div class="left" id="left">
                     <a href="https://www.toasttab.com/lamoraga/giftcards" target="_blank" class="top">Gift Cards <img class="red-tri" src="{{ url_for('static', filename='img/red-triangle.png') }}" alt="Lamoraga giftcards"></a>
-                    <div id="back"></div>
                     <ul class="dropdown">
                         <li><a href="https://www.toasttab.com/lamoraga/giftcards" target="_blank">New Gift Card</a></li>
                         <li><a href="https://www.toasttab.com/lamoraga/findcard" target="_blank">Check Balance</a></li>
@@ -67,21 +66,33 @@
         </nav>
         <!-- Mobile navigation menu -->
         <div class="mobile-nav">
-            <!-- Mobile navigation button -->
-            <button class="mobile-nav-btn">Menu</button>
-            <ul class="mobile-nav-list">
-                <li><a href="{{ url_for('index')}}">Home</a></li>
-                <li><a href="{{ url_for('menu')}}">Menu</a></li>
-                <li><a href="{{ url_for('events')}}">Events</a></li>
-                <li><a href="{{ url_for('blog')}}">Blog</a></li>
-                <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
-            </ul>
+            <div class="wrap">
+                <div class="logo"><a href="{{ url_for('index')}}"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Lamoraga Logo"></a></div>
+                <div class="right">
+                    <div class="bk_tbl">
+                        <button class="book_table">Book Table</button>
+                        <div class="mbl-opn">
+                            <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=138772&type=standard&theme=standard&color=1&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
+                        </div>
+                    </div>
+                    <!-- Mobile navigation button -->
+                    <div class="menu-mobile">
+                        <button class="mobile-nav-btn">Menu</button>
+                        <ul class="mobile-nav-list">
+                            <li><a href="{{ url_for('index')}}">Home</a></li>
+                            <li><a href="{{ url_for('menu')}}">Menu</a></li>
+                            <li><a href="{{ url_for('events')}}">Events</a></li>
+                            <li><a href="{{ url_for('blog')}}">Blog</a></li>
+                            <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="working-hours-bar">
             <div class="working-hours-text">
-                <p>Working Hours:</p>
-                <p>Monday-Friday: 4:00 pm - 9:00 pm</p>
-                <p>Saturday: 4:00 pm - 9:30 pm</p>
+                <p>Monday-Sunday: 4:00 pm - 9:00 pm</p>
+                <p>Daily Happy Hour: 4:00 pm - 6:00 pm</p>
             </div>
         </div>
         <div class="wrapper">
@@ -290,7 +301,7 @@
                 </div>
                 <div class="right">
                     <h2 class="title">Cocktails</h2>
-                    {% for drink in range(5) %}
+                    {% for drink in range(4) %}
                         <div class="wine">
                             <div class="top">
                                 <div class="name">
@@ -483,6 +494,21 @@
                         </div>
                     {% endfor %}
                 </div>
+                <div class="middle-mobile">
+                    <div class="post">
+                        <div>
+                            <img loading="lazy" src="{{ url_for('static', filename='blob_imgs/' + posts[0].cover) }} " alt="">
+                        </div>
+                        <div class="content">
+                            <p>{{ posts[0].created_at | format_datetime }}</p>
+                            <h5 id="title-blog">{{ posts[0].title }}</h5>
+                            <p>{{ posts[0].intro | truncate(100) }}</p>
+                            <div class="btn">
+                                <a href="{{ url_for('blog_post', id=posts[0].id) }}">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="btm">
                     <div class="btn">
                         <a href="{{ url_for('blog') }}">View More</a>
@@ -571,7 +597,6 @@
                     </div>
                 </div>
                 <div class="right">
-                    <h4>Working Hours</h4>
                     <p>Monday-Friday: <br>
                         4:00 pm - 9:00 pm</p>
                     <p>Saturday: <br>
