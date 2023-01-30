@@ -2279,7 +2279,7 @@ header .event-slide {
 }
 
 /* Create responsive media sizes */
-@media (max-width: 1640px){
+@media only screen and (max-width: 1640px){
 .hero .hashtag {
     display: none;
 }
@@ -2297,7 +2297,7 @@ header .event-slide {
     width: 585px;
 }
 }
-@media (max-width: 1524px){
+@media only screen and (max-width: 1524px){
 .gallery .wrapper .mask-group .sub {
         display: none;
 }
@@ -2344,7 +2344,7 @@ header .event-slide {
     width: 500px!important;
 }
 }
-@media (max-width: 1400px){
+@media only screen and (max-width: 1400px){
 .laurels{
     display: none;
 }
@@ -2398,7 +2398,7 @@ header .event-slide {
     margin-left: 36px;
 }
 }
-@media (max-width: 1300px){
+@media only screen and (max-width: 1300px){
 .gallery {
     display: none;
 }
@@ -2460,7 +2460,7 @@ p {
     width: 700px!important;
 }
 }
-@media (max-width: 1200px){
+@media only screen and (max-width: 1200px){
 .blog .wrapper .middle .post img {
     width: 324px;
     height: 356.4px;
@@ -2517,7 +2517,7 @@ p {
     font-size: 68px!important;
 }
 }
-@media (max-width: 1100px){
+@media only screen and (max-width: 1100px){
 .hero .Content .content {
     position: absolute;
     z-index: 2;
@@ -2711,7 +2711,7 @@ h3{
     margin-left: 36px;
 }
 }
-@media (max-width: 900px){
+@media only screen and (max-width: 900px){
 .blog .wrapper .middle .post img {
     width: 207.36px;
     height: 228.096px;
@@ -2761,7 +2761,7 @@ h3{
     display: none;
 }
 }
-@media (max-width: 850px){
+@media only screen and (max-width: 850px){
 .footer .wrapper .btm input{
     width: 500px;
 }
@@ -2795,7 +2795,7 @@ h3{
     display: none;
 }
 }
-@media (max-width: 730px){
+@media only screen and (max-width: 730px){
 .blog .wrapper .middle .post img{
     width: 165.888px;
     height: 182.4768px;
@@ -2853,12 +2853,12 @@ h3{
     font-size: 60px!important;
 }
 }
-@media (max-width: 650px){
+@media only screen and (max-width: 650px){
 .footer .contact-btm {
     flex-direction: column;
 }
 }
-@media (max-width: 618px){
+@media only screen and (max-width: 618px){
 .specials .btn {
     margin-top: 28px;
 }
@@ -2893,7 +2893,7 @@ h3{
     font-size: 30px !important;
 }
 }
-@media (max-width: 550px){
+@media only screen and (max-width: 550px){
 .mobile-nav{
     height: fit-content;
 }
@@ -2936,7 +2936,7 @@ h3{
     font-size: 18px!important;
 }
 }
-@media (max-width: 450px){
+@media only screen and (max-width: 450px){
 .blog h2{
     font-size: 34px!important;
 }
@@ -2999,7 +2999,7 @@ h3{
     margin-top: 923px!important;
 }
 }
-@media(max-width: 400px){
+@media only screen and (max-width: 400px){
 .hero .Content .content h1{
     font-size: 40px;
 }
