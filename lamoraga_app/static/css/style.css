@@ -5,6 +5,12 @@
     margin: 0;
     /* outline: red dashed 1px; */
 }
+html{
+    box-sizing: border-box;
+}
+*,*:before, *:after{
+    box-sizing: inherit;
+}
 p{
     font-family: 'Open Sans';
     font-weight: 400;
@@ -82,7 +88,7 @@ body{
     background-color: #040404;
     overflow-x: hidden;
     color: #ffff;
-    width: 100%!important;
+    width: 100vw!important;
 }
 .wrapper{
     position: relative;
@@ -275,6 +281,9 @@ nav .nav-right .left {
     letter-spacing: 0.04em;
     transform: rotate(-90deg);
     font-size: 18px;
+}
+header{
+    overflow: hidden;
 }
 .hero .Content{
     display: flex;
@@ -1236,6 +1245,7 @@ nav .nav-right .left {
     font-feature-settings: 'tnum' on, 'lnum' on;
     color: #FFFFFF;
 }
+
 .footer .wrapper .contact .top img{
     display: block;
     margin-left: auto;
@@ -1264,7 +1274,7 @@ nav .nav-right .left {
     align-items: center;
     padding: 0px;
     gap: 32px;
-    width: 796px;
+    width: 100%;
     height: 60px;
 }
 .footer .wrapper .btm label{
@@ -1294,7 +1304,7 @@ nav .nav-right .left {
     left: 50%;
     transform: translateX(-50%);
     top: -550px;
-    width: 1300px;
+    width: 100%;
     height: 442px;
     background: #0C0C0C;
     border: 1px solid rgba(220, 202, 135, 0.2);
@@ -1779,7 +1789,7 @@ header .event-slide {
     font-family: 'Cormorant Upright';
     font-style: normal;
     font-weight: 700;
-    width: 100em;
+    width: 100%;
     font-size: 90px;
     line-height: 130%;
     text-align: center;
@@ -2916,6 +2926,9 @@ h3{
 }
 .footer .contact h2{
     font-size: 30px !important;
+}
+.footer .wrapper .contact{
+    padding: 32px 126px;
 }
 /* Contact Form */
 .contact-form .left form input{
