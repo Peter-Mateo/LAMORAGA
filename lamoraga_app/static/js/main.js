@@ -139,3 +139,19 @@ $("#wine_btl_btn").click(function(){
     $("#cocktails_btn").removeClass("active");
     $("#wine_btn").removeClass("active");
 })
+$(document).click(function(e) {
+    if (!$(e.target).closest('.mobile-nav-list, .mobile-nav-btn').length) {
+        $('.mobile-nav-list').hide();
+    }
+});
+$('.mobile-nav-btn').click(function(){
+    $('.mobile-nav-list').toggle();
+});
+$(document).click(function(e) {
+    if (!$(e.target).closest('.mbl-opn, .book_table').length) {
+        $('.mbl-opn').hide();
+    }
+});
+$('.book_table').click(function(){
+    $('.mbl-opn').toggle();
+});

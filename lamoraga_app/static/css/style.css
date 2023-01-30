@@ -218,13 +218,6 @@ nav .nav-right .left {
 .mbl-opn{
     display: none;
 }
-/* Show mobile navigation menu list when button is clicked */
-.mobile-nav-btn:focus + .mobile-nav-list {
-    display: block;
-}
-.book_table:focus + .mbl-opn{
-    display: block;
-}
 /* Position mobile navigation menu on top right of the page */
 .mobile-nav {
     position: fixed;
@@ -2627,6 +2620,12 @@ p {
     cursor: pointer;
     position: relative;
     background-color:#F5EFDB;
+    font-family: 'Cormorant Upright';
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: #0C0B08;
 }
 .mobile-nav-list{
     position: absolute;
@@ -2646,6 +2645,12 @@ p {
     background-color: #AC1F2D;
     align-items: center;
     cursor: pointer;
+    font-family: 'Cormorant Upright';
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: #0C0B08;
 }
 #navbar{
     display: none;
