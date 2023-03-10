@@ -326,6 +326,7 @@ header{
     letter-spacing: 0.04em;
     color: #0C0B08;
     text-decoration: none;
+    width: 100px;
 }
 .hero .Content .content .middle {
     color: #AAAAAA;
@@ -1245,7 +1246,6 @@ header{
     font-feature-settings: 'tnum' on, 'lnum' on;
     color: #FFFFFF;
 }
-
 .footer .wrapper .contact .top img{
     display: block;
     margin-left: auto;
