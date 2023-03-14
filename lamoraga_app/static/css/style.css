@@ -1923,6 +1923,7 @@ header .event-slide {
     width: 100%;
     gap: 20px;
     padding-top: 30px;
+    height: fit-content;
 }
 .menu-bg .wrapper .menu-item {
     display: grid;
