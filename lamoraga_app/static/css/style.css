@@ -1879,6 +1879,11 @@ header .event-slide {
 .menu-bg {
     width: 100%;
     height: fit-content;
+    padding-top: 30px;
+}
+.menu-bg .wrapper {
+    height: fit-content;
+    padding-bottom: 20px;
 }
 .menu-bg .wrapper .type-btn {
     display: flex;
@@ -2964,6 +2969,7 @@ h3{
 }
 .footer .wrapper .contact{
     padding: 32px 126px;
+    bottom: 80%;
 }
 /* Contact Form */
 .contact-form .left form input{
