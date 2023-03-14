@@ -28,7 +28,13 @@ def contact():
 
 @app.route('/event-calendar/')
 def events():
-    return render_template('events.html', events = Events.get_all_events())
+    event = Events.get_all_events()
+    if len(event) == 0 or event == {}:
+        event = [{
+            'name': 'No events',
+            'date': datetime.now().strftime('%Y-%m-%d')
+        }]
+    return render_template('events.html', events = event)
 
 
 @app.route('/the-restaurant/press-room/')
