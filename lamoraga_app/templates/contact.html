@@ -3,6 +3,8 @@
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5SHHWBNG6R"></script>
+    <!-- Google RECAPTCHA Tag -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -129,12 +131,13 @@
     <div class="contact-form">
         <div class="wrapper">
             <div class="left">
-                <form action="" method="POST">
-                    <input type="text" for="name" id="name" placeholder="Full Name">
-                    <input type="email" for="email" id="email" placeholder="Email Address">
+                <form action="/contact/" method="POST">
+                    <input type="text" for="name" id="name" placeholder="Full Name" required>
+                    <input type="email" for="email" id="email" placeholder="Email Address"required>
                     <textarea class="textbox" type="text" for="message" id="message" placeholder="Message" required></textarea>
+                    <div class="g-recaptcha" data-sitekey="6Lf5FwslAAAAAOT4wg2dgWDQjTaofAXY-04aV_2S"></div>
                     <div class="btn">
-                        <a href="#">Submit</a>
+                        <button style="background-color: transparent; border: 0; cursor: pointer;">Submit</button>
                     </div>
                 </form>
             </div>

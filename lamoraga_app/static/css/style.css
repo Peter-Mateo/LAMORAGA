@@ -1552,6 +1552,7 @@ header .con-slide {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
     padding: 2px;
     gap: 10px;
     width: 129px;
@@ -1559,7 +1560,7 @@ header .con-slide {
     background: #DCCA87;
     border: 1px solid #DCCA87;
 }
-.contact-form .left .btn a{
+.contact-form .left .btn button{
     text-decoration: none;
     font-family: 'Cormorant Upright';
     font-style: normal;

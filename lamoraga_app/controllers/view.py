@@ -1,5 +1,9 @@
+import smtplib
 from datetime import datetime
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
+import requests
 from flask import flash, redirect, render_template, request, url_for
 
 from lamoraga_app import app
@@ -14,6 +18,27 @@ from lamoraga_app.models.user import User
 from lamoraga_app.models.wine import Wine
 
 
+def send_email(subject, body, to_email):
+    from_email = "form@lenvera.com"
+    password = "FormSubMi$$Ion!"
+
+    msg = MIMEMultipart()
+    msg['From'] = from_email
+    msg['To'] = to_email
+    msg['Subject'] = subject
+
+    msg.attach(MIMEText(body, 'plain'))
+
+    try:
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(from_email, password)
+        server.send_message(msg)
+        server.quit()
+        print("Email sent successfully!")
+    except Exception as e:
+        print(f"Error while sending email: {e}")
+
 @app.route('/')
 def index():
     return render_template('index.html', cocktails=Cocktail.get_all_cocktails(), sangria=Wine.get_sangria(), white_wine=Wine.get_white(), red_wine=Wine.get_red(), beer=Beer.get_beer(), event = Events.delete_event(), posts = Blog.get_all_posts()[::-1])
@@ -22,9 +47,34 @@ def index():
 def about():
     return render_template('about.html')
 
-@app.route('/contact/')
+@app.route('/contact/', methods =['GET', 'POST'])
 def contact():
-    return render_template('contact.html')
+    if request.method == 'GET':
+        return render_template('contact.html')
+    if request.method == 'POST':
+        recaptcha_response = request.form.get('g-recaptcha-response')
+        secret_key = "6Lf5FwslAAAAABBYOGJ_KxWGDiOdmOunhifRlZDu"
+        data = {
+            'secret': secret_key,
+            'response': recaptcha_response
+        }
+        response = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
+        captcha_success = response.json()
+
+        if not captcha_success.get('success'):
+            return "You are a bot! Go away!"
+        else:
+            # Process the form as usual
+            form_field_1 = request.form.get('name')
+            form_field_2 = request.form.get('email')
+            form_field_3 = request.form.get('message')
+
+            email_subject = "Form Submission"
+            email_body = f"Name: {form_field_1}\nEmail: {form_field_2}\nMessage: {form_field_3}"
+            recipient_email = "peter.mateo@lenvera.com"
+
+            send_email(email_subject, email_body, recipient_email)
+            return "Form submitted successfully!"
 
 @app.route('/event-calendar/')
 def events():
@@ -35,7 +85,6 @@ def events():
             'date': datetime.now().strftime('%Y-%m-%d')
         }]
     return render_template('events.html', events = event)
-
 
 @app.route('/the-restaurant/press-room/')
 def blog():
@@ -49,7 +98,6 @@ def blog_post(id):
     }
     post = Blog.get_post(data)
     return render_template('blog_post.html', post = post, posts = Blog.get_all_posts()[::-1])
-
 
 @app.route('/menus/')
 def menu():
