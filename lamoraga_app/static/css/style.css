@@ -263,6 +263,9 @@ nav .nav-right .left {
 .hero {
     margin-top: 6%;
 }
+.hero-desktop .btn{
+    display: block;
+}
 .hero .hashtag{
     display: flex;
     flex-direction: column;
@@ -920,7 +923,19 @@ header{
     letter-spacing: 0.04em;
     color: #AAAAAA;
 }
+.lazyload {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.lazyload.loaded {
+opacity: 1;
+}
 .testimonials{
+    margin-top: 10em!important;
     height: 100vh;
     width: auto;
     display: flex;
@@ -1017,8 +1032,9 @@ header{
     width: 100%;
     display: flex;
     justify-content: center;
-    background-image: url("../img/bg-second-hp.webp");
+    background-image: url("../img/bg-second-hp.webp")!important;
     background-size: cover;
+    transition: opacity 0.3s ease-in-out;
 }
 @supports not (background-image: url("../img/bg-second-hp.webp")){
     .laurels{
@@ -1029,6 +1045,7 @@ header{
     display: flex;
     justify-content: center;
     gap: 50px;
+    margin-top: 8em;
 }
 .laurels .wrapper .left {
     display: flex;
@@ -1087,8 +1104,10 @@ header{
     height: 79px;
 }
 .blog{
+    margin-top: 5em;
     width: 100%;
     height: 120vh;
+    padding-bottom: 20%!important;
 }
 .gallery{
     width: 100%;
@@ -1226,6 +1245,8 @@ header{
     height: 100vh;
     display: flex;
     background-image: url("../img/bg-second-hp.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 @supports not (background-image: url("../img/bg-second-hp.webp")){
     .footer{
@@ -1575,6 +1596,9 @@ header .abt-slide {
     height: 679px;
     overflow: hidden;
 }
+.hero-desktop .abt-slide{
+    height: 100vh;
+}
 .abt-slide{
     display: flex;
     width: auto;
@@ -1606,6 +1630,10 @@ header .abt-slide {
     left: 50%;
     top: 300px;
     transform: translateX(-50%);
+}
+.abt-slide .subCap {
+    margin-top: 10px;
+    height: fit-content;
 }
 .abt-slide p{
     font-family: 'Cormorant Upright';
@@ -2544,6 +2572,7 @@ p {
 .rectangle21{
     display: none;
 }
+
 .hero .Content .hero-img .slideshow{
     position: relative;
     width: 100em;
@@ -2736,6 +2765,12 @@ h3{
 }
 }
 @media only screen and (max-width: 900px){
+.hero-desktop {
+    display: none;
+}
+.hero {
+    display: block!important;
+}
 .blog .wrapper .middle .post img {
     width: 207.36px;
     height: 228.096px;

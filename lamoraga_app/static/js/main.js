@@ -1,3 +1,45 @@
+var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+document.addEventListener("DOMContentLoaded", function() {
+    var lazyloadDivs = document.querySelectorAll(".lazyload");
+    // Intersection Observer options
+    var options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1
+    };
+    function lazyload(div) {
+        // Set the div's background-image to the data-src value
+        div.style.backgroundImage = "url('" + div.dataset.src + "')";
+        // Add the "loaded" class to display the fade-in effect
+        div.classList.add("loaded");
+    }
+    // Create a new Intersection Observer
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            lazyload(entry.target);
+            // Unobserve the div to prevent loading it again
+            observer.unobserve(entry.target);
+        }
+        });
+    }, options);
+    // Observe all the lazyload divs
+    lazyloadDivs.forEach(function(div) {
+    observer.observe(div);
+});
+});
+
+if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+  // Show the Apple Maps link if the user is on an Apple device
+    document.getElementById("apple-maps-link").href = "https://maps.apple.com/?address=3936+Tamiami+Trail+N,Naples,FL+34103";
+    document.getElementById("apple-maps-link").style.display = "inline-block";
+    document.getElementById("google-maps-link").style.display = "none";
+    } else {
+    // Show the Google Maps link if the user is on a non-Apple device
+    document.getElementById("google-maps-link").href = "https://www.google.com/maps?q=3936+Tamiami+Trail+N,Naples,FL+34103";
+    document.getElementById("google-maps-link").style.display = "inline-block";
+    document.getElementById("apple-maps-link").style.display = "none";
+}
 $("#left").hover(function(){
     $(".dropdown").css("display", "block");
     $("#back").css("display", "block");
@@ -11,11 +53,15 @@ $("#right").hover(function(){
     $(".book_table").css("position", "relative");
     $(".book_table").css("bottom", "-86px");
     $(".open_tble").css("display", "block");
-    }, function(){
-    $(".book_table").css("position", "initial");
-    $(".open_tble").css("display", "none");
-    $("#right").css("height", "fit-content");
-})
+});
+$(document).mouseup(function(e){
+    var container = $("#right, .book_table, .open_tble");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+        $(".book_table").css("position", "initial");
+        $(".open_tble").css("display", "none");
+        $("#right").css("height", "fit-content");
+    }
+});
 $("#tapa_btn").click(function(){
     $("#tapas").css("display", "block");
     $("#soups_salad").css("display", "none");
