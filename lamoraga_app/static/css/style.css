@@ -2253,17 +2253,17 @@ header .event-slide {
 .blog .wrapper .middle .post .content{
     position: relative;
     display: flex;
-    height: 202px;
+    height: fit-content;
     flex-direction: column;
     gap: 10px;
 }
 #title-blog{
     height: 84px;
 }
-.blog .wrapper .middle .post .content .btn{
+/* .blog .wrapper .middle .post .content .btn{
     position: absolute;
     bottom: -20px;
-}
+} */
 .blog .wrapper .middle .post .content h5,
 .blog .wrapper .middle-mobile .post .content h5{
     font-family: 'Cormorant Upright';
@@ -2290,7 +2290,7 @@ header .event-slide {
     justify-content: center;
 }
 .blog .wrapper .btm .btn {
-    padding-top: 10px;
+    margin-top: 10px;
 }
 .blog .wrapper .btm .btn a{
     display: flex;
@@ -2768,6 +2768,9 @@ h3{
 .hero-desktop {
     display: none;
 }
+.blog .wrapper .btm{
+    bottom: 191px!important;
+}
 .hero {
     display: block!important;
 }
@@ -2867,6 +2870,9 @@ h3{
 }
 }
 @media only screen and (max-width: 730px){
+.blog .wrapper .btm{
+    bottom: 283px!important;
+}
 .blog .wrapper .middle .post img{
     width: 165.888px;
     height: 182.4768px;
@@ -2936,6 +2942,9 @@ h3{
 }
 }
 @media only screen and (max-width: 618px){
+.blog .wrapper .btm{
+    bottom: 138px!important;
+}
 .footer .wrapper .bottom {
     bottom: 0;
     padding-top: 110px;
@@ -3089,6 +3098,9 @@ h3{
 }
 }
 @media only screen and (max-width: 400px){
+.blog .wrapper .btm{
+    bottom: 0px!important;
+}
 .hero .Content .content h1{
     font-size: 40px;
 }
