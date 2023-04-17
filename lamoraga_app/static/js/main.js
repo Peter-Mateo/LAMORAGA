@@ -75,6 +75,8 @@ $("#tapa_btn").click(function(){
     $("#vegan_btn").removeClass("active");
     $("#happyhour").css("display", "none");
     $("#happyhour_btn").removeClass("active")
+    $("#mobile_wine").removeClass("active");
+    $("#mobile_wine_pdf").css("display", "none");
 });
 $("#soup_salad_btn").click(function(){
     $("#tapas").css("display", "none");
@@ -89,6 +91,8 @@ $("#soup_salad_btn").click(function(){
     $("#vegan_btn").removeClass("active");
     $("#happyhour").css("display", "none");
     $("#happyhour_btn").removeClass("active")
+    $("#mobile_wine").removeClass("active");
+    $("#mobile_wine_pdf").css("display", "none");
 })
 $("#entree_btn").click(function(){
     $("#tapas").css("display", "none");
@@ -103,6 +107,8 @@ $("#entree_btn").click(function(){
     $("#vegan_btn").removeClass("active");
     $("#happyhour").css("display", "none");
     $("#happyhour_btn").removeClass("active")
+    $("#mobile_wine").removeClass("active");
+    $("#mobile_wine_pdf").css("display", "none");
 })
 $("#dessert_btn").click(function(){
     $("#tapas").css("display", "none");
@@ -117,6 +123,8 @@ $("#dessert_btn").click(function(){
     $("#vegan_btn").removeClass("active");
     $("#happyhour").css("display", "none");
     $("#happyhour_btn").removeClass("active")
+    $("#mobile_wine").removeClass("active");
+    $("#mobile_wine_pdf").css("display", "none");
 })
 $("#drinks_btn").click(function(){
     $("#tapas").css("display", "none");
@@ -131,6 +139,8 @@ $("#drinks_btn").click(function(){
     $("#vegan_btn").removeClass("active");
     $("#happyhour").css("display", "none");
     $("#happyhour_btn").removeClass("active")
+    $("#mobile_wine").removeClass("active");
+    $("#mobile_wine_pdf").css("display", "none");
 })
 $("#vegan_btn").click(function(){
     $("#tapas").css("display", "none");
@@ -144,7 +154,9 @@ $("#vegan_btn").click(function(){
     $("#drinks_btn").removeClass("active");
     $("#vegan_btn").addClass("active");
     $("#happyhour").css("display", "none");
-    $("#happyhour_btn").removeClass("active")
+    $("#happyhour_btn").removeClass("active");
+    $("#mobile_wine").removeClass("active");
+    $("#mobile_wine_pdf").css("display", "none");
 })
 $("#happyhour_btn").click(function(){
     $("#happyhour").css("display", "block");
@@ -159,6 +171,8 @@ $("#happyhour_btn").click(function(){
     $("#entree_btn").removeClass("active");
     $("#drinks_btn").removeClass("active");
     $("#vegan_btn").removeClass("active");
+    $("#mobile_wine").removeClass("active");
+    $("#mobile_wine_pdf").css("display", "none");
 })
 $("#cocktails_btn").click(function(){
     $("#cocktails").css("display", "block");
@@ -168,6 +182,8 @@ $("#cocktails_btn").click(function(){
     $("#wine_btl").css("display", "none");
     $("#wine_btn").removeClass("active");
     $("#wine_btl_btn").removeClass("active");
+    $("#mobile_wine").removeClass("active");
+    $("#mobile_wine_pdf").css("display", "none");
 })
 $("#wine_btn").click(function(){
     $("#wine_btg").css("display", "block");
@@ -176,6 +192,8 @@ $("#wine_btn").click(function(){
     $("#wine_btl").css("display", "none");
     $("#cocktails_btn").removeClass("active");
     $("#wine_btl_btn").removeClass("active");
+    $("#mobile_wine").removeClass("active");
+    $("#mobile_wine_pdf").css("display", "none");
 })
 $("#wine_btl_btn").click(function(){
     $("#wine_btl").css("display", "block");
@@ -183,6 +201,17 @@ $("#wine_btl_btn").click(function(){
     $("#cocktails").css("display", "none");
     $("#wine_btg").css("display", "none");
     $("#cocktails_btn").removeClass("active");
+    $("#wine_btn").removeClass("active");
+    $("#mobile_wine").removeClass("active");
+    $("#mobile_wine_pdf").css("display", "none");
+})
+$("#mobile_wine").click(function(){
+    $("#mobile_wine_pdf").css("display", "flex");
+    $("#moible_wine").addClass("active");
+    $("#cocktails").css("display", "none");
+    $("#wine_btl").css("display", "none");
+    $("#cocktails_btn").removeClass("active");
+    $("#wine_btl_btn").removeClass("active");
     $("#wine_btn").removeClass("active");
 })
 $(document).click(function(e) {

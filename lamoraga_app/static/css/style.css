@@ -1904,6 +1904,9 @@ header .event-slide {
 #map:hover{
     filter: none;
 }
+#menu_hero{
+    height: 25vh;
+}
 .menu-bg {
     width: 100%;
     height: fit-content;
@@ -1991,8 +1994,11 @@ header .event-slide {
 }
 #tapas,#entrees, #desserts,
 #drinks, #vegan, #soups_salad,
-#wine, #happyhour, #wine_btg, #wine_btl{
+#wine, #happyhour, #wine_btg, #wine_btl, #mobile_wine, #mobile_wine_pdf{
     display: none;
+}
+#mobile_wine_pdf{
+    justify-content: center;
 }
 .Sub-heading{
     font-family: 'Cormorant Upright';
@@ -2982,6 +2988,10 @@ h2{
 h3{
     font-size: 30px !important;
 }
+.menu-bg .wrapper #mobile_wine{
+    display: block;
+}
+
 .menu-bg .wrapper #wine_btl_btn,
 .menu-bg .wrapper #wine_btn{
     display: none;

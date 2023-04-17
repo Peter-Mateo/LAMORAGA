@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <header>
+    <header id="menu_hero">
         <nav id="navbar">
             <div class="logo"><a href="{{ url_for('index')}}"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Lamoraga Logo"></a></div>
             <div class="nav-middle">
@@ -119,9 +119,6 @@
             </div>
         </div>
         <div class="wrapper">
-        </div>
-        <div class="event-slide">
-            <h1>Menus</h1>
         </div>
     </header>
     <div class="menu-bg">
@@ -333,6 +330,7 @@
                             <input type="button" id="cocktails_btn" class="active" value="Cocktails & Beer">
                             <input type="button" id="wine_btn" value="Wine BTG">
                             <input type="button" id="wine_btl_btn" value="Wine">
+                            <input type="button" id="mobile_wine" value="Wine">
                         </div>
                         <div id="cocktails">
                             <div class="items">
@@ -661,6 +659,13 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div id="mobile_wine_pdf">
+        <div class="pdf_wine">
+            <a href="../static/img/Wine List April'23.pdf">View Wine List</a>
+            <br>
+            <p>*Subject to change</p>
         </div>
     </div>
     <div class="block"></div>

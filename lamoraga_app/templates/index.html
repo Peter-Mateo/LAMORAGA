@@ -50,7 +50,7 @@
             <div class="nav-middle">
                 <ul>
                     <li><a href="{{ url_for('index')}}">Home</a></li>
-                    <li><a href="{{ url_for('menu')}}">Menu</a></li>
+                    <li><a href="{{ url_for('menu_type', menu = 'dinner' )}}">Menu</a></li>
                     <li><a href="{{ url_for('events')}}">Events</a></li>
                     <li><a href="{{ url_for('blog')}}">Blog</a></li>
                     <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
@@ -89,7 +89,7 @@
                         <button class="mobile-nav-btn">Menu</button>
                         <ul class="mobile-nav-list">
                             <li><a href="{{ url_for('index')}}">Home</a></li>
-                            <li><a href="{{ url_for('menu')}}">Menu</a></li>
+                            <li><a href="{{ url_for('menu_type', menu = 'dinner' )}}">Menu</a></li>
                             <li><a href="{{ url_for('events')}}">Events</a></li>
                             <li><a href="{{ url_for('blog')}}">Blog</a></li>
                             <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
@@ -129,7 +129,7 @@
                     </div>
                     <h1>The Key To Fine Dining</h1>
                     <div class="middle">
-                        <p>We combine traditional, Spanish tapas and classic dishes with an international twist. </p>
+                        <p>We combine traditional Spanish tapas and classic dishes with an international twist. </p>
                     </div>
                     <div class="btn">
                         <a href="{{ url_for('menu') }}" type="button">Explore Menu</a>
@@ -155,10 +155,23 @@
                 <div class="abt-slide">
                     <h1>The Key To Fine Dining</h1>
                     <!--Jinja2-->
-                    <p class="subCap">We combine traditional, Spanish tapas and classic dishes with an international twist.</p>
+                    <p class="subCap">We combine traditional Spanish tapas and classic dishes with an international twist.</p>
             </div>
         </div>
     </header>
+    <div class="reservations" id="open_table">
+        <div class="wrapper">
+            <div class="icon">
+                <img loading="lazy" src="{{ url_for('static', filename='img/double-spoons.png') }}" alt="">
+            </div>
+            <div class="top">
+                <h5>Reservations</h5>
+                <img loading="lazy" src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
+            </div>
+            <h2 class="book">Book A Table</h2>
+            <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=138772&type=standard&theme=wide&color=1&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
+        </div>
+    </div>
     <div class="about">
         <div class="wrapper">
             <div class="left">
@@ -193,19 +206,6 @@
                     <a href="{{ url_for('about')}}" type="button">Our Journey</a>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="reservations" id="open_table">
-        <div class="wrapper">
-            <div class="icon">
-                <img loading="lazy" src="{{ url_for('static', filename='img/double-spoons.png') }}" alt="">
-            </div>
-            <div class="top">
-                <h5>Reservations</h5>
-                <img loading="lazy" src="{{ url_for('static', filename='img/gold-spoon.png') }}" alt="">
-            </div>
-            <h2 class="book">Book A Table</h2>
-            <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=138772&type=standard&theme=wide&color=1&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
         </div>
     </div>
     <div class="menu">
@@ -347,7 +347,7 @@
             </div>
         </div>
     </div>
-    <div class="owner">
+    <div class="owner" style="display: none;">
         <div class="wrapper">
             <div class="left">
                 <img loading="lazy" src="{{ url_for('static', filename='img/tom.png') }}" alt="">
