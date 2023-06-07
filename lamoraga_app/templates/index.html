@@ -46,10 +46,21 @@
     <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/cdcbea4ad7868e638dbf17877/ac066d2b2e9a84ea768102688.js");</script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-          // Get the form and the container elements
+            // Get the form element
             var form = document.getElementById("mc-embedded-subscribe-form");
             var container = document.getElementById("mc_embed_signup");
-          // Add event listener to the form submission
+
+            // Add event listener to the form submission
+            form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+    
+            // Make an AJAX request to the Mailchimp server
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", form.action, true);
+            xhr.send(new FormData(form));
+            });
+    
+            // Add event listener to the form submission
             form.addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent form submission
             
@@ -59,7 +70,7 @@
             // Show the "Thanks for subscribing" message
             var message = document.getElementById("thanks-message");
             message.style.display = "block";
-            });
+            })
         });
     </script>
 </head>

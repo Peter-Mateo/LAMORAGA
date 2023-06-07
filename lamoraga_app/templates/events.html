@@ -42,10 +42,21 @@
 	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.lamoragarestaurant.com/#website","url":"https://www.lamoragarestaurant.com/","name":"Lamoraga","description":"","potentialAction":[{"@type":"SearchAction","target":"https://www.lamoragarestaurant.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.lamoragarestaurant.com/event-calendar/#webpage","url":"https://www.lamoragarestaurant.com/event-calendar/","name":"Event Calendar | Lamoraga","isPartOf":{"@id":"https://www.lamoragarestaurant.com/#website"},"datePublished":"2019-11-06T22:07:19+00:00","dateModified":"2019-11-06T22:07:51+00:00","breadcrumb":{"@id":"https://www.lamoragarestaurant.com/event-calendar/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.lamoragarestaurant.com/event-calendar/"]}]},{"@type":"BreadcrumbList","@id":"https://www.lamoragarestaurant.com/event-calendar/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.lamoragarestaurant.com/","url":"https://www.lamoragarestaurant.com/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.lamoragarestaurant.com/event-calendar/#webpage"}}]}]}</script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-          // Get the form and the container elements
+            // Get the form element
             var form = document.getElementById("mc-embedded-subscribe-form");
             var container = document.getElementById("mc_embed_signup");
-          // Add event listener to the form submission
+
+            // Add event listener to the form submission
+            form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+    
+            // Make an AJAX request to the Mailchimp server
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", form.action, true);
+            xhr.send(new FormData(form));
+            });
+    
+            // Add event listener to the form submission
             form.addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent form submission
             
@@ -55,7 +66,7 @@
             // Show the "Thanks for subscribing" message
             var message = document.getElementById("thanks-message");
             message.style.display = "block";
-            });
+            })
         });
     </script>
 </head>
