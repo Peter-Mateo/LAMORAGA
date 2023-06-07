@@ -1266,13 +1266,12 @@ opacity: 1;
     font-feature-settings: 'tnum' on, 'lnum' on;
     color: #FFFFFF;
 }
-.footer .wrapper .contact .top img{
+.footer .wrapper .top img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-
 }
-.footer .wrapper .contact h2{
+.footer .wrapper h2{
     font-family: 'Cormorant Upright';
     font-style: normal;
     font-weight: 600;
@@ -1284,10 +1283,10 @@ opacity: 1;
     font-feature-settings: 'tnum' on, 'lnum' on;
     color: #AC1F2D;
 }
-.footer .wrapper .contact p{
+.footer .wrapper p{
     text-align: center;
 }
-.footer .wrapper .contact .btm{
+.footer .wrapper .btm{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1332,6 +1331,9 @@ opacity: 1;
     background: #0C0C0C;
     border: 1px solid rgba(220, 202, 135, 0.2);
     box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+}
+#mc-embedded-subscribe.button{
+    cursor: pointer;
 }
 .footer .contact-btm{
     display: flex;
@@ -2570,6 +2572,12 @@ p {
 }
 }
 @media only screen and (max-width: 1100px){
+.footer .wrapper .btm{
+    gap: 14px !important;
+}
+#mce-EMAIL.required.email{
+    width: 440px !important;
+}
 .hero .Content .content {
     position: absolute;
     z-index: 2;
@@ -2874,8 +2882,17 @@ h3{
 .menu-bg .wrapper .wine-items .menu-info h5{
     font-size: 18px;
 }
+.footer .wrapper .btm{
+    gap: 10px !important;
+}
+#mce-EMAIL.required.email{
+    width: 400px !important;
+}
 }
 @media only screen and (max-width: 730px){
+#mce-EMAIL.required.email{
+    width: 300px !important;
+}
 .blog .wrapper .btm{
     bottom: 283px!important;
 }
@@ -2998,6 +3015,16 @@ h3{
 }
 }
 @media only screen and (max-width: 550px){
+.footer .wrapper .btm{
+    gap: 14px !important;
+}
+#mc-embedded-subscribe.button{
+    font-size: 14px !important;
+    width: 80px !important;
+}
+#mce-EMAIL.required.email{
+    width: 200px !important;
+}
 .mobile-nav{
     height: fit-content;
 }
@@ -3045,6 +3072,18 @@ h3{
 }
 }
 @media only screen and (max-width: 450px){
+.footer .wrapper .btm{
+    gap: 6px !important;
+    flex-direction: column;
+}
+#mc-embedded-subscribe.button{
+    font-size: 15px !important;
+    width: 110px !important;
+}
+#mce-EMAIL.required.email{
+    margin-top: 5px !important;
+    width: 238px !important;
+}
 .blog h2{
     font-size: 34px!important;
 }
