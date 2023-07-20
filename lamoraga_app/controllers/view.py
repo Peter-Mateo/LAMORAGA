@@ -18,10 +18,6 @@ from lamoraga_app.models.wine import Wine
 def index():
     return render_template('index.html', cocktails=Cocktail.get_all_cocktails(), sangria=Wine.get_sangria(), white_wine=Wine.get_white(), red_wine=Wine.get_red(), beer=Beer.get_beer(), event = Events.delete_event(), posts = Blog.get_all_posts()[::-1])
 
-@app.route('/ms36293769.txt')
-def ms36293769():
-    return render_template('veryify.html')
-
 @app.route('/the-restaurant/history/')
 def about():
     return render_template('about.html')
