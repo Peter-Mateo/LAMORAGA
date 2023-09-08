@@ -205,9 +205,7 @@
                 <div class="body">
                     <p>We have partnered with Sizzle Dining to make a difference in the lives of food-insecure elementary children in Southwest Florida.  Join us today to enjoy a fantastic meal while contributing to a great cause. Visit Lamoraga now and be part of the change! </p>
                 </div>
-                <div class="btn">
-                    <a href="{{ url_for('special_events')}}">View Menu</a>
-                </div>
+                <a class = "btn" href="{{ url_for('special_events')}}">View Menu</a>
             </div>
                 <div class="abt-slide">
                     <h1>The Key To Fine Dining</h1>
@@ -242,8 +240,8 @@
                     <p>Lamoraga is a culinary concept that seeks the highest level of quality and taste, in order to offer its cuisine as a convenient luxury. </p>
                 </div>
                 <br>
-                <div class="btn">
-                    <a href="{{ url_for('about')}}" type="button">Our Journey</a>
+                <div>
+                    <a href="{{ url_for('about')}}" type="button" class="btn">Our Journey</a>
                 </div>
             </div>
             <img class="knife" loading="lazy" src="{{ url_for('static', filename='img/knife.png') }}" alt="">
@@ -259,8 +257,8 @@
                     <p>The idea of Lamoraga started not too long ago in Andalusia, the Spanish region that covers most of the southern part of the Iberian Peninsula.</p>
                 </div>
                 <br>
-                <div class="btn">
-                    <a href="{{ url_for('about')}}" type="button">Our Journey</a>
+                <div>
+                    <a href="{{ url_for('about')}}" type="button" class="btn">Our Journey</a>
                 </div>
             </div>
         </div>
@@ -398,8 +396,8 @@
                 </div>
             </div>
             <div class="btm-btn">
-                <div class="btn">
-                    <a href="{{ url_for('menu_type', menu = 'cocktails' )}}">View More</a>
+                <div>
+                    <a href="{{ url_for('menu_type', menu = 'cocktails' )}}" class="btn">View More</a>
                 </div>
             </div>
         </div>
@@ -559,8 +557,8 @@
                                 <p>{{ post.created_at | format_datetime }}</p>
                                 <h5 id="title-blog">{{ post.title }}</h5>
                                 <p>{{ post.intro | truncate(100) }}</p>
-                                <div class="btn">
-                                    <a href="{{ url_for('blog_post', id=post.id) }}">Read More</a>
+                                <div>
+                                    <a href="{{ url_for('blog_post', id=post.id) }}" class="btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -575,15 +573,15 @@
                             <p>{{ posts[0].created_at | format_datetime }}</p>
                             <h5 id="title-blog">{{ posts[0].title }}</h5>
                             <p>{{ posts[0].intro | truncate(100) }}</p>
-                            <div class="btn">
-                                <a href="{{ url_for('blog_post', id=posts[0].id) }}">Read More</a>
+                            <div>
+                                <a href="{{ url_for('blog_post', id=posts[0].id) }}" class="btn">Read More</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="btm">
-                    <div class="btn">
-                        <a href="{{ url_for('blog') }}">View More</a>
+                    <div>
+                        <a href="{{ url_for('blog') }}" class="btn">View More</a>
                     </div>
                 </div>
             </div>
@@ -600,8 +598,8 @@
                 <h2>Photo Gallery</h2>
                 <div class="btm">
                     <p>Join our community on Instagram and stay up-to-date with our latest news and promotions.</p>
-                    <div class="btn">
-                        <a href="https://www.instagram.com/lamoraganaples/?hl=en">View More</a>
+                    <div>
+                        <a href="https://www.instagram.com/lamoraganaples/?hl=en" class="btn">View More</a>
                     </div>
                 </div>
             </div>

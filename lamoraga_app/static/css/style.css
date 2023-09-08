@@ -239,12 +239,6 @@ nav .nav-right .left {
     flex-direction: column;
     justify-content: space-evenly;
 }
-.Special-Popup .title {
-    
-}
-.Special-Popup .body {
-    
-}
 .Special-Popup .btn {
     padding: 7px;
     height: 44px;
@@ -366,7 +360,7 @@ header{
     height: 44px;
     background: #AC1F2D;
 }
-.hero .Content .content .btn a{
+.hero .Content .content .btn{
     font-family: 'Cormorant Upright';
     font-weight: 700;
     font-size: 16px;
@@ -599,7 +593,7 @@ header{
     height: 44px;
     background: #AC1F2D;
 }
-.about .wrapper .btn a{
+.about .wrapper .btn {
     text-decoration: none;
     font-family: 'Cormorant Upright';
     font-style: normal;
@@ -866,7 +860,7 @@ header{
     height: 30px;
     background: #AC1F2D;
 }
-.specials .btn a{
+.specials .btn {
     font-family: 'Cormorant Upright';
     font-style: normal;
     font-weight: 900;
@@ -1225,7 +1219,7 @@ opacity: 1;
     background: #DCCA87;
     border: 1px solid #DCCA87;
 }
-.gallery .wrapper .left .btm .btn a{
+.gallery .wrapper .left .btm .btn {
     font-family: 'Cormorant Upright';
     font-style: normal;
     font-weight: 800;
