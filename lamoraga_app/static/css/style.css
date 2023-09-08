@@ -3013,6 +3013,9 @@ h3{
 }
 }
 @media only screen and (max-width: 550px){
+.blog{
+    padding-bottom: 0!important;
+}
 .footer .wrapper .btm{
     gap: 14px !important;
 }
