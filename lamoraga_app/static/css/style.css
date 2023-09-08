@@ -2296,9 +2296,7 @@ header .event-slide {
 .blog .wrapper .btm {
     display: flex;
     justify-content: center;
-}
-.blog .wrapper .btm .btn {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .blog .wrapper .btm .btn a{
     display: flex;
