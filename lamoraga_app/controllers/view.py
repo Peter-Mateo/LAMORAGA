@@ -36,6 +36,9 @@ def events():
         }]
     return render_template('events.html', events = event)
 
+@app.route('/special-events/')
+def special_events():
+    return render_template('special_events.html')
 
 @app.route('/the-restaurant/press-room/')
 def blog():
@@ -49,7 +52,6 @@ def blog_post(id):
     }
     post = Blog.get_post(data)
     return render_template('blog_post.html', post = post, posts = Blog.get_all_posts()[::-1])
-
 
 @app.route('/menus/')
 def menu():
@@ -73,11 +75,9 @@ def menu_type(menu):
 def admin():
     return render_template('admin.html')
 
-
 @app.route('/lenvera-console')
 def console():
     return render_template('control.html')
-
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -89,7 +89,6 @@ def login():
         return redirect('/')
     else:
         return redirect(url_for('console'))
-
 
 @app.route('/lenvera-admin/newpost/', methods=['POST'])
 def save_post():

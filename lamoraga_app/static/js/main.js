@@ -230,3 +230,18 @@ $(document).click(function(e) {
 $('.book_table').click(function(){
     $('.mbl-opn').toggle();
 });
+
+const overlay = document.getElementById("overlay");
+const centeredObject = document.getElementById("centeredObject");
+const closeButton = document.getElementById("closeButton");
+// Removes the overlay and Popup if overlay is clicked
+overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+    centeredObject.style.display = "none";
+});
+// Removes the Popup if Close is clicked
+closeButton.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevent overlay click event from triggering
+    overlay.style.display = "none";
+    centeredObject.style.display = "none";
+});
