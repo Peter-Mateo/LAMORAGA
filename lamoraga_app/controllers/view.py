@@ -36,6 +36,8 @@ def events():
         }]
     return render_template('events.html', events = event)
 
+
+""" *** Special Event Route *** """
 @app.route('/special-events/')
 def special_events():
     return render_template('special_events.html')
