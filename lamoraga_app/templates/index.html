@@ -545,7 +545,7 @@
                     </div>
                 </div>
                 <div class="middle">
-                    {% for post in posts %}
+                    {% for post in posts[0:3] %}
                         <div class="post">
                             <div>
                                 <img loading="lazy" src="{{ url_for('static', filename='blob_imgs/' + post.cover) }} " alt="">
