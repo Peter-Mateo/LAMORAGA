@@ -76,7 +76,7 @@
     </script>
 </head>
 <body>
-    <header>
+    <header style="height: 57vh;">
         <nav id="navbar">
             <div class="logo"><a href="{{ url_for('index')}}"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Lamoraga Logo"></a></div>
             <div class="nav-middle">
@@ -154,7 +154,7 @@
     <div class="container">
         <div class="wrapper">
             <div class="blog_list">
-            {% for post in posts[0:2] %}
+            {% for post in posts[0:3] %}
                 <div class="post">
                     <div class="top">
                         <img src="{{ url_for('static', filename='blob_imgs/' + post.cover) }}" alt="">
@@ -168,11 +168,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="btm">
+                    <div class="btm" style="margin-bottom: 12px;">
                         <a href="{{ url_for('blog_post', id= post.id) }}"><hr> Read More</a>
                     </div>
                 </div>
             {% endfor %}
+            <!-- Need to insert Button to alternate pages -->
             </div> 
             <div class="menu-blog">
                 <div class="categories">
@@ -182,10 +183,10 @@
                         </div>
                         <div class="list">
                             <div class="cate">
-                                <a href="">Photography <hr> (1)</a>
+                                <a href="">Cuisine <hr> (1)</a>
                             </div>
                             <div class="cate">
-                                <a href="">Baking <hr> (1)</a>
+                                <a href="">Student Tips <hr> (1)</a>
                             </div>
                             <div class="cate">
                                 <a href="">Cooking Tips <hr> (1)</a>
@@ -195,7 +196,7 @@
                 </div>
                 <div class="recent-post">
                     <div class="inner-contain">
-                        <div class="top">
+                        <div class="top" style="margin-bottom: 12px;">
                             <h4>Our Latest Posts</h4>
                         </div>
                         <div class="content">
@@ -209,7 +210,7 @@
                                 </div>
                             </div>
                             <div class="btm">
-                                <a href="{{ url_for('blog_post', id= post.id) }}">Read</a>
+                                <a style="padding-left: 0;" href="{{ url_for('blog_post', id= post.id) }}">Read</a>
                             </div>
                             {% endfor %}
                         </div>

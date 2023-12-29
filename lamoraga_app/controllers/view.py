@@ -13,7 +13,7 @@ from lamoraga_app.models.tapa import Tapa
 from lamoraga_app.models.user import User
 from lamoraga_app.models.wine import Wine
 
-
+""" Landing Page for Home Page """
 @app.route('/')
 def index():
     return render_template('index.html', cocktails=Cocktail.get_all_cocktails(), sangria=Wine.get_sangria(), white_wine=Wine.get_white(), red_wine=Wine.get_red(), beer=Beer.get_beer(), event = Events.delete_event(), posts = Blog.get_all_posts()[::-1])
@@ -41,9 +41,11 @@ def events():
 def special_events():
     return render_template('special_events.html')
 
+""" Blog Route *** """
 @app.route('/the-restaurant/press-room/')
 def blog():
     blog = Blog.get_all_posts()
+    print(blog[::-1][0])
     return render_template('blog.html', posts = blog[::-1])
 
 @app.route('/the-restaurant/press-room/<int:id>')
@@ -115,5 +117,5 @@ def save_post():
 # Date Filter
 @app.template_filter()
 def format_datetime(value):
-    format = "%b %m, %Y"
+    format = "%b %d, %Y"
     return value.strftime(format)

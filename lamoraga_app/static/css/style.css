@@ -2172,12 +2172,12 @@ header .event-slide {
 .menu-blog .recent-post .content{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 9px;
     width: 100%;
     height: fit-content;
 }
 .menu-blog .recent-post .small-descrip {
-    height: 70px;
+    height: fit-content;
     overflow: hidden;
 }
 .menu-blog .recent-post .img-box{
