@@ -45,8 +45,30 @@ def special_events():
 @app.route('/the-restaurant/press-room/')
 def blog():
     blog = Blog.get_all_posts()
-    print(blog[::-1][0])
-    return render_template('blog.html', posts = blog[::-1])
+    PageAssignedBlogs = []
+    Page = 1
+    PageIndex = 1
+    for blogs in blog:
+        if Page % 4 == 0:
+            PageIndex += 1
+        RefactoredBlog = {
+            'id' : blogs['id'],
+            'title' : blogs['title'],
+            'intro' : blogs['intro'],
+            'par1heading' : blogs['par1heading'],
+            'par1' : blogs['par1'],
+            'par2heading' : blogs['par2heading'],
+            'par2' : blogs['par2'],
+            'par3heading' : blogs['par3heading'],
+            'par3' : blogs['par3'],
+            'sumheading' : blogs['sumheading'],
+            'summary' : blogs['summary'],
+            'Page' : PageIndex
+        }
+        Page += 1
+        PageAssignedBlogs.append(RefactoredBlog)
+    print(PageAssignedBlogs)
+    return render_template('blog.html', posts = blog[::-1], pages = PageIndex)
 
 @app.route('/the-restaurant/press-room/<int:id>')
 def blog_post(id):
